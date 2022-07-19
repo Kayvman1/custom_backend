@@ -5,6 +5,7 @@
 #include <semaphore.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <signal.h>
 
 #include <string>
 #include <cstring>
@@ -12,7 +13,7 @@
 #include <thread>
 #include <cstddef>
 
-#define PORT 8080
+//#define PORT 8080
 
 enum Endian
 {
@@ -25,30 +26,81 @@ uint32_t my_htons(uint32_t val);
 uint32_t endianSwap(uint32_t val);
 Endian endianCheck();
 
-
-
-void handle_thread(int socket)
+void signal_callback_handler(int e)
 {
+    //Why is this not called ???
+    printf("\n\nFUCK\n\n");
+}
+void handle_thread(int socket)
+{   
+    //consider what happens if you want to retransmit whats in a socket when a conenction fails.
+
+    // Each client might have listening thread and an execute 
+
+    // control packet vs streaming packets
+
+
+    //select or poll reading out of socket
+    // Spin reading?
+    signal(SIGPIPE, signal_callback_handler);
     while (true)
     {
 
         // serialize and return JSON
 
         char buffer[30000] = {0};
-        long valread = read(socket, buffer, strlen("hello"));
-        if (valread < 0)
+        uint8_t id;
+        uint32_t size;
+
+        long valread;
+
+        if ((valread = read(socket, &id, 1)) == sizeof(id))
         {
-            printf("valRead less than 0");
+            printf("id: %i\n", id);
+
+            switch (id){
+                case 1: handle_auth_message();
+                break;
+                default: printf("A"); 
+
+
+            }
         }
 
-        if (valread == 0)
+        else
         {
-            return;
+
+            printf("Read 1 fail");
+            break;
+            // Write better logging and import class for logging;
+            //  on every read that is zero you want to continue
+        }
+
+        // Begin deseralizing and sending structs to correct threads
+
+        if (valread = read(socket, &size, 4) == sizeof(size))
+        {
+            printf("size: %i\n", size);
+        }
+
+        else
+        {
+            printf("Read 2 fail");
+            break;
+        }
+
+        if (valread = read(socket, buffer, size) == size)
+        {
+            
+            printf("Payload: %s \n", buffer);
         }
         else
         {
-            printf("This is the message: %i %s\n", valread, buffer);
+
+            printf("Read 3 %li\n", valread);
+            break;
         }
+
         write(socket, "test", strlen("test"));
         printf("------------------message sent-------------------\n");
     }
@@ -56,6 +108,8 @@ void handle_thread(int socket)
     return;
 }
 
+// TODO SET THREAD AS BLOCKING SO YOU CAN'T READ PACKET SEGMANTS
+// What to do when whole message isnt sent
 
 int main(int argc, char const *argv[])
 { // server   //client
@@ -81,9 +135,15 @@ int main(int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
 
+    int user_port = 8080;
+    if (argc == 2)
+    {
+        user_port = atoi(argv[1]);
+    }
+
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
+    address.sin_port = htons(user_port);
 
     // removes the garabage values from the rest of the address
     memset(address.sin_zero, '\0', sizeof address.sin_zero);
@@ -95,7 +155,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        printf("Successful binding");
+        printf("Successful binding on port %i\n", user_port);
     }
     if (listen(server_fd, 50) < 0)
     {
@@ -104,7 +164,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        printf("Successfully listening");
+        printf("Successfully listening\n");
     }
 
     // accept client and then pass forward to code
@@ -161,10 +221,9 @@ uint32_t my_htons(uint32_t val)
 {
     if (endianCheck() == Endian::big)
         return val;
-    
+
     return endianSwap(val);
 }
-
 
 // first 4 bytes message id (identity packet) (TCP auto orders)
 // next 4 bytes buffer length (if variable length)
