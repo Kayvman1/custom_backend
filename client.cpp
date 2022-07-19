@@ -55,7 +55,7 @@ uint32_t my_htons(uint32_t val)
 // Message id 1 for now
 //double ** pointer
 //what happens when using a single pointer
-uint32_t pack_auth_message(uint8_t **buffer)
+uint32_t pack_auth_message(uint8_t *buffer)
 {
     u_int8_t id = 1;
     char username[1024];
@@ -64,9 +64,9 @@ uint32_t pack_auth_message(uint8_t **buffer)
     // we want to use Strlen beacuse size of gives us size of the memory block not the null terminated string
     uint32_t size = strlen(username);
 
-    memcpy(*buffer + 0, &id, 1);
-    memcpy(*buffer + 1, &size, 4);
-    memcpy(*buffer + 5, username, size);
+    memcpy(buffer + 0, &id, 1);
+    memcpy(buffer + 1, &size, 4);
+    memcpy(buffer + 5, username, size);
 
     printf("Id: %i Size: %i\n", id, size);
     return 1 + 4 + size;
@@ -118,17 +118,17 @@ int main(int argc, char const *argv[])
 
         //Keep in mind sizes my change on different systems
         uint8_t *buffer = (uint8_t *)calloc(3000, sizeof(u_int8_t));
-        uint32_t pack_size = pack_auth_message(&buffer);
+        uint32_t pack_size = pack_auth_message(buffer);
 
 
         printf("packetsize: %i\n", pack_size);
 
         uint8_t id;
-        memcpy(&buffer, &id, 1);
+        memcpy(&id, buffer , 1);
         printf("packet id: %i \n", id);
 
         uint32_t size;
-        memcpy(&buffer + 1, &size, 4);
+        memcpy(&size, buffer + 1, 4);
         printf("payload size: %i \n", size);
 
         int x = send(sock, buffer, pack_size, 0);

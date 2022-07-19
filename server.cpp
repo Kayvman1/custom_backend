@@ -5,6 +5,7 @@
 #include <semaphore.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <signal.h>
 
 #include <string>
 #include <cstring>
@@ -25,8 +26,23 @@ uint32_t my_htons(uint32_t val);
 uint32_t endianSwap(uint32_t val);
 Endian endianCheck();
 
-void handle_thread(int socket)
+void signal_callback_handler(int e)
 {
+    //Why is this not called ???
+    printf("\n\nFUCK\n\n");
+}
+void handle_thread(int socket)
+{   
+    //consider what happens if you want to retransmit whats in a socket when a conenction fails.
+
+    // Each client might have listening thread and an execute 
+
+    // control packet vs streaming packets
+
+
+    //select or poll reading out of socket
+    // Spin reading?
+    signal(SIGPIPE, signal_callback_handler);
     while (true)
     {
 
@@ -40,13 +56,22 @@ void handle_thread(int socket)
 
         if ((valread = read(socket, &id, 1)) == sizeof(id))
         {
-             printf("id: %i\n ", id);
+            printf("id: %i\n", id);
+
+            switch (id){
+                case 1: handle_auth_message();
+                break;
+                default: printf("A"); 
+
+
+            }
         }
 
         else
         {
 
             printf("Read 1 fail");
+            break;
             // Write better logging and import class for logging;
             //  on every read that is zero you want to continue
         }
@@ -57,21 +82,23 @@ void handle_thread(int socket)
         {
             printf("size: %i\n", size);
         }
-            
+
         else
         {
             printf("Read 2 fail");
+            break;
         }
 
         if (valread = read(socket, buffer, size) == size)
         {
-            printf("id:%i size:%i\n", id, size);
-            printf("%s \n", buffer);
+            
+            printf("Payload: %s \n", buffer);
         }
         else
         {
 
             printf("Read 3 %li\n", valread);
+            break;
         }
 
         write(socket, "test", strlen("test"));
