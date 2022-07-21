@@ -1,0 +1,36 @@
+Accounts:
+get_user_profile 
+login_request- username, password, Further auth (tokens ?)
+login response- session identification token 
+refresh_token_request- refreshid Cookie
+refresh_token_response- session id token
+create_user_response- username, password, email 
+create_user_response- status of account creation
+
+Poems:
+poem_create_request - session id, user id, serialized poem
+poem_create_response- poem id, status
+poem_list_response - list of poem?
+poem_feed_request- session id, user id
+poem_feed_response- list of poems
+poem_detail_view_request- session id, user id, poem id
+poem_detail_view_response- poem id, serialized poem, poem meta data?, status
+poem_delete_request- session id, user id, poem id
+poem_delete response- status
+poem_interaction_request session id, user id, poem id, interaction (like, unlike, etc...)
+poem_interaction_response- status
+poem_paginated_response (useful helper method)
+
+Profile:
+detailed_profile_request- session id, user profile id, user id
+detailed_profile_response- requested profile id, status
+profile_interaction- session id, user id, other user profile id, interaction
+profile_interaction_response- status
+profile_update_request- session id, user id, serilized profile (only the updated parts?)
+profile_update_response- status
+
+Search:
+api_search_request- session id, user id, serach type id, query paramters
+api_search_response- ? list of corresponding items paginated ?
+paginated response helper 
+ 
