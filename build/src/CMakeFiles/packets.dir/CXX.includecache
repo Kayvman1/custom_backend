@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kayvan/Repos/custom_backend/src/packets/packets.cpp
+iostream
+-
+string
+-
+cstring
+-
+packets.h
+/home/kayvan/Repos/custom_backend/src/packets/packets.h
+catch2/catch_test_macros.hpp
+-
+
+/home/kayvan/Repos/custom_backend/src/packets/packets.h
+iostream
+-
+
