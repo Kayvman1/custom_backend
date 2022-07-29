@@ -253,3 +253,76 @@ TEST_CASE("SerializePoemActionResponse", "[serialize]")
     REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
+
+// WHERE DOES THIS GO
+
+TEST_CASE("SerializeUser", "[serialize]")
+{
+    user *msg1 = new user;
+    msg1->username = "username";
+
+    uint8_t *buf = (uint8_t *)malloc(1000);
+    user *msg2 = new user;
+
+    user::pack(msg1, buf);
+    user::unpack(msg2, buf);
+
+    REQUIRE(msg1->username == msg2->username);
+}
+
+TEST_CASE("SerializePoem", "[serialize]")
+{
+    poem *msg1 = new poem;
+    msg1->author = user();
+    msg1->author.username = "Username";
+    msg1->content = "content";
+    msg1->title = "title";
+    msg1->poem_id = 1;
+
+    uint8_t *buf = (uint8_t *)malloc(1000);
+    poem *msg2 = new poem;
+
+    poem::pack(msg1, buf);
+    poem::unpack(msg2, buf);
+
+    INFO(msg1->author.username);
+
+    REQUIRE(msg1->content == msg2->content);
+    REQUIRE(msg1->title == msg2->title);
+    REQUIRE(msg1->poem_id == msg2->poem_id);
+    REQUIRE(msg1->author.username == msg2->author.username);
+}
+
+TEST_CASE("SerializePacket", "[serialize]")
+{
+    uint8_t *buf = (uint8_t *)malloc(1000);
+
+    packet *pac1 = new packet;
+    pac1->message_type = 0;
+    pac1->message_id = 5;
+    pac1->magic = 1;
+    pac1->session_token = 1;
+    pac1->flags = 4;
+
+
+    poem_interaction_response *msg1 = new poem_interaction_response;
+    msg1->status = 200;
+
+    packet::pack(pac1, buf, msg1);
+
+    poem_interaction_response *msg2 = new poem_interaction_response;
+    packet *pac2 = new packet;
+
+    packet::unpack(pac2,buf,(void *)msg2);
+
+    INFO((int)msg1->status);
+    INFO((int)msg2->status);
+    REQUIRE(msg1->id == msg2->id);
+    REQUIRE(msg1->status == msg2->status);
+
+    REQUIRE(pac1->message_type == pac2->message_type);
+    REQUIRE(pac1->message_id == pac2->message_id);
+    REQUIRE(pac1->magic == pac2->magic);
+    REQUIRE(pac1->session_token == pac2->session_token);
+    REQUIRE(pac1->flags == pac2->flags);
+}

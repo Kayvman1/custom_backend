@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
+
 /home/kayvan/Repos/custom_backend/src/packets/packets.cpp
 iostream
 -
@@ -15,6 +17,8 @@ cstring
 -
 packets.h
 /home/kayvan/Repos/custom_backend/src/packets/packets.h
+packet_ids.h
+/home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
 catch2/catch_test_macros.hpp
 -
 
