@@ -13,6 +13,9 @@
 #include <thread>
 #include <cstddef>
 
+#include "../packets/packets.h";
+#include "../ring_buffer/ring_buffer.h"
+
 //#define PORT 8080
 
 enum Endian
@@ -22,32 +25,29 @@ enum Endian
 };
 
 sem_t x, y;
-uint32_t my_htons(uint32_t val);
-uint32_t endianSwap(uint32_t val);
-Endian endianCheck();
 
 void signal_callback_handler(int e)
 {
-    //Why is this not called ???
-    printf("\n\nFUCK\n\n");
+    std::cout << "signal callback" << std::endl;
 }
+
+// consider what happens if you want to retransmit whats in a socket when a conenction fails.
+// Each client might have listening thread and an execute
+// control packet vs streaming packets
+// learn byte protcol for web
+// learn http protocol standards
+// terminate called without an active exception
+// select or poll reading out of socket
+//  Spin reading?
+
+
+//Where is the handshake handled?
 void handle_thread(int socket)
-{   
-    //consider what happens if you want to retransmit whats in a socket when a conenction fails.
-
-    // Each client might have listening thread and an execute 
-
-    // control packet vs streaming packets
-
-
-    //select or poll reading out of socket
-    // Spin reading?
+{
     signal(SIGPIPE, signal_callback_handler);
     while (true)
     {
-
-        // serialize and return JSON
-
+        
         char buffer[30000] = {0};
         uint8_t id;
         uint32_t size;
@@ -58,12 +58,13 @@ void handle_thread(int socket)
         {
             printf("id: %i\n", id);
 
-            switch (id){
-                case 1: handle_auth_message();
+            switch (id)
+            {
+            case 1:
+                handle_auth_message();
                 break;
-                default: printf("A"); 
-
-
+            default:
+                printf("A");
             }
         }
 
@@ -91,7 +92,7 @@ void handle_thread(int socket)
 
         if (valread = read(socket, buffer, size) == size)
         {
-            
+
             printf("Payload: %s \n", buffer);
         }
         else
@@ -191,45 +192,3 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
-
-Endian endianCheck()
-{
-    uint16_t checkVal = 0x0001;
-    uint8_t *byte = reinterpret_cast<uint8_t *>(&checkVal);
-    if (byte[0] == 0x01)
-    {
-        return Endian::small;
-    }
-    return Endian::big;
-}
-
-uint32_t endianSwap(uint32_t val)
-{
-    uint32_t newVal = 0;
-    // increaming the pointer incremants size of data type in memory
-    // cast the address the pointer type of the correct type
-    u_int8_t *pointer = reinterpret_cast<uint8_t *>(&val);
-    for (int i = 0; i < sizeof(uint32_t); i++)
-    {
-        newVal = newVal << 8;
-        newVal = (newVal | pointer[i]);
-    }
-    return newVal;
-}
-
-uint32_t my_htons(uint32_t val)
-{
-    if (endianCheck() == Endian::big)
-        return val;
-
-    return endianSwap(val);
-}
-
-// first 4 bytes message id (identity packet) (TCP auto orders)
-// next 4 bytes buffer length (if variable length)
-// rest buffer
-
-// learn byte protcol for web
-// learn http protocol standards
-
-// terminate called without an active exception

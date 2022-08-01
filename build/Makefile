@@ -537,6 +537,19 @@ packets/fast:
 	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/build
 .PHONY : packets/fast
 
+#=============================================================================
+# Target rules for targets named ring_buffer
+
+# Build rule for target.
+ring_buffer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ring_buffer
+.PHONY : ring_buffer
+
+# fast build rule for target.
+ring_buffer/fast:
+	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
+.PHONY : ring_buffer/fast
+
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -605,6 +618,7 @@ help:
 	@echo "... Catch2"
 	@echo "... Catch2WithMain"
 	@echo "... packets"
+	@echo "... ring_buffer"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

@@ -18,8 +18,8 @@ public:
     uint64_t session_token;
     uint32_t flags;
 
-    //uint64_t buf_size;
-    //uint8_t *buf;
+    // uint64_t buf_size;
+    // uint8_t *buf;
 
     static void pack(packet *msg, uint8_t *buf, void *raw_msg);
     static void unpack(packet *msg, uint8_t *buf, void *raw_msg);
@@ -33,8 +33,8 @@ public:
     std::string username;
     std::string password;
 
-    //TODO : username/password len
-    const u_int8_t id = 1;
+    // TODO : username/password len
+
     // Furth auth cookies ?
     static void pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
@@ -45,17 +45,17 @@ class login_response
 public:
     uint8_t status;
     std::string auth_token;
-    const u_int8_t id = 2;
+
     // User class TBD Based on database
 
-    static void pack(void *raw_msg, uint8_t *buf);
+    static int pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
+   
 };
 
 class refresh_token_request
 {
 public:
-    const uint8_t id = 3;
     std::string refresh_token;
     std::string csrf_token;
 
@@ -66,7 +66,6 @@ public:
 class refresh_token_response
 {
 public:
-    const uint8_t id = 4;
     std::string auth_token;
     // TODO ADD STATUS
     static void pack(void *raw_msg, uint8_t *buf);
@@ -102,7 +101,6 @@ public:
 class create_user_request
 {
 public:
-    uint8_t id = 5;
     std::string username;
     std::string password;
     std::string email;
@@ -112,7 +110,6 @@ public:
 class create_user_response // TODO SHOULD THIS BE THE SAME AS A LOGIN REQUEST RESPONSE
 {
 public:
-    uint8_t id = 6;
     int status;
     // USER CLASS
     static void pack(void *raw_msg, uint8_t *buf);
@@ -126,7 +123,7 @@ class poem_create_request
 public:
     // User class;
     // POEM;
-    uint8_t id = 7;
+
     std::string auth_token;
     static void pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
@@ -134,7 +131,6 @@ public:
 class poem_create_response
 {
 public:
-    uint8_t id = 8;
     uint8_t status;
     static void pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
@@ -143,7 +139,6 @@ public:
 class poem_feed_request
 {
 public:
-    uint8_t id = 9;
     // USER
     std::string auth_token;
     static void pack(void *raw_msg, uint8_t *buf);
@@ -153,7 +148,6 @@ public:
 class poem_feed_response
 {
 public:
-    uint8_t id = 10;
     uint8_t status;
     // list of poems
     static void pack(void *raw_msg, uint8_t *buf);
@@ -162,7 +156,6 @@ public:
 class poem_detail_view_request
 {
 public:
-    uint8_t id = 11;
     std::string auth_token;
     // POEM ID OR POEM CLASS ?
     static void pack(void *raw_msg, uint8_t *buf);
@@ -172,7 +165,6 @@ public:
 class poem_detail_view_response
 {
 public:
-    uint8_t id = 12;
     // POEM
     uint8_t status;
     static void pack(void *raw_msg, uint8_t *buf);
@@ -182,7 +174,6 @@ public:
 class poem_delete_request
 {
 public:
-    uint8_t id = 13;
     std::string auth_token;
     // USER
     // POEM or just ID
@@ -192,7 +183,6 @@ public:
 class poem_delete_response
 {
 public:
-    uint8_t id = 14;
     uint8_t status;
     static void pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
@@ -200,7 +190,6 @@ public:
 class poem_interaction_request
 {
 public:
-    uint8_t id = 15;
     std::string auth_token;
     // USER
     // POEM
@@ -213,7 +202,6 @@ public:
 class poem_interaction_response
 {
 public:
-    uint8_t id = 16;
     uint8_t status;
     static void pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);

@@ -1,6 +1,7 @@
 #include <catch2/catch_test_macros.hpp>
 #include <iostream>
 #include "../src/packets/packets.h"
+#include "../src/ring_buffer/ring_buffer.h"
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -12,9 +13,8 @@ TEST_CASE("SerializeLoginRequest", "[serialize]")
     login_request *msg2 = new login_request;
 
     login_request::pack(msg1, buf);
-    login_request::unpack(msg2, buf + 1);
+    login_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->username == msg2->username);
     REQUIRE(msg1->password == msg2->password);
 }
@@ -29,9 +29,8 @@ TEST_CASE("SerializeLoginResponse", "[serialize]")
     login_response *msg2 = new login_response;
 
     login_response::pack(msg1, buf);
-    login_response::unpack(msg2, buf + 1);
+    login_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
@@ -46,9 +45,8 @@ TEST_CASE("SerializeRefreshRequest", "[serialize]")
     refresh_token_request *msg2 = new refresh_token_request;
 
     refresh_token_request::pack(msg1, buf);
-    refresh_token_request::unpack(msg2, buf + 1);
+    refresh_token_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->csrf_token == msg2->csrf_token);
     REQUIRE(msg1->refresh_token == msg2->refresh_token);
 }
@@ -61,9 +59,8 @@ TEST_CASE("SeralizeRefreshResponse")
     refresh_token_response *msg2 = new refresh_token_response;
 
     refresh_token_response::pack(msg1, buf);
-    refresh_token_response::unpack(msg2, buf + 1);
+    refresh_token_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
 
@@ -78,9 +75,8 @@ TEST_CASE("SerializeCreateUserRequest", "[serialize]")
     create_user_request *msg2 = new create_user_request;
 
     create_user_request::pack(msg1, buf);
-    create_user_request::unpack(msg2, buf + 1);
+    create_user_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->username == msg2->username);
     REQUIRE(msg1->password == msg2->password);
     REQUIRE(msg1->email == msg2->email);
@@ -95,9 +91,8 @@ TEST_CASE("SerializeCreateUserResponse", "[serialize]")
     create_user_response *msg2 = new create_user_response;
 
     create_user_response::pack(msg1, buf);
-    create_user_response::unpack(msg2, buf + 1);
+    create_user_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -112,9 +107,8 @@ TEST_CASE("SerializePoemCreateRequest", "[serialize]")
     poem_create_request *msg2 = new poem_create_request;
 
     poem_create_request::pack(msg1, buf);
-    poem_create_request::unpack(msg2, buf + 1);
+    poem_create_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
 
@@ -127,9 +121,8 @@ TEST_CASE("SerializePoemCreateResponse", "[serialize]")
     poem_create_response *msg2 = new poem_create_response;
 
     poem_create_response::pack(msg1, buf);
-    poem_create_response::unpack(msg2, buf + 1);
+    poem_create_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -142,9 +135,8 @@ TEST_CASE("SerializePoemFeedRequest", "[serialize]")
     poem_feed_request *msg2 = new poem_feed_request;
 
     poem_feed_request::pack(msg1, buf);
-    poem_feed_request::unpack(msg2, buf + 1);
+    poem_feed_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
 
@@ -157,9 +149,8 @@ TEST_CASE("SerializePoemFeedResponse", "[serialize]")
     poem_feed_response *msg2 = new poem_feed_response;
 
     poem_feed_response::pack(msg1, buf);
-    poem_feed_response::unpack(msg2, buf + 1);
+    poem_feed_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -172,9 +163,8 @@ TEST_CASE("SerializePoemDetailRequest", "[serialize]")
     poem_detail_view_request *msg2 = new poem_detail_view_request;
 
     poem_detail_view_request::pack(msg1, buf);
-    poem_detail_view_request::unpack(msg2, buf + 1);
+    poem_detail_view_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
 
@@ -187,9 +177,8 @@ TEST_CASE("SerializePoemDetailResponse", "[serialize]")
     poem_detail_view_response *msg2 = new poem_detail_view_response;
 
     poem_detail_view_response::pack(msg1, buf);
-    poem_detail_view_response::unpack(msg2, buf + 1);
+    poem_detail_view_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -202,9 +191,8 @@ TEST_CASE("SerializePoemDeleteRequest", "[serialize]")
     poem_delete_request *msg2 = new poem_delete_request;
 
     poem_delete_request::pack(msg1, buf);
-    poem_delete_request::unpack(msg2, buf + 1);
+    poem_delete_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
 
@@ -217,9 +205,8 @@ TEST_CASE("SerializePoemDeleteResponse", "[serialize]")
     poem_delete_response *msg2 = new poem_delete_response;
 
     poem_delete_response::pack(msg1, buf);
-    poem_delete_response::unpack(msg2, buf + 1);
+    poem_delete_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -233,9 +220,8 @@ TEST_CASE("SerializePoemActionRequest", "[serialize]")
     poem_interaction_request *msg2 = new poem_interaction_request;
 
     poem_interaction_request::pack(msg1, buf);
-    poem_interaction_request::unpack(msg2, buf + 1);
+    poem_interaction_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->action == msg2->action);
     REQUIRE(msg1->auth_token == msg2->auth_token);
 }
@@ -248,9 +234,8 @@ TEST_CASE("SerializePoemActionResponse", "[serialize]")
     poem_interaction_response *msg2 = new poem_interaction_response;
 
     poem_interaction_response::pack(msg1, buf);
-    poem_interaction_response::unpack(msg2, buf + 1);
+    poem_interaction_response::unpack(msg2, buf);
 
-    REQUIRE(msg1->id == msg2->id);
     REQUIRE(msg1->status == msg2->status);
 }
 
@@ -299,30 +284,103 @@ TEST_CASE("SerializePacket", "[serialize]")
 
     packet *pac1 = new packet;
     pac1->message_type = 0;
-    pac1->message_id = 5;
+    pac1->message_id = 4;
     pac1->magic = 1;
     pac1->session_token = 1;
     pac1->flags = 4;
 
-
-    poem_interaction_response *msg1 = new poem_interaction_response;
-    msg1->status = 200;
+    refresh_token_response *msg1 = new refresh_token_response;
+    msg1->auth_token = "AUTH_TOKEN";
 
     packet::pack(pac1, buf, msg1);
 
-    poem_interaction_response *msg2 = new poem_interaction_response;
+    refresh_token_response *msg2 = new refresh_token_response;
     packet *pac2 = new packet;
 
-    packet::unpack(pac2,buf,(void *)msg2);
+    packet::unpack(pac2, buf, (void *)msg2);
 
-    INFO((int)msg1->status);
-    INFO((int)msg2->status);
-    REQUIRE(msg1->id == msg2->id);
-    REQUIRE(msg1->status == msg2->status);
+    REQUIRE(msg1->auth_token == msg2->auth_token);
 
     REQUIRE(pac1->message_type == pac2->message_type);
     REQUIRE(pac1->message_id == pac2->message_id);
     REQUIRE(pac1->magic == pac2->magic);
     REQUIRE(pac1->session_token == pac2->session_token);
     REQUIRE(pac1->flags == pac2->flags);
+}
+
+TEST_CASE("RingBufferWrite", "[ring_buffer]")
+{
+    ring_buffer buf = ring_buffer(10);
+
+    for (int i = 1; i < 12; i++)
+    {
+        uint8_t val = i;
+        buf.write(&val, 1);
+    }
+
+    REQUIRE(buf.buf[0] == 11);
+}
+
+TEST_CASE("RingBufferRead", "[ring_buffer]")
+{
+    ring_buffer buf = ring_buffer(10);
+
+    for (int i = 1; i < 12; i++)
+    {
+        uint8_t val = i;
+        buf.write(&val, 1);
+    }
+
+    uint8_t *x = (uint8_t *)buf.read();
+    REQUIRE((uint8_t)*x == 11);
+}
+
+TEST_CASE("RingBufferUseCase1", "[ring_buffer]")
+{
+    ring_buffer buf = ring_buffer(200);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    int len;
+
+    login_response *msg1 = new login_response;
+    msg1->status = 1;
+    msg1->auth_token = "1";
+
+    login_response *msg2 = new login_response;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+
+    login_response *msg3 = new login_response;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+
+    login_response *msg4 = new login_response;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+
+    len = login_response::pack(msg1, b);
+    buf.write(b, len);
+
+    len = login_response::pack(msg2, b);
+    buf.write(b, len);
+
+    len = login_response::pack(msg3, b);
+    buf.write(b, len);
+
+    len = login_response::pack(msg4, b);
+    buf.write(b, len);
+
+    login_response *ret = new login_response;
+
+    login_response::unpack(ret, (uint8_t *)buf.read());
+    REQUIRE(ret->auth_token == "1");
+
+    login_response::unpack(ret, (uint8_t *)buf.read());
+    REQUIRE(ret->auth_token == "2");
+
+    login_response::unpack(ret, (uint8_t *)buf.read());
+    REQUIRE(ret->auth_token == "3");
+
+    login_response::unpack(ret, (uint8_t *)buf.read());
+    REQUIRE(ret->auth_token == "4");
 }

@@ -92,6 +92,7 @@ tests: CMakeFiles/tests.dir/tests/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: lib/Catch2/src/libCatch2Main.a
 tests: src/libpackets.a
+tests: src/libring_buffer.a
 tests: lib/Catch2/src/libCatch2.a
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"

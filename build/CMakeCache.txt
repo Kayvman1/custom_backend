@@ -470,6 +470,9 @@ SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 //Dependencies for target
 packets_LIB_DEPENDS:STATIC=
 
+//Dependencies for target
+ring_buffer_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

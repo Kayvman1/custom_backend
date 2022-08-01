@@ -7,8 +7,9 @@ project(IndiewriterBackend)
 add_subdirectory(lib/Catch2)
 add_subdirectory(src)
 add_executable(tests tests/test.cpp)
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain packets)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain packets ring_buffer)
 target_compile_options(tests PRIVATE -g )
+
 
 include(CTest)
 include(Catch)

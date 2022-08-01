@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -136,6 +136,21 @@ packets/fast:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/build
 .PHONY : packets/fast
 
+# Convenience name for target.
+src/CMakeFiles/ring_buffer.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ring_buffer.dir/rule
+.PHONY : src/CMakeFiles/ring_buffer.dir/rule
+
+# Convenience name for target.
+ring_buffer: src/CMakeFiles/ring_buffer.dir/rule
+
+.PHONY : ring_buffer
+
+# fast build rule for target.
+ring_buffer/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
+.PHONY : ring_buffer/fast
+
 packets/packets.o: packets/packets.cpp.o
 
 .PHONY : packets/packets.o
@@ -163,6 +178,33 @@ packets/packets.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/packets/packets.cpp.s
 .PHONY : packets/packets.cpp.s
 
+ring_buffer/ring_buffer.o: ring_buffer/ring_buffer.cpp.o
+
+.PHONY : ring_buffer/ring_buffer.o
+
+# target to build an object file
+ring_buffer/ring_buffer.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o
+.PHONY : ring_buffer/ring_buffer.cpp.o
+
+ring_buffer/ring_buffer.i: ring_buffer/ring_buffer.cpp.i
+
+.PHONY : ring_buffer/ring_buffer.i
+
+# target to preprocess a source file
+ring_buffer/ring_buffer.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.i
+.PHONY : ring_buffer/ring_buffer.cpp.i
+
+ring_buffer/ring_buffer.s: ring_buffer/ring_buffer.cpp.s
+
+.PHONY : ring_buffer/ring_buffer.s
+
+# target to generate assembly for a file
+ring_buffer/ring_buffer.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s
+.PHONY : ring_buffer/ring_buffer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,12 +212,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... packets"
 	@echo "... test"
+	@echo "... packets"
+	@echo "... edit_cache"
+	@echo "... ring_buffer"
 	@echo "... packets/packets.o"
 	@echo "... packets/packets.i"
 	@echo "... packets/packets.s"
+	@echo "... ring_buffer/ring_buffer.o"
+	@echo "... ring_buffer/ring_buffer.i"
+	@echo "... ring_buffer/ring_buffer.s"
 .PHONY : help
 
 

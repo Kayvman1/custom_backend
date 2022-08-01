@@ -96,4 +96,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   "lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
   "src/CMakeFiles/packets.dir/DependInfo.cmake"
+  "src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
   )

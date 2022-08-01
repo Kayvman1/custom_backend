@@ -44,6 +44,8 @@ void packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
 
 void packet::unpack(packet *msg, uint8_t *buf, void *raw_msg)
 {
+    //Do pass in a raw buff or instantiate one here 
+
     uint8_t index = 0;
 
     std::memcpy(&msg->message_type, buf + index, sizeof(msg->message_type));
@@ -70,7 +72,7 @@ void packet::unpack(packet *msg, uint8_t *buf, void *raw_msg)
         {
 #define X(ClassName, ClassID)                        \
     case ClassID:                                    \
-        ClassName::unpack(raw_msg, buf + index + 1); \
+        ClassName::unpack(raw_msg, buf + index ); \
         break;
             CONTROL_PACKET_TABLE
 #undef X
@@ -84,15 +86,13 @@ void packet::unpack(packet *msg, uint8_t *buf, void *raw_msg)
 // CAN I MAKE THIS A UINT 8 BUF SO I CAN INCREMENT
 
 // CONSUME FIRST BYTE OF PACKED BUFFER
-void login_request::pack(void *raw_msg, uint8_t *buf)
+void  login_request::pack(void *raw_msg, uint8_t *buf)
 {
     login_request *msg = (login_request *)raw_msg;
     int index = 0;
     uint8_t username_length = msg->username.length();
     uint8_t password_length = msg->password.length();
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
     // Should this be type aliased
 
     std::memcpy(buf + index, &username_length, sizeof(username_length));
@@ -104,9 +104,10 @@ void login_request::pack(void *raw_msg, uint8_t *buf)
     std::memcpy(buf + index, &password_length, sizeof(password_length));
     index = index + sizeof(password_length);
 
-    std::strncpy((char *)buf + index, msg->password.c_str(), PASSWORD_LEN) + 1;
+    std::strncpy((char *)buf + index, msg->password.c_str(), PASSWORD_LEN + 1);
+    index += PASSWORD_LEN + 1;
 
-    return;
+    return ;
 }
 void login_request::unpack(void *raw_msg, uint8_t *buf)
 {
@@ -129,15 +130,12 @@ void login_request::unpack(void *raw_msg, uint8_t *buf)
     return;
 }
 
-void login_response::pack(void *raw_msg, uint8_t *buf)
+int login_response::pack(void *raw_msg, uint8_t *buf)
 {
     login_response *msg = (login_response *)raw_msg;
     // TODO add user class serialization
     int index = 0;
     uint8_t token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &(msg->status), sizeof(msg->status));
     index = index + sizeof(msg->status);
@@ -146,7 +144,11 @@ void login_response::pack(void *raw_msg, uint8_t *buf)
     index = index + sizeof(token_length);
 
     std::strncpy((char *)buf + index, msg->auth_token.c_str(), TOKEN_LEN + 1);
+    index += TOKEN_LEN + 1;
+
+    return index;
 }
+
 
 void login_response::unpack(void *raw_msg, uint8_t *buf)
 {
@@ -171,9 +173,6 @@ void refresh_token_request::pack(void *raw_msg, uint8_t *buf)
     int index = 0;
     uint8_t refresh_token_length = msg->refresh_token.length();
     uint8_t csrf_token_length = msg->csrf_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &refresh_token_length, sizeof(refresh_token_length));
     index = index + sizeof(refresh_token_length);
@@ -211,9 +210,6 @@ void refresh_token_response::pack(void *raw_msg, uint8_t *buf)
     int index = 0;
     uint8_t auth_token_length = msg->auth_token.length();
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
-
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
 
@@ -241,9 +237,6 @@ void create_user_request::pack(void *raw_msg, uint8_t *buf)
     uint8_t username_length = msg->username.length();
     uint8_t password_length = msg->password.length();
     uint8_t email_length = msg->email.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &username_length, sizeof(username_length));
     index = index + sizeof(username_length);
@@ -293,8 +286,7 @@ void create_user_response::pack(void *raw_msg, uint8_t *buf)
     create_user_response *msg = (create_user_response *)raw_msg;
     // TODO add user class deserialization
     int index = 0;
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
+
     // ADD USER STUFF
     std::memcpy(buf + index, &(msg->status), sizeof(msg->status));
 }
@@ -315,9 +307,6 @@ void poem_create_request::pack(void *raw_msg, uint8_t *buf)
     poem_create_request *msg = (poem_create_request *)raw_msg;
     int index = 0;
     uint8_t auth_token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
@@ -342,9 +331,6 @@ void poem_create_response::pack(void *raw_msg, uint8_t *buf)
     poem_create_response *msg = (poem_create_response *)raw_msg;
     int index = 0;
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
-
     std::memcpy(buf + index, &msg->status, sizeof(msg->status));
     index = index + sizeof(msg->status);
 }
@@ -362,9 +348,6 @@ void poem_feed_request::pack(void *raw_msg, uint8_t *buf)
     poem_feed_request *msg = (poem_feed_request *)raw_msg;
     int index = 0;
     uint8_t auth_token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
@@ -389,9 +372,6 @@ void poem_feed_response::pack(void *raw_msg, uint8_t *buf)
     poem_feed_response *msg = (poem_feed_response *)raw_msg;
     int index = 0;
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
-
     std::memcpy(buf + index, &msg->status, sizeof(msg->status));
     index = index + sizeof(msg->status);
 }
@@ -410,9 +390,6 @@ void poem_detail_view_request::pack(void *raw_msg, uint8_t *buf)
     poem_detail_view_request *msg = (poem_detail_view_request *)raw_msg;
     int index = 0;
     u_int8_t auth_token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
@@ -437,9 +414,6 @@ void poem_detail_view_response::pack(void *raw_msg, uint8_t *buf)
     poem_detail_view_response *msg = (poem_detail_view_response *)raw_msg;
     int index = 0;
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
-
     std::memcpy(buf + index, &msg->status, sizeof(msg->status));
     index = index + sizeof(msg->status);
 }
@@ -458,9 +432,6 @@ void poem_delete_request::pack(void *raw_msg, uint8_t *buf)
     poem_delete_request *msg = (poem_delete_request *)raw_msg;
     int index = 0;
     u_int8_t auth_token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
@@ -485,9 +456,6 @@ void poem_delete_response::pack(void *raw_msg, uint8_t *buf)
     poem_delete_response *msg = (poem_delete_response *)raw_msg;
     int index = 0;
 
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
-
     std::memcpy(buf + index, &msg->status, sizeof(msg->status));
     index = index + sizeof(msg->status);
 }
@@ -506,9 +474,6 @@ void poem_interaction_request::pack(void *raw_msg, uint8_t *buf)
     poem_interaction_request *msg = (poem_interaction_request *)raw_msg;
     int index = 0;
     uint8_t auth_token_length = msg->auth_token.length();
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
@@ -546,9 +511,6 @@ void poem_interaction_response::pack(void *raw_msg, uint8_t *buf)
 {
     poem_interaction_response *msg = (poem_interaction_response *)raw_msg;
     int index = 0;
-
-    std::memcpy(buf + index, &(msg->id), sizeof(msg->id));
-    index = index + sizeof(msg->id);
 
     std::memcpy(buf + index, &msg->status, sizeof(msg->status));
     index = index + sizeof(msg->status);
@@ -639,3 +601,5 @@ void poem::unpack(void *raw_msg, uint8_t *buf)
 
     user::unpack(&msg->author, buf + index);
 }
+
+
