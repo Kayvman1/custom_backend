@@ -20,6 +20,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
   "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/packets.dir/DependInfo.cmake"
   "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
+  "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/server.dir/DependInfo.cmake"
   "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   )
 

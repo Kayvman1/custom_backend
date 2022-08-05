@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/kayvan/Repos/custom_backend/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -77,6 +66,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -120,6 +120,21 @@ preinstall/fast:
 depend:
 	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/CMakeFiles/server.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
+.PHONY : src/CMakeFiles/server.dir/rule
+
+# Convenience name for target.
+server: src/CMakeFiles/server.dir/rule
+
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 # Convenience name for target.
 src/CMakeFiles/packets.dir/rule:
@@ -205,14 +220,42 @@ ring_buffer/ring_buffer.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s
 .PHONY : ring_buffer/ring_buffer.cpp.s
 
+server/server.o: server/server.cpp.o
+
+.PHONY : server/server.o
+
+# target to build an object file
+server/server.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/server.cpp.o
+.PHONY : server/server.cpp.o
+
+server/server.i: server/server.cpp.i
+
+.PHONY : server/server.i
+
+# target to preprocess a source file
+server/server.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/server.cpp.i
+.PHONY : server/server.cpp.i
+
+server/server.s: server/server.cpp.s
+
+.PHONY : server/server.s
+
+# target to generate assembly for a file
+server/server.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/server.cpp.s
+.PHONY : server/server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... server"
 	@echo "... packets"
 	@echo "... edit_cache"
 	@echo "... ring_buffer"
@@ -222,6 +265,9 @@ help:
 	@echo "... ring_buffer/ring_buffer.o"
 	@echo "... ring_buffer/ring_buffer.i"
 	@echo "... ring_buffer/ring_buffer.s"
+	@echo "... server/server.o"
+	@echo "... server/server.i"
+	@echo "... server/server.s"
 .PHONY : help
 
 

@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring>
 #include "ring_buffer.h"
+#include <mutex>
 
 ring_buffer::ring_buffer()
 {
@@ -9,6 +10,8 @@ ring_buffer::ring_buffer()
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
+    
+    
 }
 
 ring_buffer::ring_buffer(int l)
@@ -17,6 +20,7 @@ ring_buffer::ring_buffer(int l)
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
+    
 }
 
 void ring_buffer::write(void *raw_data, uint16_t len)
@@ -105,4 +109,60 @@ int ring_buffer::size_of_next_message()
 void ring_buffer::print()
 {
     std::cout << "AA \n";
+}
+
+int ring_buffer::read_bytes(void *write_buf, int read_size)
+{
+
+    read_lock.lock();
+    // NOW WE ARE THREAD SAFE
+
+    // first check to see if write fits
+    uint8_t *stop_pointer = stack.front();
+    int bytes_left_message = stop_pointer - read_pointer;
+
+    // Entire message is on left side of the stop pointer
+    if (stop_pointer > read_pointer)
+    {
+        if (bytes_left_message > read_size)
+        {
+            memcpy(write_buf, read_pointer, read_size);
+            read_pointer += read_size;
+            return size;
+        }
+
+        if (bytes_left_message <= read_size)
+        {
+            memcpy(write_buf, read_pointer, bytes_left_message);
+            read_pointer += bytes_left_message;
+            write_lock.unlock();
+            return bytes_left_message;
+        }
+    }
+    else
+    {
+        bytes_left_message += size;
+        int segment_right = buf + size - read_pointer;
+        int segment_left = read_size - segment_right;
+
+        if (segment_left + segment_right > read_size)
+        {
+            memcpy(write_buf, read_pointer, segment_right);
+            memcpy(write_buf + segment_right, buf, segment_left);
+            read_pointer = buf + segment_left;
+            return size;
+        }
+        if (segment_left+ segment_right <= read_size)
+        {   
+            memcpy(write_buf, read_pointer, segment_right);
+            bytes_left_message -= segment_right;
+
+            memcpy(write_buf + segment_right, buf, bytes_left_message);
+            read_pointer = buf + bytes_left_message;
+
+            write_lock.unlock();
+            return bytes_left_message + segment_right;
+        }
+    }
+
 }

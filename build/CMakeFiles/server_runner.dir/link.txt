@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/server_runner.dir/runner/main.cpp.o  -o server_runner src/libpackets.a src/libring_buffer.a src/libserver.a -pthread 

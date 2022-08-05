@@ -239,17 +239,17 @@ ExperimentalBuild/fast:
 .PHONY : ExperimentalBuild/fast
 
 #=============================================================================
-# Target rules for targets named NightlyStart
+# Target rules for targets named ExperimentalConfigure
 
 # Build rule for target.
-NightlyStart: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
-.PHONY : NightlyStart
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
 
 # fast build rule for target.
-NightlyStart/fast:
-	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
-.PHONY : NightlyStart/fast
+ExperimentalConfigure/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
 
 #=============================================================================
 # Target rules for targets named NightlyMemoryCheck
@@ -330,19 +330,6 @@ Experimental/fast:
 .PHONY : Experimental/fast
 
 #=============================================================================
-# Target rules for targets named ExperimentalConfigure
-
-# Build rule for target.
-ExperimentalConfigure: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
-.PHONY : ExperimentalConfigure
-
-# fast build rule for target.
-ExperimentalConfigure/fast:
-	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
-.PHONY : ExperimentalConfigure/fast
-
-#=============================================================================
 # Target rules for targets named NightlyTest
 
 # Build rule for target.
@@ -354,6 +341,32 @@ NightlyTest: cmake_check_build_system
 NightlyTest/fast:
 	$(MAKE) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
 .PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named server_runner
+
+# Build rule for target.
+server_runner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server_runner
+.PHONY : server_runner
+
+# fast build rule for target.
+server_runner/fast:
+	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/build
+.PHONY : server_runner/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
 
 #=============================================================================
 # Target rules for targets named tests
@@ -525,6 +538,19 @@ Catch2WithMain/fast:
 .PHONY : Catch2WithMain/fast
 
 #=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
 # Target rules for targets named packets
 
 # Build rule for target.
@@ -549,6 +575,33 @@ ring_buffer: cmake_check_build_system
 ring_buffer/fast:
 	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
 .PHONY : ring_buffer/fast
+
+runner/main.o: runner/main.cpp.o
+
+.PHONY : runner/main.o
+
+# target to build an object file
+runner/main.cpp.o:
+	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/runner/main.cpp.o
+.PHONY : runner/main.cpp.o
+
+runner/main.i: runner/main.cpp.i
+
+.PHONY : runner/main.i
+
+# target to preprocess a source file
+runner/main.cpp.i:
+	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/runner/main.cpp.i
+.PHONY : runner/main.cpp.i
+
+runner/main.s: runner/main.cpp.s
+
+.PHONY : runner/main.s
+
+# target to generate assembly for a file
+runner/main.cpp.s:
+	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/runner/main.cpp.s
+.PHONY : runner/main.cpp.s
 
 tests/test.o: tests/test.cpp.o
 
@@ -594,16 +647,17 @@ help:
 	@echo "... ContinuousTest"
 	@echo "... ContinuousUpdate"
 	@echo "... ExperimentalBuild"
-	@echo "... NightlyStart"
+	@echo "... ExperimentalConfigure"
 	@echo "... NightlyMemoryCheck"
 	@echo "... NightlyBuild"
 	@echo "... ExperimentalUpdate"
 	@echo "... ContinuousBuild"
 	@echo "... Continuous"
 	@echo "... Experimental"
-	@echo "... ExperimentalConfigure"
 	@echo "... edit_cache"
 	@echo "... NightlyTest"
+	@echo "... server_runner"
+	@echo "... NightlyStart"
 	@echo "... tests"
 	@echo "... NightlyUpdate"
 	@echo "... NightlyCoverage"
@@ -617,8 +671,12 @@ help:
 	@echo "... ExperimentalStart"
 	@echo "... Catch2"
 	@echo "... Catch2WithMain"
+	@echo "... server"
 	@echo "... packets"
 	@echo "... ring_buffer"
+	@echo "... runner/main.o"
+	@echo "... runner/main.i"
+	@echo "... runner/main.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

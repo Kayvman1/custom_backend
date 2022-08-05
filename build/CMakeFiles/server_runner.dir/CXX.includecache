@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kayvan/Repos/custom_backend/runner/main.cpp
+iostream
+-
+../src/server/server.h
+/home/kayvan/Repos/custom_backend/src/server/server.h
+
+/home/kayvan/Repos/custom_backend/src/server/server.h
+

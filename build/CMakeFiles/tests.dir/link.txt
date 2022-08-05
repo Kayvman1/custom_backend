@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/tests.dir/tests/test.cpp.o  -o tests lib/Catch2/src/libCatch2Main.a src/libpackets.a src/libring_buffer.a lib/Catch2/src/libCatch2.a 
+/usr/bin/c++     CMakeFiles/tests.dir/tests/test.cpp.o  -o tests lib/Catch2/src/libCatch2Main.a src/libpackets.a src/libring_buffer.a src/libserver.a lib/Catch2/src/libCatch2.a -pthread 

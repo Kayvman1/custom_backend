@@ -1,0 +1,35 @@
+Build LRHU
+Build acceptor thread
+Build handler thread/ logic 
+write it so you can use macros to switch between build and test runs
+
+instead of accepting a connection on a socket signal that a test client has started. 
+
+wrap two buffer into a class have both the client and server have access to this and then this contains metadata to facilate metadata
+
+server runner just parse args and calls server
+
+test function for server that instanciates a wrapper class 
+
+server get pair creates a new pair to simulate multiple connections 
+
+Get rid of the while true in server and change it to semaphore that waits for a connection
+
+// consider what happens if you want to retransmit whats in a socket when a conenction fails.
+// Each client might have listening thread and an execute
+// control packet vs streaming packets
+// learn byte protcol for web
+// learn http protocol standards
+// terminate called without an active exception
+// select or poll reading out of socket
+//  Spin reading?
+
+
+//Where is the handshake handled?
+
+
+// TODO SET THREAD AS BLOCKING SO YOU CAN'T READ PACKET SEGMANTS
+// What to do when whole message isnt sent
+
+
+DO I HAVE TO HAVE A RING_BUFFER INTILIZE CALL NOW ?

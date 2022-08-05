@@ -38,7 +38,7 @@ TEST_CASE("SerializeLoginResponse", "[serialize]")
 TEST_CASE("SerializeRefreshRequest", "[serialize]")
 {
     refresh_token_request *msg1 = new refresh_token_request;
-    msg1->csrf_token = "csrf_token";
+
     msg1->refresh_token = "refresh_token";
 
     uint8_t *buf = (uint8_t *)malloc(100);
@@ -47,7 +47,7 @@ TEST_CASE("SerializeRefreshRequest", "[serialize]")
     refresh_token_request::pack(msg1, buf);
     refresh_token_request::unpack(msg2, buf);
 
-    REQUIRE(msg1->csrf_token == msg2->csrf_token);
+    
     REQUIRE(msg1->refresh_token == msg2->refresh_token);
 }
 
@@ -243,14 +243,14 @@ TEST_CASE("SerializePoemActionResponse", "[serialize]")
 
 TEST_CASE("SerializeUser", "[serialize]")
 {
-    user *msg1 = new user;
+    account *msg1 = new account;
     msg1->username = "username";
 
     uint8_t *buf = (uint8_t *)malloc(1000);
-    user *msg2 = new user;
+    account *msg2 = new account;
 
-    user::pack(msg1, buf);
-    user::unpack(msg2, buf);
+    account::pack(msg1, buf);
+    account::unpack(msg2, buf);
 
     REQUIRE(msg1->username == msg2->username);
 }
@@ -258,8 +258,8 @@ TEST_CASE("SerializeUser", "[serialize]")
 TEST_CASE("SerializePoem", "[serialize]")
 {
     poem *msg1 = new poem;
-    msg1->author = user();
-    msg1->author.username = "Username";
+    msg1->author = new account();
+    msg1->author->username = "Username";
     msg1->content = "content";
     msg1->title = "title";
     msg1->poem_id = 1;
@@ -270,12 +270,12 @@ TEST_CASE("SerializePoem", "[serialize]")
     poem::pack(msg1, buf);
     poem::unpack(msg2, buf);
 
-    INFO(msg1->author.username);
+    INFO(msg1->author->username);
 
     REQUIRE(msg1->content == msg2->content);
     REQUIRE(msg1->title == msg2->title);
     REQUIRE(msg1->poem_id == msg2->poem_id);
-    REQUIRE(msg1->author.username == msg2->author.username);
+    REQUIRE(msg1->author->username == msg2->author->username);
 }
 
 TEST_CASE("SerializePacket", "[serialize]")
@@ -297,7 +297,7 @@ TEST_CASE("SerializePacket", "[serialize]")
     refresh_token_response *msg2 = new refresh_token_response;
     packet *pac2 = new packet;
 
-    packet::unpack(pac2, buf, (void *)msg2);
+    packet::unpack(pac2, buf);
 
     REQUIRE(msg1->auth_token == msg2->auth_token);
 
@@ -310,34 +310,34 @@ TEST_CASE("SerializePacket", "[serialize]")
 
 TEST_CASE("RingBufferWrite", "[ring_buffer]")
 {
-    ring_buffer buf = ring_buffer(10);
+    ring_buffer* buf = new ring_buffer(10);
 
     for (int i = 1; i < 12; i++)
     {
         uint8_t val = i;
-        buf.write(&val, 1);
+        buf->write(&val, 1);
     }
 
-    REQUIRE(buf.buf[0] == 11);
+    REQUIRE(buf->buf[0] == 11);
 }
 
 TEST_CASE("RingBufferRead", "[ring_buffer]")
 {
-    ring_buffer buf = ring_buffer(10);
+    ring_buffer *buf = new ring_buffer(10);
 
     for (int i = 1; i < 12; i++)
     {
         uint8_t val = i;
-        buf.write(&val, 1);
+        buf->write(&val, 1);
     }
 
-    uint8_t *x = (uint8_t *)buf.read();
+    uint8_t *x = (uint8_t *)buf->read();
     REQUIRE((uint8_t)*x == 11);
 }
 
 TEST_CASE("RingBufferUseCase1", "[ring_buffer]")
 {
-    ring_buffer buf = ring_buffer(200);
+    ring_buffer *buf = new ring_buffer(200);
     uint8_t *b = (uint8_t *)malloc(100);
     uint8_t *read = (uint8_t *)malloc(100);
     int len;
@@ -359,28 +359,28 @@ TEST_CASE("RingBufferUseCase1", "[ring_buffer]")
     msg4->auth_token = "4";
 
     len = login_response::pack(msg1, b);
-    buf.write(b, len);
+    buf->write(b, len);
 
     len = login_response::pack(msg2, b);
-    buf.write(b, len);
+    buf->write(b, len);
 
     len = login_response::pack(msg3, b);
-    buf.write(b, len);
+    buf->write(b, len);
 
     len = login_response::pack(msg4, b);
-    buf.write(b, len);
+    buf->write(b, len);
 
     login_response *ret = new login_response;
 
-    login_response::unpack(ret, (uint8_t *)buf.read());
+    login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "1");
 
-    login_response::unpack(ret, (uint8_t *)buf.read());
+    login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "2");
 
-    login_response::unpack(ret, (uint8_t *)buf.read());
+    login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "3");
 
-    login_response::unpack(ret, (uint8_t *)buf.read());
+    login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "4");
 }
