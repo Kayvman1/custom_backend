@@ -26,8 +26,8 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     std::memcpy(buf + index, &msg->flags, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    std::memcpy(buf + index, 0, sizeof(buf_size));
     buf_size_addr = index;
+    index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)
     {
@@ -36,9 +36,11 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
         {
 #define X(ClassName, ClassID)                                 \
     case ClassID:                                             \
+    {                                                         \
         message_size = ClassName::pack(raw_msg, buf + index); \
-        break;
-            CONTROL_PACKET_TABLE
+        break;                                                \
+    }                                                         \
+        CONTROL_PACKET_TABLE
 #undef X
             break;
         }
@@ -71,16 +73,23 @@ void packet::unpack(packet *msg, uint8_t *buf)
     std::memcpy(&msg->flags, buf + index, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
+    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->flags));
+    index = index + sizeof(msg->buf_size);
+
     switch (msg->message_type)
     {
     case CONTROL_PACKET:
         switch (msg->message_id)
         {
-#define X(ClassName, ClassID)                    \
-    case ClassID:                                \
-        ClassName *ClassName##_pointer;          \
+#define X(ClassName, ClassID)                                \
+    case ClassID:                                            \
+    {                                                        \
+                                                             \
+        ClassName *ClassName##_pointer = new ClassName;      \
         ClassName::unpack(ClassName##_pointer, buf + index); \
-        break;
+        break;                                               \
+    }
+
             CONTROL_PACKET_TABLE
 #undef X
             break;
@@ -157,8 +166,8 @@ void login_response::unpack(void *raw_msg, uint8_t *buf)
     std::memcpy(&(msg->status), buf + index, sizeof(msg->status));
     index = index + sizeof(msg->status);
 
-    std::memcpy(&msg->auth_token_length, buf + index, sizeof(&msg->auth_token_length));
-    index = index + sizeof(&msg->auth_token_length);
+    std::memcpy(&msg->auth_token_length, buf + index, sizeof(msg->auth_token_length));
+    index = index + sizeof(msg->auth_token_length);
 
     msg->auth_token = std::string((char *)buf + index);
     index = index + TOKEN_LEN + 1;
@@ -199,6 +208,9 @@ uint32_t refresh_token_response::pack(void *raw_msg, uint8_t *buf)
     uint32_t index = 0;
     uint8_t auth_token_length = msg->auth_token.length();
 
+    std::memcpy(buf + index, &msg->status, sizeof(msg->status));
+    index = index + sizeof(msg->status);
+
     std::memcpy(buf + index, &auth_token_length, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
 
@@ -214,8 +226,11 @@ void refresh_token_response::unpack(void *raw_msg, uint8_t *buf)
     refresh_token_response *msg = (refresh_token_response *)raw_msg;
     uint32_t index = 0;
 
-    std::memcpy(&msg->auth_token_length, buf + index, sizeof(auth_token_length));
-    index = index + sizeof(auth_token_length);
+    std::memcpy(&msg->status, buf + index, sizeof(msg->status));
+    index = index + sizeof(msg->status);
+
+    std::memcpy(&msg->auth_token_length, buf + index, sizeof(msg->auth_token_length));
+    index = index + sizeof(msg->auth_token_length);
 
     msg->auth_token = std::string((char *)buf + index);
     index += TOKEN_LEN + 1;
@@ -296,6 +311,7 @@ void create_user_response::unpack(void *raw_msg, uint8_t *buf)
     std::memcpy(&(msg->status), buf + index, sizeof(msg->status));
     index += sizeof(msg->status);
 
+    msg->user = new account;
     index += account::unpack(msg->user, buf + index);
 }
 
@@ -311,18 +327,26 @@ uint32_t poem_create_request::pack(void *raw_msg, uint8_t *buf)
     index = index + sizeof(auth_token_length);
 
     std::strncpy((char *)buf + index, msg->auth_token.c_str(), TOKEN_LEN);
+
+    index += poem::pack(msg->poem_create, buf + index);
+    index += account::pack(msg->user, buf + index);
 }
 
 void poem_create_request::unpack(void *raw_msg, uint8_t *buf)
 {
     poem_create_request *msg = (poem_create_request *)raw_msg;
     uint32_t index = 0;
-    uint8_t auth_token_length;
 
-    std::memcpy(&auth_token_length, buf + index, sizeof(auth_token_length));
+    std::memcpy(&msg->auth_token_length, buf + index, sizeof(auth_token_length));
     index = index + sizeof(auth_token_length);
 
     msg->auth_token = std::string((char *)buf + index);
+
+    msg->user = new account;
+    msg->poem_create = new poem;
+
+    index += poem::unpack(msg->poem_create, buf + index);
+    index += account::unpack(msg->user, buf + index);
 }
 
 uint32_t poem_create_response::pack(void *raw_msg, uint8_t *buf)

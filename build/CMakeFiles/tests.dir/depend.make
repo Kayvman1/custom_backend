@@ -35,6 +35,7 @@ CMakeFiles/tests.dir/tests/test.cpp.o: ../lib/Catch2/src/catch2/../catch2/intern
 CMakeFiles/tests.dir/tests/test.cpp.o: ../lib/Catch2/src/catch2/../catch2/internal/catch_unique_name.hpp
 CMakeFiles/tests.dir/tests/test.cpp.o: ../lib/Catch2/src/catch2/../catch2/internal/catch_unique_ptr.hpp
 CMakeFiles/tests.dir/tests/test.cpp.o: ../lib/Catch2/src/catch2/../catch2/internal/catch_void_type.hpp
+CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packet_ids.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packets.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/ring_buffer/ring_buffer.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../tests/test.cpp

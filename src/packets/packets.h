@@ -3,6 +3,7 @@
 #define PASSWORD_LEN 31
 #define TOKEN_LEN 31
 #define EMAIL_LEN 127
+
 // TODO MOVE THESE MACROS
 #define TITLE_LEN 50
 #define CONTENT_LEN 50
@@ -104,7 +105,7 @@ public:
     static uint32_t pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
 };
-class create_user_response 
+class create_user_response
 {
 public:
     uint16_t status;
@@ -118,10 +119,11 @@ public:
 class poem_create_request
 {
 public:
-    // User class;
-    // POEM;
-
     std::string auth_token;
+    uint8_t auth_token_length;
+    poem *poem_create;
+    account *user;
+
     static uint32_t pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
 };
@@ -138,7 +140,7 @@ class poem_feed_request
 public:
     std::string auth_token;
     uint8_t auth_token_length;
-    account *user; 
+    account *user;
 
     static uint32_t pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
