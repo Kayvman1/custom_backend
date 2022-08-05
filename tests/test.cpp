@@ -344,9 +344,9 @@ TEST_CASE("RingBufferRead", "[ring_buffer]")
     REQUIRE((uint8_t)*x == 11);
 }
 
-TEST_CASE("RingBufferUseCase1", "[ring_buffer]")
+TEST_CASE("RingBufferUseCaseNoWrap", "[ring_buffer]")
 {
-    ring_buffer *buf = new ring_buffer(2000);
+    ring_buffer *buf = new ring_buffer(300);
     uint8_t *b = (uint8_t *)malloc(100);
     uint8_t *read = (uint8_t *)malloc(100);
     login_response *msg1 = new login_response;
@@ -380,14 +380,60 @@ TEST_CASE("RingBufferUseCase1", "[ring_buffer]")
     len = login_response::pack(msg4, b);
     buf->write(b, len);
 
-    std::cout << len * 4;
-
     login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "1");
     login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "2");
     login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "3");
+    login_response::unpack(ret, (uint8_t *)buf->read());
+    REQUIRE(ret->auth_token == "4");
+}
+
+TEST_CASE("RingBufferUseCaseWithWrap", "[ring_buffer]")
+{
+    ring_buffer *buf = new ring_buffer(200);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    login_response *msg1 = new login_response;
+    login_response *msg2 = new login_response;
+    login_response *msg3 = new login_response;
+    login_response *msg4 = new login_response;
+    login_response *ret = new login_response;
+    account *user = new account;
+    int len;
+
+    user->username = "username";
+    msg1->status = 1;
+    msg1->auth_token = "1";
+    msg1->user = user;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+    msg2->user = user;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+    msg3->user = user;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+    msg4->user = user;
+
+    len = login_response::pack(msg1, b);
+    buf->write(b, len);
+    login_response::unpack(ret, (uint8_t *)buf->read());
+    REQUIRE(ret->auth_token == "1");
+
+    len = login_response::pack(msg2, b);
+    buf->write(b, len);
+    login_response::unpack(ret, (uint8_t *)buf->read());
+    REQUIRE(ret->auth_token == "2");
+
+    len = login_response::pack(msg3, b);
+    buf->write(b, len);
+    login_response::unpack(ret, (uint8_t *)buf->read());
+    REQUIRE(ret->auth_token == "3");
+
+    len = login_response::pack(msg4, b);
+    buf->write(b, len);
     login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "4");
 }
