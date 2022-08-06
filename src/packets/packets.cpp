@@ -26,7 +26,7 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     std::memcpy(buf + index, &msg->flags, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    buf_size_addr = index;
+    buf_size_addr = index ;
     index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)
@@ -34,20 +34,21 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     case CONTROL_PACKET:
         switch (msg->message_id)
         {
-#define X(ClassName, ClassID)                                 \
-    case ClassID:                                             \
-    {                                                         \
+#define X(ClassName, ClassID)                  \
+    case ClassID:                              \
+    {                                          \
         message_size = ClassName::pack(raw_msg, buf + index); \
-        break;                                                \
-    }                                                         \
-        CONTROL_PACKET_TABLE
+        break;                                 \
+    }
+
+            CONTROL_PACKET_TABLE
 #undef X
             break;
         }
         break;
     }
 
-    std::memcpy(buf + buf_size_addr, &message_size, sizeof(buf_size));
+    std::memcpy(buf + buf_size_addr, &message_size, sizeof(message_size));
     index += message_size;
     return index;
 }
@@ -73,7 +74,7 @@ void packet::unpack(packet *msg, uint8_t *buf)
     std::memcpy(&msg->flags, buf + index, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->flags));
+    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->buf_size));
     index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)

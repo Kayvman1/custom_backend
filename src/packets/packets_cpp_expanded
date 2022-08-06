@@ -28821,7 +28821,7 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     std::memcpy(buf + index, &msg->flags, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    buf_size_addr = index;
+    buf_size_addr = index ;
     index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)
@@ -28829,13 +28829,21 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     case CONTROL_PACKET:
         switch (msg->message_id)
         {
-# 45 "packets.cpp"
+
+
+
+
+
+
+
+            case 1: { message_size = login_request::pack(raw_msg, buf + index); break; } case 2: { message_size = login_response::pack(raw_msg, buf + index); break; } case 3: { message_size = refresh_token_request::pack(raw_msg, buf + index); break; } case 4: { message_size = refresh_token_response::pack(raw_msg, buf + index); break; } case 5: { message_size = create_user_request::pack(raw_msg, buf + index); break; } case 6: { message_size = create_user_response::pack(raw_msg, buf + index); break; }
+
             break;
         }
         break;
     }
 
-    std::memcpy(buf + buf_size_addr, &message_size, sizeof(buf_size));
+    std::memcpy(buf + buf_size_addr, &message_size, sizeof(message_size));
     index += message_size;
     return index;
 }
@@ -28861,7 +28869,7 @@ void packet::unpack(packet *msg, uint8_t *buf)
     std::memcpy(&msg->flags, buf + index, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->flags));
+    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->buf_size));
     index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)
@@ -28869,8 +28877,8 @@ void packet::unpack(packet *msg, uint8_t *buf)
     case CONTROL_PACKET:
         switch (msg->message_id)
         {
-# 93 "packets.cpp"
-            case 1: { login_request *login_request_pointer; login_request::unpack(login_request_pointer, buf + index); break; } case 2: { login_response *login_response_pointer; login_response::unpack(login_response_pointer, buf + index); break; } case 3: { refresh_token_request *refresh_token_request_pointer; refresh_token_request::unpack(refresh_token_request_pointer, buf + index); break; } case 4: { refresh_token_response *refresh_token_response_pointer; refresh_token_response::unpack(refresh_token_response_pointer, buf + index); break; } case 5: { create_user_request *create_user_request_pointer; create_user_request::unpack(create_user_request_pointer, buf + index); break; } case 6: { create_user_response *create_user_response_pointer; create_user_response::unpack(create_user_response_pointer, buf + index); break; }
+# 94 "packets.cpp"
+            case 1: { login_request *login_request_pointer = new login_request; login_request::unpack(login_request_pointer, buf + index); break; } case 2: { login_response *login_response_pointer = new login_response; login_response::unpack(login_response_pointer, buf + index); break; } case 3: { refresh_token_request *refresh_token_request_pointer = new refresh_token_request; refresh_token_request::unpack(refresh_token_request_pointer, buf + index); break; } case 4: { refresh_token_response *refresh_token_response_pointer = new refresh_token_response; refresh_token_response::unpack(refresh_token_response_pointer, buf + index); break; } case 5: { create_user_request *create_user_request_pointer = new create_user_request; create_user_request::unpack(create_user_request_pointer, buf + index); break; } case 6: { create_user_response *create_user_response_pointer = new create_user_response; create_user_response::unpack(create_user_response_pointer, buf + index); break; }
 
             break;
         }

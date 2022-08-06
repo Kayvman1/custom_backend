@@ -22,4 +22,6 @@ add_test( RingBufferUseCaseNoWrap /home/kayvan/Repos/custom_backend/build/tests 
 set_tests_properties( RingBufferUseCaseNoWrap PROPERTIES WORKING_DIRECTORY /home/kayvan/Repos/custom_backend/build)
 add_test( RingBufferUseCaseWithWrap /home/kayvan/Repos/custom_backend/build/tests RingBufferUseCaseWithWrap  )
 set_tests_properties( RingBufferUseCaseWithWrap PROPERTIES WORKING_DIRECTORY /home/kayvan/Repos/custom_backend/build)
-set( tests_TESTS SerializeLoginRequest SerializeLoginResponse SerializeRefreshRequest SerializeRefreshResponse SerializeCreateUserRequest SerializeCreateUserResponse SerializeAccount SerializePacket RingBufferWrite RingBufferRead RingBufferUseCaseNoWrap RingBufferUseCaseWithWrap)
+add_test( RingBufferReadBytes /home/kayvan/Repos/custom_backend/build/tests RingBufferReadBytes  )
+set_tests_properties( RingBufferReadBytes PROPERTIES WORKING_DIRECTORY /home/kayvan/Repos/custom_backend/build)
+set( tests_TESTS SerializeLoginRequest SerializeLoginResponse SerializeRefreshRequest SerializeRefreshResponse SerializeCreateUserRequest SerializeCreateUserResponse SerializeAccount SerializePacket RingBufferWrite RingBufferRead RingBufferUseCaseNoWrap RingBufferUseCaseWithWrap RingBufferReadBytes)

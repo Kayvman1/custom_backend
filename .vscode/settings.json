@@ -58,6 +58,7 @@
         "iomanip": "cpp",
         "mutex": "cpp",
         "cinttypes": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "packets_cpp_expanded": "cpp"
     }
 }

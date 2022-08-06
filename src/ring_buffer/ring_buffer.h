@@ -6,8 +6,8 @@
 class ring_buffer
 {
 public:
-    std::mutex read_lock;
-    std::mutex write_lock;
+    std::recursive_mutex read_lock;
+    std::recursive_mutex write_lock;
     uint8_t *buf;
     uint8_t *read_pointer;
     uint8_t *write_pointer;

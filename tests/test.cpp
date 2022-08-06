@@ -3,6 +3,7 @@
 #include "../src/packets/packets.h"
 #include "../src/packets/packet_ids.h"
 #include "../src/ring_buffer/ring_buffer.h"
+#include <thread>
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -13,13 +14,14 @@ TEST_CASE("SerializeLoginRequest", "[serialize]")
     msg1->username = "Hello";
     msg1->password = "World!";
 
-    login_request::pack(msg1, buf);
+    int size = login_request::pack(msg1, buf);
     login_request::unpack(msg2, buf);
 
     REQUIRE(msg1->username == msg2->username);
     REQUIRE(msg1->password == msg2->password);
     REQUIRE(msg2->username_length == msg1->username.length());
     REQUIRE(msg2->password_length == msg1->password.length());
+    REQUIRE(size == 66);
 }
 
 TEST_CASE("SerializeLoginResponse", "[serialize]")
@@ -302,6 +304,7 @@ TEST_CASE("SerializePacket", "[serialize]")
     pac1->magic = 1;
     pac1->session_token = 1;
     pac1->flags = 4;
+    pac1->buf_size = login_request::pack(msg1,buf);
 
     msg1->username = "username";
     msg1->password = "password";
@@ -315,6 +318,7 @@ TEST_CASE("SerializePacket", "[serialize]")
     REQUIRE(pac1->magic == pac2->magic);
     REQUIRE(pac1->session_token == pac2->session_token);
     REQUIRE(pac1->flags == pac2->flags);
+    REQUIRE(pac1->buf_size == pac2->buf_size);
 }
 
 TEST_CASE("RingBufferWrite", "[ring_buffer]")
@@ -436,4 +440,67 @@ TEST_CASE("RingBufferUseCaseWithWrap", "[ring_buffer]")
     buf->write(b, len);
     login_response::unpack(ret, (uint8_t *)buf->read());
     REQUIRE(ret->auth_token == "4");
+}
+
+
+
+int test(ring_buffer *ring_buf);
+TEST_CASE("RingBufferReadBytes", "[ring_buffer]")
+{
+    ring_buffer *buf = new ring_buffer(400);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    packet *p = new packet;
+    login_response *msg1 = new login_response;
+    login_response *msg2 = new login_response;
+    login_response *msg3 = new login_response;
+    login_response *msg4 = new login_response;
+    login_response *ret = new login_response;
+    account *user = new account;
+    int len;
+
+    p->message_id = login_response_id;
+    p->message_type = 0;
+    p->magic = 123456;
+    p->session_token = 1;
+    p->flags = 0;
+    user->username = "username";
+    msg1->status = 1;
+    msg1->auth_token = "1";
+    msg1->user = user;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+    msg2->user = user;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+    msg3->user = user;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+    msg4->user = user;
+
+    len = packet::pack(p, b, msg1);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg2);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg3);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg4);
+    buf->write(b, len);
+
+    test(buf);
+}
+
+int test(ring_buffer *ring_buf)
+{
+    uint8_t *message_buf = (uint8_t *)malloc(100);
+    ring_buf->read_bytes(message_buf, 1);
+    ring_buf->read_bytes(message_buf, 1);
+    ring_buf->read_bytes(message_buf, 8);
+    ring_buf->read_bytes(message_buf, 8);
+    ring_buf->read_bytes(message_buf, 4);
+    ring_buf->read_bytes(message_buf, 4);
+
+    uint32_t *s;
+    s = (uint32_t *)message_buf + 22;
+    std::cout << *s;
 }
