@@ -12,10 +12,7 @@
 #include <thread>
 #include <cstddef>
 
-#include "../packets/packets.h";
-
-#include "../ring_buffer/ring_buffer.h"
-
+#include "../packets/packets.h"
 #include "server.h"
 
 void server::start(int port_number)
@@ -84,9 +81,31 @@ void server::start(int port_number)
 
         else
         {
-            //std::thread clientThread(handle_thread, new_socket);
-            //clientThread.detach();
+            // std::thread clientThread(handle_thread, new_socket);
+            // clientThread.detach();
         }
     }
     return;
+}
+
+virtual_socket *server::new_virtual_connection()
+{
+    virtual_socket *sock = new virtual_socket;
+    lock.lock();
+    connections.push_back(sock);
+    lock.unlock();
+    return sock;
+}
+
+void server::terminate_virtual_connections(virtual_socket *connection)
+{
+    lock.lock();
+    for (int i = 0; i < connections.size(); i++)
+    {
+        if (connections[i] == connection)
+        {
+            connections.erase(connections.begin() + i - 1);
+        }
+    }
+    lock.unlock();
 }

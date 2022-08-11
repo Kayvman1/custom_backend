@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvirtual_socket.a  CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o
+/usr/bin/ranlib libvirtual_socket.a

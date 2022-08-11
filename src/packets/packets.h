@@ -42,7 +42,8 @@ public:
     uint32_t buf_size;
 
     static uint32_t pack(packet *msg, uint8_t *buf, void *raw_msg);
-    static void unpack(packet *msg, uint8_t *buf);
+    static void *unpack(packet *msg, uint8_t *buf);
+    static void *message_unpack(uint8_t *buf, uint8_t m_type, uint8_t m_id);
 };
 
 // MESSAGE CLASS 0: CONTROL PACKETS

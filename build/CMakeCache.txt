@@ -476,6 +476,9 @@ ring_buffer_LIB_DEPENDS:STATIC=
 //Dependencies for target
 server_LIB_DEPENDS:STATIC=
 
+//Dependencies for target
+virtual_socket_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
         port_arg = atoi(argv[1]);
     }
 
-    server runner =  server();
+    server *runner =  new server();
 
-    runner.start(port_arg);
+    runner->start(port_arg);
 }

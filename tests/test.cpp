@@ -298,19 +298,20 @@ TEST_CASE("SerializePacket", "[serialize]")
     packet *pac1 = new packet;
     packet *pac2 = new packet;
     login_request *msg1 = new login_request;
+    login_request *msg2 = new login_request;
 
     pac1->message_type = 0;
     pac1->message_id = login_request_id;
     pac1->magic = 1;
     pac1->session_token = 1;
     pac1->flags = 4;
-    pac1->buf_size = login_request::pack(msg1,buf);
+    pac1->buf_size = login_request::pack(msg1, buf);
 
     msg1->username = "username";
     msg1->password = "password";
 
     packet::pack(pac1, buf, msg1);
-    packet::unpack(pac2, buf);
+    msg2 = (login_request *)packet::unpack(pac2, buf);
 
     // TODO CANT COMPARE MESGAGES BECAUSE DESERIALZED message arent returned
     REQUIRE(pac1->message_type == pac2->message_type);
@@ -319,6 +320,8 @@ TEST_CASE("SerializePacket", "[serialize]")
     REQUIRE(pac1->session_token == pac2->session_token);
     REQUIRE(pac1->flags == pac2->flags);
     REQUIRE(pac1->buf_size == pac2->buf_size);
+    REQUIRE(msg1->username == msg2->username);
+    REQUIRE(msg1->password == msg2->password);
 }
 
 TEST_CASE("RingBufferWrite", "[ring_buffer]")
@@ -442,10 +445,8 @@ TEST_CASE("RingBufferUseCaseWithWrap", "[ring_buffer]")
     REQUIRE(ret->auth_token == "4");
 }
 
-
-
-int test(ring_buffer *ring_buf);
-TEST_CASE("RingBufferReadBytes", "[ring_buffer]")
+int test(ring_buffer *ring_buf, int read_number);
+TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
 {
     ring_buffer *buf = new ring_buffer(400);
     uint8_t *b = (uint8_t *)malloc(100);
@@ -487,20 +488,83 @@ TEST_CASE("RingBufferReadBytes", "[ring_buffer]")
     len = packet::pack(p, b, msg4);
     buf->write(b, len);
 
-    test(buf);
+    test(buf, 1);
+    test(buf, 2);
+    test(buf, 3);
+    test(buf, 4);
+}
+TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
+{
+    ring_buffer *buf = new ring_buffer(400);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    packet *p = new packet;
+    login_response *msg1 = new login_response;
+    login_response *msg2 = new login_response;
+    login_response *msg3 = new login_response;
+    login_response *msg4 = new login_response;
+    login_response *ret = new login_response;
+    account *user = new account;
+    int len;
+
+    p->message_id = login_response_id;
+    p->message_type = 0;
+    p->magic = 123456;
+    p->session_token = 1;
+    p->flags = 0;
+    user->username = "username";
+    msg1->status = 1;
+    msg1->auth_token = "1";
+    msg1->user = user;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+    msg2->user = user;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+    msg3->user = user;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+    msg4->user = user;
+
+    len = packet::pack(p, b, msg1);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg2);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg3);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg4);
+    buf->write(b, len);
+
+    std::thread clientThread1(test, buf, 1);
+    std::thread clientThread2(test, buf, 2);
+    std::thread clientThread3(test, buf, 3);
+    std::thread clientThread4(test, buf, 4);
+
+    clientThread1.join();
+    clientThread2.join();
+    clientThread3.join();
+    clientThread4.join();
+
 }
 
-int test(ring_buffer *ring_buf)
+int test(ring_buffer *ring_buf, int read_number)
 {
-    uint8_t *message_buf = (uint8_t *)malloc(100);
-    ring_buf->read_bytes(message_buf, 1);
-    ring_buf->read_bytes(message_buf, 1);
-    ring_buf->read_bytes(message_buf, 8);
-    ring_buf->read_bytes(message_buf, 8);
-    ring_buf->read_bytes(message_buf, 4);
-    ring_buf->read_bytes(message_buf, 4);
+    packet *unpack = new packet;
+    ring_buf->read_bytes(&unpack->message_type, 1);
+    ring_buf->read_bytes(&unpack->message_id, 1);
+    ring_buf->read_bytes(&unpack->magic, 8);
+    ring_buf->read_bytes(&unpack->session_token, 8);
+    ring_buf->read_bytes(&unpack->flags, 4);
+    ring_buf->read_bytes(&unpack->buf_size, 4);
 
-    uint32_t *s;
-    s = (uint32_t *)message_buf + 22;
-    std::cout << *s;
+    std::cout << unpack->buf_size << std::endl;
+
+    uint8_t *team = (uint8_t *)malloc(unpack->buf_size);
+    ring_buf->read_bytes(team, unpack->buf_size);
+
+    login_response *msg;
+    msg = (login_response *)packet::message_unpack(team, unpack->message_type, unpack->message_id);
+
+    REQUIRE(msg->status == atoi(msg->auth_token.c_str()));
+    return 0;
 }

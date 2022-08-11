@@ -538,17 +538,30 @@ Catch2WithMain/fast:
 .PHONY : Catch2WithMain/fast
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named ring_buffer
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
+ring_buffer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ring_buffer
+.PHONY : ring_buffer
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
-.PHONY : server/fast
+ring_buffer/fast:
+	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
+.PHONY : ring_buffer/fast
+
+#=============================================================================
+# Target rules for targets named virtual_socket
+
+# Build rule for target.
+virtual_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 virtual_socket
+.PHONY : virtual_socket
+
+# fast build rule for target.
+virtual_socket/fast:
+	$(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/build
+.PHONY : virtual_socket/fast
 
 #=============================================================================
 # Target rules for targets named packets
@@ -564,17 +577,17 @@ packets/fast:
 .PHONY : packets/fast
 
 #=============================================================================
-# Target rules for targets named ring_buffer
+# Target rules for targets named server
 
 # Build rule for target.
-ring_buffer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ring_buffer
-.PHONY : ring_buffer
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-ring_buffer/fast:
-	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
-.PHONY : ring_buffer/fast
+server/fast:
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 runner/main.o: runner/main.cpp.o
 
@@ -671,9 +684,10 @@ help:
 	@echo "... ExperimentalStart"
 	@echo "... Catch2"
 	@echo "... Catch2WithMain"
-	@echo "... server"
-	@echo "... packets"
 	@echo "... ring_buffer"
+	@echo "... virtual_socket"
+	@echo "... packets"
+	@echo "... server"
 	@echo "... runner/main.o"
 	@echo "... runner/main.i"
 	@echo "... runner/main.s"

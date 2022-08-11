@@ -102,7 +102,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ExperimentalStart.dir/DependInfo.cmake"
   "lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   "lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
-  "src/CMakeFiles/server.dir/DependInfo.cmake"
-  "src/CMakeFiles/packets.dir/DependInfo.cmake"
   "src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
+  "src/CMakeFiles/virtual_socket.dir/DependInfo.cmake"
+  "src/CMakeFiles/packets.dir/DependInfo.cmake"
+  "src/CMakeFiles/server.dir/DependInfo.cmake"
   )

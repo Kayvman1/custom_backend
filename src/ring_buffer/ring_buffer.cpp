@@ -114,10 +114,6 @@ void ring_buffer::print()
 int ring_buffer::read_bytes(void *write_buf, int read_size)
 {
 
-    read_lock.lock();
-    // NOW WE ARE THREAD SAFE
-
-    // first check to see if write fits
     uint8_t *stop_pointer = stack.front();
     int bytes_left_message = stop_pointer - read_pointer;
 
@@ -135,7 +131,8 @@ int ring_buffer::read_bytes(void *write_buf, int read_size)
         {
             memcpy(write_buf, read_pointer, bytes_left_message);
             read_pointer += bytes_left_message;
-            write_lock.unlock();
+            stack.pop();
+
             return bytes_left_message;
         }
     }
@@ -159,8 +156,7 @@ int ring_buffer::read_bytes(void *write_buf, int read_size)
 
             memcpy(write_buf + segment_right, buf, bytes_left_message);
             read_pointer = buf + bytes_left_message;
-
-            write_lock.unlock();
+            stack.pop();
             return bytes_left_message + segment_right;
         }
     }

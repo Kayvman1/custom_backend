@@ -9,4 +9,6 @@ public:
     void server_write();
     void *client_read();
     void client_write();
+
+    int read_bytes(void *write_bytes, int size);
 };

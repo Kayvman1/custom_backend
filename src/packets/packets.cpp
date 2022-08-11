@@ -26,7 +26,7 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     std::memcpy(buf + index, &msg->flags, sizeof(msg->flags));
     index = index + sizeof(msg->flags);
 
-    buf_size_addr = index ;
+    buf_size_addr = index;
     index = index + sizeof(msg->buf_size);
 
     switch (msg->message_type)
@@ -34,11 +34,11 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     case CONTROL_PACKET:
         switch (msg->message_id)
         {
-#define X(ClassName, ClassID)                  \
-    case ClassID:                              \
-    {                                          \
+#define X(ClassName, ClassID)                                 \
+    case ClassID:                                             \
+    {                                                         \
         message_size = ClassName::pack(raw_msg, buf + index); \
-        break;                                 \
+        break;                                                \
     }
 
             CONTROL_PACKET_TABLE
@@ -53,7 +53,7 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     return index;
 }
 
-void packet::unpack(packet *msg, uint8_t *buf)
+void *packet::unpack(packet *msg, uint8_t *buf)
 {
     // Do pass in a raw buff or instantiate one here
 
@@ -88,6 +88,7 @@ void packet::unpack(packet *msg, uint8_t *buf)
                                                              \
         ClassName *ClassName##_pointer = new ClassName;      \
         ClassName::unpack(ClassName##_pointer, buf + index); \
+        return ClassName##_pointer;                          \
         break;                                               \
     }
 
@@ -99,6 +100,30 @@ void packet::unpack(packet *msg, uint8_t *buf)
     }
 }
 
+void *packet::message_unpack(uint8_t *buf, uint8_t m_type, uint8_t m_id)
+{
+    switch (m_type)
+    {
+    case CONTROL_PACKET:
+        switch (m_id)
+        {
+#define X(ClassName, ClassID)                                \
+    case ClassID:                                            \
+    {                                                        \
+                                                             \
+        ClassName *ClassName##_pointer = new ClassName;      \
+        ClassName::unpack(ClassName##_pointer, buf); \
+        return ClassName##_pointer;                          \
+        break;                                               \
+    }
+
+            CONTROL_PACKET_TABLE
+#undef X
+            break;
+        }
+        break;
+    }
+}
 uint32_t login_request::pack(void *raw_msg, uint8_t *buf)
 {
     login_request *msg = (login_request *)raw_msg;

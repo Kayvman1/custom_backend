@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/kayvan/Repos/custom_backend/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,6 +77,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,19 +122,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/server.dir/rule:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
-.PHONY : src/CMakeFiles/server.dir/rule
+src/CMakeFiles/ring_buffer.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ring_buffer.dir/rule
+.PHONY : src/CMakeFiles/ring_buffer.dir/rule
 
 # Convenience name for target.
-server: src/CMakeFiles/server.dir/rule
+ring_buffer: src/CMakeFiles/ring_buffer.dir/rule
 
-.PHONY : server
+.PHONY : ring_buffer
 
 # fast build rule for target.
-server/fast:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
-.PHONY : server/fast
+ring_buffer/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
+.PHONY : ring_buffer/fast
+
+# Convenience name for target.
+src/CMakeFiles/virtual_socket.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/virtual_socket.dir/rule
+.PHONY : src/CMakeFiles/virtual_socket.dir/rule
+
+# Convenience name for target.
+virtual_socket: src/CMakeFiles/virtual_socket.dir/rule
+
+.PHONY : virtual_socket
+
+# fast build rule for target.
+virtual_socket/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/build
+.PHONY : virtual_socket/fast
 
 # Convenience name for target.
 src/CMakeFiles/packets.dir/rule:
@@ -152,19 +167,19 @@ packets/fast:
 .PHONY : packets/fast
 
 # Convenience name for target.
-src/CMakeFiles/ring_buffer.dir/rule:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ring_buffer.dir/rule
-.PHONY : src/CMakeFiles/ring_buffer.dir/rule
+src/CMakeFiles/server.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
+.PHONY : src/CMakeFiles/server.dir/rule
 
 # Convenience name for target.
-ring_buffer: src/CMakeFiles/ring_buffer.dir/rule
+server: src/CMakeFiles/server.dir/rule
 
-.PHONY : ring_buffer
+.PHONY : server
 
 # fast build rule for target.
-ring_buffer/fast:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
-.PHONY : ring_buffer/fast
+server/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 packets/packets.o: packets/packets.cpp.o
 
@@ -220,6 +235,33 @@ ring_buffer/ring_buffer.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s
 .PHONY : ring_buffer/ring_buffer.cpp.s
 
+ring_buffer/virtual_socket.o: ring_buffer/virtual_socket.cpp.o
+
+.PHONY : ring_buffer/virtual_socket.o
+
+# target to build an object file
+ring_buffer/virtual_socket.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o
+.PHONY : ring_buffer/virtual_socket.cpp.o
+
+ring_buffer/virtual_socket.i: ring_buffer/virtual_socket.cpp.i
+
+.PHONY : ring_buffer/virtual_socket.i
+
+# target to preprocess a source file
+ring_buffer/virtual_socket.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.i
+.PHONY : ring_buffer/virtual_socket.cpp.i
+
+ring_buffer/virtual_socket.s: ring_buffer/virtual_socket.cpp.s
+
+.PHONY : ring_buffer/virtual_socket.s
+
+# target to generate assembly for a file
+ring_buffer/virtual_socket.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.s
+.PHONY : ring_buffer/virtual_socket.cpp.s
+
 server/server.o: server/server.cpp.o
 
 .PHONY : server/server.o
@@ -253,18 +295,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... packets"
-	@echo "... edit_cache"
 	@echo "... ring_buffer"
+	@echo "... virtual_socket"
+	@echo "... edit_cache"
+	@echo "... packets"
+	@echo "... server"
+	@echo "... test"
 	@echo "... packets/packets.o"
 	@echo "... packets/packets.i"
 	@echo "... packets/packets.s"
 	@echo "... ring_buffer/ring_buffer.o"
 	@echo "... ring_buffer/ring_buffer.i"
 	@echo "... ring_buffer/ring_buffer.s"
+	@echo "... ring_buffer/virtual_socket.o"
+	@echo "... ring_buffer/virtual_socket.i"
+	@echo "... ring_buffer/virtual_socket.s"
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"

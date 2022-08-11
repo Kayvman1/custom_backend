@@ -607,12 +607,12 @@ clean: CMakeFiles/NightlyTest.dir/clean
 # Target rules for target CMakeFiles/server_runner.dir
 
 # All Build rule for target.
-CMakeFiles/server_runner.dir/all: src/CMakeFiles/server.dir/all
-CMakeFiles/server_runner.dir/all: src/CMakeFiles/packets.dir/all
 CMakeFiles/server_runner.dir/all: src/CMakeFiles/ring_buffer.dir/all
+CMakeFiles/server_runner.dir/all: src/CMakeFiles/packets.dir/all
+CMakeFiles/server_runner.dir/all: src/CMakeFiles/server.dir/all
 	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/depend
 	$(MAKE) -f CMakeFiles/server_runner.dir/build.make CMakeFiles/server_runner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=97,98 "Built target server_runner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=95,96 "Built target server_runner"
 .PHONY : CMakeFiles/server_runner.dir/all
 
 # Include target in all.
@@ -680,12 +680,12 @@ clean: CMakeFiles/NightlyStart.dir/clean
 # All Build rule for target.
 CMakeFiles/tests.dir/all: lib/Catch2/src/CMakeFiles/Catch2.dir/all
 CMakeFiles/tests.dir/all: lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/all
-CMakeFiles/tests.dir/all: src/CMakeFiles/server.dir/all
-CMakeFiles/tests.dir/all: src/CMakeFiles/packets.dir/all
 CMakeFiles/tests.dir/all: src/CMakeFiles/ring_buffer.dir/all
+CMakeFiles/tests.dir/all: src/CMakeFiles/packets.dir/all
+CMakeFiles/tests.dir/all: src/CMakeFiles/server.dir/all
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=99,100 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=97,98 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Include target in all.
@@ -695,7 +695,7 @@ all: CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 98
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 96
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -1080,7 +1080,7 @@ lib/Catch2/src/preinstall:
 lib/Catch2/src/CMakeFiles/Catch2.dir/all:
 	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/depend
 	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Built target Catch2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Built target Catch2"
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/all
 
 # Include target in all.
@@ -1090,7 +1090,7 @@ all: lib/Catch2/src/CMakeFiles/Catch2.dir/all
 
 # Build rule for subdir invocation for target.
 lib/Catch2/src/CMakeFiles/Catch2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 89
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 87
 	$(MAKE) -f CMakeFiles/Makefile2 lib/Catch2/src/CMakeFiles/Catch2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/rule
@@ -1117,7 +1117,7 @@ clean: lib/Catch2/src/CMakeFiles/Catch2.dir/clean
 lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/all: lib/Catch2/src/CMakeFiles/Catch2.dir/all
 	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build.make lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/depend
 	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build.make lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=90,91 "Built target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=88,89 "Built target Catch2WithMain"
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/all
 
 # Include target in all.
@@ -1127,7 +1127,7 @@ all: lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/all
 
 # Build rule for subdir invocation for target.
 lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 91
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 89
 	$(MAKE) -f CMakeFiles/Makefile2 lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/rule
@@ -1151,16 +1151,18 @@ clean: lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/clean
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/CMakeFiles/server.dir/all
-src/all: src/CMakeFiles/packets.dir/all
 src/all: src/CMakeFiles/ring_buffer.dir/all
+src/all: src/CMakeFiles/virtual_socket.dir/all
+src/all: src/CMakeFiles/packets.dir/all
+src/all: src/CMakeFiles/server.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/CMakeFiles/server.dir/clean
-src/clean: src/CMakeFiles/packets.dir/clean
 src/clean: src/CMakeFiles/ring_buffer.dir/clean
+src/clean: src/CMakeFiles/virtual_socket.dir/clean
+src/clean: src/CMakeFiles/packets.dir/clean
+src/clean: src/CMakeFiles/server.dir/clean
 
 .PHONY : src/clean
 
@@ -1170,13 +1172,124 @@ src/preinstall:
 .PHONY : src/preinstall
 
 #=============================================================================
+# Target rules for target src/CMakeFiles/ring_buffer.dir
+
+# All Build rule for target.
+src/CMakeFiles/ring_buffer.dir/all:
+	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/depend
+	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=92 "Built target ring_buffer"
+.PHONY : src/CMakeFiles/ring_buffer.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/ring_buffer.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/ring_buffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ring_buffer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/ring_buffer.dir/rule
+
+# Convenience name for target.
+ring_buffer: src/CMakeFiles/ring_buffer.dir/rule
+
+.PHONY : ring_buffer
+
+# clean rule for target.
+src/CMakeFiles/ring_buffer.dir/clean:
+	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/clean
+.PHONY : src/CMakeFiles/ring_buffer.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/ring_buffer.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/virtual_socket.dir
+
+# All Build rule for target.
+src/CMakeFiles/virtual_socket.dir/all:
+	$(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/depend
+	$(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=99,100 "Built target virtual_socket"
+.PHONY : src/CMakeFiles/virtual_socket.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/virtual_socket.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/virtual_socket.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/virtual_socket.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/virtual_socket.dir/rule
+
+# Convenience name for target.
+virtual_socket: src/CMakeFiles/virtual_socket.dir/rule
+
+.PHONY : virtual_socket
+
+# clean rule for target.
+src/CMakeFiles/virtual_socket.dir/clean:
+	$(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/clean
+.PHONY : src/CMakeFiles/virtual_socket.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/virtual_socket.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/packets.dir
+
+# All Build rule for target.
+src/CMakeFiles/packets.dir/all:
+	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/depend
+	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=90,91 "Built target packets"
+.PHONY : src/CMakeFiles/packets.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/packets.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/packets.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/packets.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/packets.dir/rule
+
+# Convenience name for target.
+packets: src/CMakeFiles/packets.dir/rule
+
+.PHONY : packets
+
+# clean rule for target.
+src/CMakeFiles/packets.dir/clean:
+	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/clean
+.PHONY : src/CMakeFiles/packets.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/packets.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/server.dir
 
 # All Build rule for target.
 src/CMakeFiles/server.dir/all:
 	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/depend
 	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=95,96 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=93,94 "Built target server"
 .PHONY : src/CMakeFiles/server.dir/all
 
 # Include target in all.
@@ -1203,80 +1316,6 @@ src/CMakeFiles/server.dir/clean:
 
 # clean rule for target.
 clean: src/CMakeFiles/server.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/packets.dir
-
-# All Build rule for target.
-src/CMakeFiles/packets.dir/all:
-	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/depend
-	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=92 "Built target packets"
-.PHONY : src/CMakeFiles/packets.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/packets.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/packets.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/packets.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/packets.dir/rule
-
-# Convenience name for target.
-packets: src/CMakeFiles/packets.dir/rule
-
-.PHONY : packets
-
-# clean rule for target.
-src/CMakeFiles/packets.dir/clean:
-	$(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/clean
-.PHONY : src/CMakeFiles/packets.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/packets.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/ring_buffer.dir
-
-# All Build rule for target.
-src/CMakeFiles/ring_buffer.dir/all:
-	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/depend
-	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=93,94 "Built target ring_buffer"
-.PHONY : src/CMakeFiles/ring_buffer.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/ring_buffer.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/ring_buffer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ring_buffer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayvan/Repos/custom_backend/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/ring_buffer.dir/rule
-
-# Convenience name for target.
-ring_buffer: src/CMakeFiles/ring_buffer.dir/rule
-
-.PHONY : ring_buffer
-
-# clean rule for target.
-src/CMakeFiles/ring_buffer.dir/clean:
-	$(MAKE) -f src/CMakeFiles/ring_buffer.dir/build.make src/CMakeFiles/ring_buffer.dir/clean
-.PHONY : src/CMakeFiles/ring_buffer.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/ring_buffer.dir/clean
 
 .PHONY : clean
 
