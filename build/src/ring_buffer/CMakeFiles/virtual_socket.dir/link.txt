@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,libvirtual_socket.so -o libvirtual_socket.so CMakeFiles/virtual_socket.dir/virtual_socket.cpp.o -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/src/ring_buffer libring_buffer.so 

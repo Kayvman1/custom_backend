@@ -100,12 +100,13 @@ void *packet::unpack(packet *msg, uint8_t *buf)
     }
 }
 
-void *packet::message_unpack(uint8_t *buf, uint8_t m_type, uint8_t m_id)
+void *packet::message_unpack(uint8_t *buf)
 {
-    switch (m_type)
+    
+    switch (message_type)
     {
     case CONTROL_PACKET:
-        switch (m_id)
+        switch (message_id)
         {
 #define X(ClassName, ClassID)                                \
     case ClassID:                                            \

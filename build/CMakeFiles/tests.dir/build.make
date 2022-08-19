@@ -60,15 +60,15 @@ include CMakeFiles/tests.dir/flags.make
 CMakeFiles/tests.dir/tests/test.cpp.o: CMakeFiles/tests.dir/flags.make
 CMakeFiles/tests.dir/tests/test.cpp.o: ../tests/test.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/tests/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp
 
 CMakeFiles/tests.dir/tests/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/tests/test.cpp > CMakeFiles/tests.dir/tests/test.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/tests/test.cpp > CMakeFiles/tests.dir/tests/test.cpp.i
 
 CMakeFiles/tests.dir/tests/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/tests/test.cpp -o CMakeFiles/tests.dir/tests/test.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/tests/test.cpp -o CMakeFiles/tests.dir/tests/test.cpp.s
 
 CMakeFiles/tests.dir/tests/test.cpp.o.requires:
 
@@ -90,11 +90,13 @@ tests_EXTERNAL_OBJECTS =
 
 tests: CMakeFiles/tests.dir/tests/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
-tests: lib/Catch2/src/libCatch2Main.a
+tests: lib/Catch2/src/libCatch2Maind.a
 tests: src/libpackets.a
-tests: src/libring_buffer.a
+tests: src/ring_buffer/libring_buffer.so
 tests: src/libserver.a
-tests: lib/Catch2/src/libCatch2.a
+tests: src/ring_buffer/libvirtual_socket.so
+tests: lib/Catch2/src/libCatch2d.a
+tests: src/libpackets.a
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)

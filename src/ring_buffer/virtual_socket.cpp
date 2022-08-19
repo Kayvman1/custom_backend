@@ -1,11 +1,34 @@
 #include "virtual_socket.h"
+#include "ring_buffer.h"
 
-void *virtual_socket::server_read()
+virtual_socket::virtual_socket()
 {
-    server_endpoint.read();
+    ring_buffer *x = new ring_buffer();
+    return;
 }
 
-int virtual_socket::read_bytes(void *write_byte, int size)
+ssize_t virtual_socket::write(int sockfd, void *buffer, size_t num_bytes)
 {
-    server_endpoint.lock; 
+    if (sockfd == virtual_fd::SERVER)
+    {
+        server_endpoint.write(buffer, num_bytes);
+    }
+
+    else if (sockfd == virtual_fd::CLIENT)
+    {
+        client_endpoint.write(buffer, num_bytes);
+    }
+}
+
+ssize_t virtual_socket::read(int sockfd, void *buffer, size_t num_bytes)
+{
+    if (sockfd == virtual_fd::SERVER)
+    {
+        server_endpoint.read_bytes(buffer, num_bytes);
+    }
+
+    else if (sockfd == virtual_fd::CLIENT)
+    {
+        client_endpoint.read_bytes(buffer, num_bytes);
+    }
 }

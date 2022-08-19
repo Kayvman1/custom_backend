@@ -14,7 +14,7 @@ add_subdirectory(src)
 add_executable(tests tests/test.cpp)
 add_executable(server_runner runner/main.cpp)
 
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain Threads::Threads packets ring_buffer server)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain Threads::Threads packets ring_buffer server virtual_socket)
 target_compile_options(tests PRIVATE -pthread -g)
 
 target_link_libraries(server_runner PRIVATE Threads::Threads packets ring_buffer server)

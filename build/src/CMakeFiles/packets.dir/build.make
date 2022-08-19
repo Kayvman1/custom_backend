@@ -60,15 +60,15 @@ include src/CMakeFiles/packets.dir/flags.make
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: src/CMakeFiles/packets.dir/flags.make
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/packets/packets.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/packets.dir/packets/packets.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/packets.dir/packets/packets.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/packets/packets.cpp > CMakeFiles/packets.dir/packets/packets.cpp.i
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/packets/packets.cpp > CMakeFiles/packets.dir/packets/packets.cpp.i
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/packets.dir/packets/packets.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/packets/packets.cpp -o CMakeFiles/packets.dir/packets/packets.cpp.s
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/packets/packets.cpp -o CMakeFiles/packets.dir/packets/packets.cpp.s
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.o.requires:
 

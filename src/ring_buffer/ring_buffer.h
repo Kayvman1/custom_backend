@@ -1,3 +1,6 @@
+#pragma once 
+//#ifndef __RING_BUFFER__
+//#define __RING_BUFFER__
 #include <iostream>
 #include <queue>
 #include <thread>
@@ -22,3 +25,4 @@ public:
     int size_of_next_message();
     int read_bytes(void *buf, int size);
 };
+//#endif

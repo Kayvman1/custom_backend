@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/server_runner.dir/runner/main.cpp.o  -o server_runner src/libpackets.a src/libring_buffer.a src/libserver.a -pthread 
+/usr/bin/g++  -g   CMakeFiles/server_runner.dir/runner/main.cpp.o  -o server_runner -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/src/ring_buffer src/libpackets.a src/ring_buffer/libring_buffer.so src/libserver.a -pthread src/libpackets.a src/ring_buffer/libvirtual_socket.so 

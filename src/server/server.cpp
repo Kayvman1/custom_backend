@@ -14,6 +14,8 @@
 
 #include "../packets/packets.h"
 #include "server.h"
+#include "../ring_buffer/virtual_socket.h"
+void handle_new_connection(int new_socket);
 
 void server::start(int port_number)
 {
@@ -68,7 +70,7 @@ void server::start(int port_number)
 
     int i = 0;
 
-    while (true)
+    while (true) // TODO WAKE ON CONNECTION
     {
         addr_size = sizeof(serverStorage);
         new_socket = accept(server_fd,
@@ -81,8 +83,8 @@ void server::start(int port_number)
 
         else
         {
-            // std::thread clientThread(handle_thread, new_socket);
-            // clientThread.detach();
+            std::thread clientThread(handle_new_connection, new_socket);
+            clientThread.detach();
         }
     }
     return;
@@ -108,4 +110,43 @@ void server::terminate_virtual_connections(virtual_socket *connection)
         }
     }
     lock.unlock();
+}
+
+void handle_new_connection(int socket)
+{
+
+    uint8_t message_buffer[3000];
+    packet *unpack = new packet;
+
+    long val_read;
+    val_read = read(socket, &unpack->message_type, sizeof(packet::message_type));
+    val_read = read(socket, &unpack->message_id, sizeof(packet::message_id));
+
+    val_read = read(socket, &unpack->magic, sizeof(packet::magic));
+    val_read = read(socket, &unpack->session_token, sizeof(packet::session_token));
+    val_read = read(socket, &unpack->flags, sizeof(packet::flags));
+    val_read = read(socket, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = read(socket, message_buffer, unpack->buf_size);
+
+    
+    unpack->message_unpack(message_buffer);
+}
+
+void handle_new_connection1(virtual_socket socket)
+{
+
+    uint8_t message_buffer[3000];
+    packet *unpack = new packet;
+
+    long val_read;
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->magic, sizeof(packet::magic));
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->session_token, sizeof(packet::session_token));
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->flags, sizeof(packet::flags));
+    val_read = socket.read(virtual_fd::CLIENT, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = socket.read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+
+    //unpack->message_unpack(message_buffer);
 }

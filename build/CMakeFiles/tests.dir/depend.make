@@ -38,6 +38,7 @@ CMakeFiles/tests.dir/tests/test.cpp.o: ../lib/Catch2/src/catch2/../catch2/intern
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packet_ids.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packets.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/ring_buffer/ring_buffer.h
+CMakeFiles/tests.dir/tests/test.cpp.o: ../src/ring_buffer/virtual_socket.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../tests/test.cpp
 CMakeFiles/tests.dir/tests/test.cpp.o: generated-includes/catch2/catch_user_config.hpp
 

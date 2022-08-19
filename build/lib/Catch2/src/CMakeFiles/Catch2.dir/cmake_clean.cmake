@@ -98,8 +98,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o"
-  "libCatch2.pdb"
-  "libCatch2.a"
+  "libCatch2d.pdb"
+  "libCatch2d.a"
 )
 
 # Per-language clean rules from dependency scanning.

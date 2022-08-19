@@ -60,15 +60,15 @@ include src/CMakeFiles/server.dir/flags.make
 src/CMakeFiles/server.dir/server/server.cpp.o: src/CMakeFiles/server.dir/flags.make
 src/CMakeFiles/server.dir/server/server.cpp.o: ../src/server/server.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/server.dir/server/server.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp
 
 src/CMakeFiles/server.dir/server/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/server/server.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/server.cpp > CMakeFiles/server.dir/server/server.cpp.i
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/server.cpp > CMakeFiles/server.dir/server/server.cpp.i
 
 src/CMakeFiles/server.dir/server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/server.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
 
 src/CMakeFiles/server.dir/server/server.cpp.o.requires:
 

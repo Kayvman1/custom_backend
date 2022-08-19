@@ -1,14 +1,22 @@
-#include "../ring_buffer/ring_buffer.h"
+#pragma once
+//#ifndef __VIRTUAL_SOCKET__
+//#define __VIRTUAL_SOCKET__
+#include "ring_buffer.h"
 
 class virtual_socket
 {
 public:
+    virtual_socket();
     ring_buffer server_endpoint;
     ring_buffer client_endpoint;
-    void *server_read();
-    void server_write();
-    void *client_read();
-    void client_write();
 
-    int read_bytes(void *write_bytes, int size);
+    ssize_t read(int sockfd, void *buffer, size_t num_bytes);
+    ssize_t write(int sockfd, void *buffer, size_t num_bytes);
 };
+
+enum virtual_fd
+{
+    SERVER,
+    CLIENT
+};
+//#endif

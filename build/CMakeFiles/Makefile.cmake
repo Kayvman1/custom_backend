@@ -18,6 +18,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../lib/Catch2/src/CMakeLists.txt"
   "../lib/Catch2/src/catch2/catch_user_config.hpp.in"
   "../src/CMakeLists.txt"
+  "../src/ring_buffer/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -66,6 +67,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/Catch2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/Catch2/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/ring_buffer/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -102,8 +104,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ExperimentalStart.dir/DependInfo.cmake"
   "lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   "lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
-  "src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
-  "src/CMakeFiles/virtual_socket.dir/DependInfo.cmake"
   "src/CMakeFiles/packets.dir/DependInfo.cmake"
   "src/CMakeFiles/server.dir/DependInfo.cmake"
+  "src/ring_buffer/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
+  "src/ring_buffer/CMakeFiles/virtual_socket.dir/DependInfo.cmake"
   )

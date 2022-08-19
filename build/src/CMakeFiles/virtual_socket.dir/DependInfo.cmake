@@ -4,16 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp" "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o"
   "/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp" "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../src"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

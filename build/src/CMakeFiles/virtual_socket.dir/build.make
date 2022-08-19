@@ -60,15 +60,15 @@ include src/CMakeFiles/virtual_socket.dir/flags.make
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o: src/CMakeFiles/virtual_socket.dir/flags.make
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o: ../src/ring_buffer/virtual_socket.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp
 
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp > CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.i
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp > CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.i
 
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp -o CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.s
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp -o CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.s
 
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o.requires:
 
@@ -81,17 +81,43 @@ src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o.provides: src
 src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o.provides.build: src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o
 
 
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o: src/CMakeFiles/virtual_socket.dir/flags.make
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o: ../src/ring_buffer/ring_buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp
+
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp > CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.i
+
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp -o CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.s
+
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.requires
+
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.provides: src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/virtual_socket.dir/build.make src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.provides.build
+.PHONY : src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.provides
+
+src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.provides.build: src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o
+
+
 # Object files for target virtual_socket
 virtual_socket_OBJECTS = \
-"CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o"
+"CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o" \
+"CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o"
 
 # External object files for target virtual_socket
 virtual_socket_EXTERNAL_OBJECTS =
 
 src/libvirtual_socket.a: src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o
+src/libvirtual_socket.a: src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o
 src/libvirtual_socket.a: src/CMakeFiles/virtual_socket.dir/build.make
 src/libvirtual_socket.a: src/CMakeFiles/virtual_socket.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libvirtual_socket.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libvirtual_socket.a"
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -P CMakeFiles/virtual_socket.dir/cmake_clean_target.cmake
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/virtual_socket.dir/link.txt --verbose=$(VERBOSE)
 
@@ -101,6 +127,7 @@ src/CMakeFiles/virtual_socket.dir/build: src/libvirtual_socket.a
 .PHONY : src/CMakeFiles/virtual_socket.dir/build
 
 src/CMakeFiles/virtual_socket.dir/requires: src/CMakeFiles/virtual_socket.dir/ring_buffer/virtual_socket.cpp.o.requires
+src/CMakeFiles/virtual_socket.dir/requires: src/CMakeFiles/virtual_socket.dir/ring_buffer/ring_buffer.cpp.o.requires
 
 .PHONY : src/CMakeFiles/virtual_socket.dir/requires
 

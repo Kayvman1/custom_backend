@@ -4,6 +4,7 @@
 #include "../src/packets/packet_ids.h"
 #include "../src/ring_buffer/ring_buffer.h"
 #include <thread>
+#include "../src/ring_buffer/virtual_socket.h"
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -544,7 +545,6 @@ TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
     clientThread2.join();
     clientThread3.join();
     clientThread4.join();
-
 }
 
 int test(ring_buffer *ring_buf, int read_number)
@@ -563,8 +563,25 @@ int test(ring_buffer *ring_buf, int read_number)
     ring_buf->read_bytes(team, unpack->buf_size);
 
     login_response *msg;
-    msg = (login_response *)packet::message_unpack(team, unpack->message_type, unpack->message_id);
+    msg = (login_response *)unpack->message_unpack(team);
 
     REQUIRE(msg->status == atoi(msg->auth_token.c_str()));
     return 0;
+}
+
+TEST_CASE("VirtualSocketServerRead", "[ring_buffer]")
+{
+    virtual_socket *vs = new virtual_socket();
+
+    uint8_t *buf = (uint8_t *)malloc(100);
+    uint32_t val = 55;
+    memcpy(buf, &val, sizeof(val));
+
+    vs->write(virtual_fd::SERVER, buf, sizeof(val));
+
+    vs->read(virtual_fd::CLIENT, buf, sizeof(val));
+
+    memcpy(&val, buf, sizeof(val));
+
+    REQUIRE(val == 55);
 }

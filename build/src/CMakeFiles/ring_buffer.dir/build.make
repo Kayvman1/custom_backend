@@ -60,15 +60,15 @@ include src/CMakeFiles/ring_buffer.dir/flags.make
 src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o: src/CMakeFiles/ring_buffer.dir/flags.make
 src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o: ../src/ring_buffer/ring_buffer.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp
 
 src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp > CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.i
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp > CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.i
 
 src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp -o CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp -o CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.s
 
 src/CMakeFiles/ring_buffer.dir/ring_buffer/ring_buffer.cpp.o.requires:
 

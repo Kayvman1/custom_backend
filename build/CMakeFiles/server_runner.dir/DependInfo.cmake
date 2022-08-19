@@ -11,13 +11,15 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
+  "../src/ring_buffer"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/packets.dir/DependInfo.cmake"
-  "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
+  "/home/kayvan/Repos/custom_backend/build/src/ring_buffer/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
   "/home/kayvan/Repos/custom_backend/build/src/CMakeFiles/server.dir/DependInfo.cmake"
+  "/home/kayvan/Repos/custom_backend/build/src/ring_buffer/CMakeFiles/virtual_socket.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

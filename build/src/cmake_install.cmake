@@ -37,3 +37,9 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/kayvan/Repos/custom_backend/build/src/ring_buffer/cmake_install.cmake")
+
+endif()
+
