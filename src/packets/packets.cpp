@@ -5,6 +5,42 @@
 #include "packets.h"
 #include "packet_ids.h"
 
+uint32_t test_request::pack(void *raw_msg, uint8_t *buf)
+{
+    test_request *msg = (test_request *)raw_msg;
+    std::memcpy(buf, &(msg->val), sizeof(val));
+
+    return sizeof(val);
+}
+
+void test_request::unpack(void *raw_msg, uint8_t *buf)
+{
+    test_request *msg = (test_request *)raw_msg;
+    uint32_t index = 0;
+
+    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
+
+    return;
+}
+
+uint32_t test_response::pack(void *raw_msg, uint8_t *buf)
+{
+    test_response *msg = (test_response *)raw_msg;
+    std::memcpy(buf, &(msg->val), sizeof(val));
+
+    return sizeof(val);
+}
+
+void test_response::unpack(void *raw_msg, uint8_t *buf)
+{
+    test_response *msg = (test_response *)raw_msg;
+    uint32_t index = 0;
+
+    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
+
+    return;
+}
+
 uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
 {
     uint8_t index = 0;
@@ -102,20 +138,20 @@ void *packet::unpack(packet *msg, uint8_t *buf)
 
 void *packet::message_unpack(uint8_t *buf)
 {
-    
+
     switch (message_type)
     {
     case CONTROL_PACKET:
         switch (message_id)
         {
-#define X(ClassName, ClassID)                                \
-    case ClassID:                                            \
-    {                                                        \
-                                                             \
-        ClassName *ClassName##_pointer = new ClassName;      \
-        ClassName::unpack(ClassName##_pointer, buf); \
-        return ClassName##_pointer;                          \
-        break;                                               \
+#define X(ClassName, ClassID)                           \
+    case ClassID:                                       \
+    {                                                   \
+                                                        \
+        ClassName *ClassName##_pointer = new ClassName; \
+        ClassName::unpack(ClassName##_pointer, buf);    \
+        return ClassName##_pointer;                     \
+        break;                                          \
     }
 
             CONTROL_PACKET_TABLE

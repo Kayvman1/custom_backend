@@ -20,9 +20,10 @@ public:
     ring_buffer(int l);
 
     void print();
-    void write(void *raw_data, uint16_t len);
+    uint16_t write(void *raw_data, uint16_t len);
     void *read();
     int size_of_next_message();
     int read_bytes(void *buf, int size);
 };
 //#endif
+ 

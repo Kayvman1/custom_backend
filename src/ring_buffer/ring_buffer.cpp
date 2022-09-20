@@ -10,8 +10,7 @@ ring_buffer::ring_buffer()
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
-    
-    
+    stack = std::queue<uint8_t *>();
 }
 
 ring_buffer::ring_buffer(int l)
@@ -20,15 +19,17 @@ ring_buffer::ring_buffer(int l)
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
-    
+    stack = std::queue<uint8_t *>();
 }
 
-void ring_buffer::write(void *raw_data, uint16_t len)
+uint16_t ring_buffer::write(void *raw_data, uint16_t len)
 {
     // SEGMENT 1 AND 2
     //  first check to see if write fits
     int segment_right = buf + size - write_pointer;
     int segment_left = len - segment_right;
+
+    int bytes_written = 0; // TODO should i use this and count when i write or just return len?
 
     if (segment_right > len)
     {
@@ -47,14 +48,20 @@ void ring_buffer::write(void *raw_data, uint16_t len)
         write_pointer -= size;
     }
     stack.push(write_pointer);
-    return;
+    return len;
 }
 
 // HAVE The caller pass in a buffer and write to it.
 // Think about what to do if buffer passed in is two small
 void *ring_buffer::read()
 {
-    // first check to see if write fits
+    // if there is nothing to read return -1:
+
+    if (stack.empty())
+    {
+        return NULL;
+    }
+
     uint8_t *stop_pointer = stack.front();
     stack.pop();
     uint8_t *return_buffer;
@@ -113,6 +120,11 @@ void ring_buffer::print()
 
 int ring_buffer::read_bytes(void *write_buf, int read_size)
 {
+    //if the stack is empty there is nothing to read return -1
+    if (stack.empty())
+    {
+        return -1;
+    }
 
     uint8_t *stop_pointer = stack.front();
     int bytes_left_message = stop_pointer - read_pointer;
@@ -149,8 +161,8 @@ int ring_buffer::read_bytes(void *write_buf, int read_size)
             read_pointer = buf + segment_left;
             return size;
         }
-        if (segment_left+ segment_right <= read_size)
-        {   
+        if (segment_left + segment_right <= read_size)
+        {
             memcpy(write_buf, read_pointer, segment_right);
             bytes_left_message -= segment_right;
 
@@ -160,5 +172,4 @@ int ring_buffer::read_bytes(void *write_buf, int read_size)
             return bytes_left_message + segment_right;
         }
     }
-
 }

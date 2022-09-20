@@ -1,6 +1,4 @@
 #include <unistd.h>
-
-#include <arpa/inet.h>
 #include <semaphore.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -12,13 +10,23 @@
 #include <thread>
 #include <cstddef>
 
-#include "../packets/packets.h"
 #include "server.h"
 #include "../ring_buffer/virtual_socket.h"
+#include "../packets/packet_ids.h"
+
+void *handlers[10];
+
 void handle_new_connection(int new_socket);
+void test_request_handler(uint8_t *buf, virtual_socket *vs);
+void test_response_handler(uint8_t *buf, virtual_socket *vs);
 
 void server::start(int port_number)
 {
+#define X(ClassName, ClassID) \
+    handlers[ClassID] = (void *) &ClassName##_handler;
+
+    TEST_PACKET_TABLE
+#undef X
     int server_fd, new_socket;
 
     long valread;
@@ -128,25 +136,45 @@ void handle_new_connection(int socket)
     val_read = read(socket, &unpack->buf_size, sizeof(packet::buf_size));
     val_read = read(socket, message_buffer, unpack->buf_size);
 
-    
     unpack->message_unpack(message_buffer);
 }
 
-void handle_new_connection1(virtual_socket socket)
+void test_request_handler(uint8_t *buf, virtual_socket *vs)
+{
+    test_request *req = new test_request;
+    test_request::unpack(req, buf);
+    test_response *resp = new test_response();
+
+    resp->val = req->val;
+
+   // uint8_t *buf = (uint8_t *)std::malloc(100);
+    test_response::pack(resp, buf);
+
+    vs->write(virtual_fd::CLIENT, buf, 4);
+}
+void test_response_handler(uint8_t *buf, virtual_socket *vs)
+{
+}
+
+void *server::handle_message(virtual_socket *socket)
 {
 
     uint8_t message_buffer[3000];
     packet *unpack = new packet;
 
     long val_read;
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
 
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->magic, sizeof(packet::magic));
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->session_token, sizeof(packet::session_token));
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->flags, sizeof(packet::flags));
-    val_read = socket.read(virtual_fd::CLIENT, &unpack->buf_size, sizeof(packet::buf_size));
-    val_read = socket.read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->magic, sizeof(packet::magic));
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->session_token, sizeof(packet::session_token));
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->flags, sizeof(packet::flags));
+    val_read = socket->read(virtual_fd::CLIENT, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = socket->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    //unpack->message_unpack(message_buffer);
+    unpack->message_unpack(message_buffer);
+
+    // GET MESSAGE TYPE
+    // GET MESSAGE ID
+    ((void *(*)(uint8_t *, virtual_socket *))handlers[unpack->message_id])(message_buffer, socket);
 }

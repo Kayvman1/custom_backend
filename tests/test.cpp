@@ -5,6 +5,7 @@
 #include "../src/ring_buffer/ring_buffer.h"
 #include <thread>
 #include "../src/ring_buffer/virtual_socket.h"
+#include "../src/server/server.h"
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -569,7 +570,7 @@ int test(ring_buffer *ring_buf, int read_number)
     return 0;
 }
 
-TEST_CASE("VirtualSocketServerRead", "[ring_buffer]")
+TEST_CASE("VirtualSocketServerRead", "[virtualSocket]")
 {
     virtual_socket *vs = new virtual_socket();
 
@@ -584,4 +585,27 @@ TEST_CASE("VirtualSocketServerRead", "[ring_buffer]")
     memcpy(&val, buf, sizeof(val));
 
     REQUIRE(val == 55);
+}
+
+TEST_CASE("VirtualConnection", "[Server]")
+{
+    server *s = new server();
+    virtual_socket *vs = s->new_virtual_connection();
+    packet *p = new packet();
+    test_request *msg1 = new test_request();
+    uint8_t *buf = (uint8_t *)malloc(100);
+    int packet_size;
+
+    msg1->val = 5;
+    packet_size = packet::pack(p, buf, msg1);
+
+    vs->write(virtual_fd::SERVER, buf, packet_size);
+    s->handle_message(vs);
+    vs->read(virtual_fd::CLIENT,buf,1);
+
+    uint8_t val;
+    memcpy(&val,buf,1);
+
+    std::cout<<val;
+    //make s read from vs and then call handle message
 }

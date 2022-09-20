@@ -7,7 +7,7 @@
 // TODO MOVE THESE MACROS
 #define TITLE_LEN 50
 #define CONTENT_LEN 50
-
+#pragma once
 // TODO THIS MUST BE MOVED
 class account
 {
@@ -44,6 +44,22 @@ public:
     static uint32_t pack(packet *msg, uint8_t *buf, void *raw_msg);
     static void *unpack(packet *msg, uint8_t *buf);
     void *message_unpack(uint8_t *buf);
+};
+
+class test_request
+{
+public:
+    uint8_t val;
+    static uint32_t pack(void *raw_msg, uint8_t *buf);
+    static void unpack(void *raw_msg, uint8_t *buf);
+};
+
+class test_response
+{
+public:
+    uint8_t val;
+    static uint32_t pack(void *raw_msg, uint8_t *buf);
+    static void unpack(void *raw_msg, uint8_t *buf);
 };
 
 // MESSAGE CLASS 0: CONTROL PACKETS
