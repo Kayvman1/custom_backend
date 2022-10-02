@@ -59,6 +59,8 @@
         "mutex": "cpp",
         "cinttypes": "cpp",
         "variant": "cpp",
-        "packets_cpp_expanded": "cpp"
+        "packets_cpp_expanded": "cpp",
+        "pqxx": "cpp",
+        "composite": "cpp"
     }
 }

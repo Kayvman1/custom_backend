@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/runner/main.cpp"
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include  -g   -pthread -g -lpqxx -lpq -std=gnu++14 -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/tests/test.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -std=gnu++14 -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/tests/test.cpp"
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include  -g   -pthread -g -lpqxx -lpq -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/runner/main.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
@@ -510,14 +510,154 @@
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp"
 },
 {
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/array.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/array.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/array.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/binarystring.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/binarystring.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/binarystring.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/blob.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/blob.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/blob.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/connection.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/connection.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/connection.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/cursor.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/cursor.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/cursor.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/encodings.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/encodings.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/encodings.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/errorhandler.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/errorhandler.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/errorhandler.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/except.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/except.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/except.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/field.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/field.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/field.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/largeobject.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/largeobject.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/largeobject.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/notification.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/notification.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/notification.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/params.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/params.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/params.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/pipeline.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/pipeline.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/pipeline.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/result.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/result.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/result.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/robusttransaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/robusttransaction.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/robusttransaction.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/row.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/row.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/row.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/sql_cursor.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/sql_cursor.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/sql_cursor.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/strconv.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/strconv.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/strconv.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/stream_from.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_from.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_from.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/stream_to.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_to.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_to.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/subtransaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/subtransaction.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/subtransaction.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/time.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/time.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/time.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/transaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/transaction_base.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction_base.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction_base.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/util.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/util.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/util.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/version.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/version.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/version.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/wait.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/wait.cxx",
+  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/wait.cxx"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/server/server.cpp"
+},
+{
   "directory": "/home/kayvan/Repos/custom_backend/build/src",
   "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/packets/packets.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/server/server.cpp"
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",

@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Build documentation
+BUILD_DOC:BOOL=OFF
+
+//Build all test cases
+BUILD_TEST:BOOL=ON
+
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
@@ -393,6 +399,24 @@ COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
 
+//Enable to build RPM source packages
+CPACK_SOURCE_RPM:BOOL=OFF
+
+//Enable to build TBZ2 source packages
+CPACK_SOURCE_TBZ2:BOOL=ON
+
+//Enable to build TGZ source packages
+CPACK_SOURCE_TGZ:BOOL=ON
+
+//Enable to build TXZ source packages
+CPACK_SOURCE_TXZ:BOOL=ON
+
+//Enable to build TZ source packages
+CPACK_SOURCE_TZ:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=OFF
+
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
 
@@ -444,6 +468,32 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
+//The directory containing a CMake configuration file for PPQX.
+PPQX_DIR:PATH=PPQX_DIR-NOTFOUND
+
+//Path to a library.
+PQXX_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libpqxx.so
+
+//Path to a library.
+PQ_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libpq.so
+
+//The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
+// directory containing the PostgreSQL include directories. E.g
+// /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
+PostgreSQL_INCLUDE_DIR:PATH=/usr/include/postgresql
+
+//The Set the PostgreSQL_LIBRARY_DIR cmake cache entry to the top-level
+// directory containing the PostgreSQL libraries.
+PostgreSQL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpq.so
+
+//The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
+// directory containing the PostgreSQL include directories. E.g
+// /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
+PostgreSQL_TYPE_INCLUDE_DIR:PATH=/usr/include/postgresql/10/server
+
+//The directory containing a CMake configuration file for Ppqx.
+Ppqx_DIR:PATH=Ppqx_DIR-NOTFOUND
+
 //Path to scp command, used by CTest for submitting results to
 // a Dart server
 SCPCOMMAND:FILEPATH=/usr/bin/scp
@@ -461,13 +511,46 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
 //Dependencies for target
+handlers_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+libpqxx_BINARY_DIR:STATIC=/home/kayvan/Repos/custom_backend/build/build-pqxx
+
+//The directory containing a CMake configuration file for libpqxx.
+libpqxx_DIR:PATH=libpqxx_DIR-NOTFOUND
+
+//Value Computed by CMake
+libpqxx_SOURCE_DIR:STATIC=/home/kayvan/Repos/custom_backend/lib/libpqxx
+
+//The directory containing a CMake configuration file for lpq.
+lpq_DIR:PATH=lpq_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for lpqxx.
+lpqxx_DIR:PATH=lpqxx_DIR-NOTFOUND
+
+//Dependencies for target
+packet_handlers_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 packets_LIB_DEPENDS:STATIC=
+
+//The directory containing a CMake configuration file for ppqx.
+ppqx_DIR:PATH=ppqx_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for pq.
+pq_DIR:PATH=pq_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for pqxx.
+pqxx_DIR:PATH=pqxx_DIR-NOTFOUND
+
+//Dependencies for the target
+pqxx_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpq.so;
 
 //Dependencies for target
 ring_buffer_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
-server_LIB_DEPENDS:STATIC=general;virtual_socket;general;packets;
+server_LIB_DEPENDS:STATIC=general;virtual_socket;general;packets;general;handlers;
 
 //Dependencies for the target
 virtual_socket_LIB_DEPENDS:STATIC=general;ring_buffer;
@@ -611,7 +694,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -656,6 +739,18 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
 COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_RPM
+CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TBZ2
+CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TGZ
+CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TXZ
+CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TZ
+CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
@@ -670,6 +765,8 @@ Catch2WithMain_GUID_CMAKE:INTERNAL=8bd3552a-2cfb-4a59-ab15-2031b97ada1e
 Catch2_GUID_CMAKE:INTERNAL=8d538cbe-01bf-4a2e-a98a-6c368fdf13d7
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding PostgreSQL
+FIND_PACKAGE_MESSAGE_DETAILS_PostgreSQL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpq.so][/usr/include/postgresql][/usr/include/postgresql/10/server][v14.5 (Ubuntu 14.5-1.pgdg18.04+1)()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GITCOMMAND
@@ -684,6 +781,52 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: P4COMMAND
 P4COMMAND-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+PQXX_HAVE_CHARCONV_FLOAT:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_CHARCONV_INT:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_CMP:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_CONCEPTS:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_CXA_DEMANGLE:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_GCC_PURE:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_GCC_VISIBILITY:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_LIKELY:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_MULTIDIMENSIONAL_SUBSCRIPT:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_PATH:INTERNAL=FALSE
+//Have function poll
+PQXX_HAVE_POLL:INTERNAL=1
+//Have symbol PQencryptPasswordConn
+PQXX_HAVE_PQENCRYPTPASSWORDCONN:INTERNAL=1
+//Have symbol PQenterPipelineMode
+PQXX_HAVE_PQ_PIPELINE:INTERNAL=1
+//Result of TRY_COMPILE
+PQXX_HAVE_SLEEP_FOR:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_SPAN:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_STRERROR_R:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_STRERROR_S:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_THREAD_LOCAL:INTERNAL=TRUE
+//Result of TRY_COMPILE
+PQXX_HAVE_UNREACHABLE:INTERNAL=FALSE
+//Result of TRY_COMPILE
+PQXX_HAVE_YEAR_MONTH_DAY:INTERNAL=FALSE
+//ADVANCED property for variable: PostgreSQL_INCLUDE_DIR
+PostgreSQL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PostgreSQL_LIBRARY
+PostgreSQL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PostgreSQL_TYPE_INCLUDE_DIR
+PostgreSQL_TYPE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SCPCOMMAND
 SCPCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
@@ -700,4 +843,6 @@ THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
 _CATCH_DISCOVER_TESTS_SCRIPT:INTERNAL=/home/kayvan/Repos/custom_backend/lib/Catch2/extras/CatchAddTests.cmake
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Result of TRY_COMPILE
+need_fslib:INTERNAL=TRUE
 

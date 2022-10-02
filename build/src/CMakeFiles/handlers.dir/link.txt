@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhandlers.a  CMakeFiles/handlers.dir/server/packet_handlers.cpp.o
+/usr/bin/ranlib libhandlers.a

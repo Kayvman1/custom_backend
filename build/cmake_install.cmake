@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kayvan/Repos/custom_backend/build/lib/Catch2/cmake_install.cmake")
+  include("/home/kayvan/Repos/custom_backend/build/build-pqxx/cmake_install.cmake")
   include("/home/kayvan/Repos/custom_backend/build/src/cmake_install.cmake")
 
 endif()

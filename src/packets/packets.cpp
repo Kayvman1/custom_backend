@@ -5,41 +5,7 @@
 #include "packets.h"
 #include "packet_ids.h"
 
-uint32_t test_request::pack(void *raw_msg, uint8_t *buf)
-{
-    test_request *msg = (test_request *)raw_msg;
-    std::memcpy(buf, &(msg->val), sizeof(val));
-
-    return sizeof(val);
-}
-
-void test_request::unpack(void *raw_msg, uint8_t *buf)
-{
-    test_request *msg = (test_request *)raw_msg;
-    uint32_t index = 0;
-
-    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
-
-    return;
-}
-
-uint32_t test_response::pack(void *raw_msg, uint8_t *buf)
-{
-    test_response *msg = (test_response *)raw_msg;
-    std::memcpy(buf, &(msg->val), sizeof(val));
-
-    return sizeof(val);
-}
-
-void test_response::unpack(void *raw_msg, uint8_t *buf)
-{
-    test_response *msg = (test_response *)raw_msg;
-    uint32_t index = 0;
-
-    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
-
-    return;
-}
+/////////////////////////// PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
 {
@@ -65,24 +31,11 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     buf_size_addr = index;
     index = index + sizeof(msg->buf_size);
 
-    switch (msg->message_type)
-    {
-    case CONTROL_PACKET:
-        switch (msg->message_id)
-        {
-#define X(ClassName, ClassID)                                 \
-    case ClassID:                                             \
-    {                                                         \
-        message_size = ClassName::pack(raw_msg, buf + index); \
-        break;                                                \
-    }
+    pack_pointer func = GET_PACK_FOR_MESSAGE(msg);
+    message_size = func(raw_msg, buf + index);
 
-            CONTROL_PACKET_TABLE
-#undef X
-            break;
-        }
-        break;
-    }
+    //TODO REMOVE THIS, DEBUGGING ? 
+    msg->buf_size = message_size;
 
     std::memcpy(buf + buf_size_addr, &message_size, sizeof(message_size));
     index += message_size;
@@ -113,54 +66,63 @@ void *packet::unpack(packet *msg, uint8_t *buf)
     std::memcpy(&msg->buf_size, buf + index, sizeof(msg->buf_size));
     index = index + sizeof(msg->buf_size);
 
-    switch (msg->message_type)
-    {
-    case CONTROL_PACKET:
-        switch (msg->message_id)
-        {
-#define X(ClassName, ClassID)                                \
-    case ClassID:                                            \
-    {                                                        \
-                                                             \
-        ClassName *ClassName##_pointer = new ClassName;      \
-        ClassName::unpack(ClassName##_pointer, buf + index); \
-        return ClassName##_pointer;                          \
-        break;                                               \
-    }
+    void *m = GET_POINTER_MESSAGE(msg);
+    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
+    func(m, buf + index);
 
-            CONTROL_PACKET_TABLE
-#undef X
-            break;
-        }
-        break;
-    }
+    return m;
 }
 
 void *packet::message_unpack(uint8_t *buf)
 {
+    void *m = GET_POINTER_MESSAGE(this);
+    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(this);
+    func(m, buf);
 
-    switch (message_type)
-    {
-    case CONTROL_PACKET:
-        switch (message_id)
-        {
-#define X(ClassName, ClassID)                           \
-    case ClassID:                                       \
-    {                                                   \
-                                                        \
-        ClassName *ClassName##_pointer = new ClassName; \
-        ClassName::unpack(ClassName##_pointer, buf);    \
-        return ClassName##_pointer;                     \
-        break;                                          \
-    }
-
-            CONTROL_PACKET_TABLE
-#undef X
-            break;
-        }
-        break;
-    }
+    return m;
 }
+
+/////////////////////////// TEST PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+uint32_t test_request::pack(void *raw_msg, uint8_t *buf)
+{
+    test_request *msg = (test_request *)raw_msg;
+    std::memcpy(buf, &(msg->val), sizeof(msg->val));
+
+    return sizeof(msg->val);
+}
+
+void test_request::unpack(void *raw_msg, uint8_t *buf)
+{
+    test_request *msg = (test_request *)raw_msg;
+    uint32_t index = 0;
+
+    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
+
+    return;
+}
+
+uint32_t test_response::pack(void *raw_msg, uint8_t *buf)
+{
+    test_response *msg = (test_response *)raw_msg;
+    std::memcpy(buf, &(msg->val), sizeof(val));
+
+    return sizeof(val);
+}
+
+void test_response::unpack(void *raw_msg, uint8_t *buf)
+{
+    test_response *msg = (test_response *)raw_msg;
+    uint32_t index = 0;
+
+    std::memcpy(&msg->val, buf + index, sizeof(msg->val));
+
+    return;
+}
+
+/////////////////////////// CONTROL PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 uint32_t login_request::pack(void *raw_msg, uint8_t *buf)
 {
     login_request *msg = (login_request *)raw_msg;
@@ -378,7 +340,7 @@ void create_user_response::unpack(void *raw_msg, uint8_t *buf)
     index += account::unpack(msg->user, buf + index);
 }
 
-///////////////////////////POEMS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////////////// POEMS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 uint32_t poem_create_request::pack(void *raw_msg, uint8_t *buf)
 {

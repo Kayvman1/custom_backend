@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #define USERNAME_LEN 31
 #define PASSWORD_LEN 31

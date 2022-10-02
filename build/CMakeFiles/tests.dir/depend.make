@@ -39,6 +39,7 @@ CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packet_ids.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/packets/packets.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/ring_buffer/ring_buffer.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/ring_buffer/virtual_socket.h
+CMakeFiles/tests.dir/tests/test.cpp.o: ../src/server/packet_handlers.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../src/server/server.h
 CMakeFiles/tests.dir/tests/test.cpp.o: ../tests/test.cpp
 CMakeFiles/tests.dir/tests/test.cpp.o: generated-includes/catch2/catch_user_config.hpp

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
+../server/packet_handlers.h
+/home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
+../packets/packets.h
+/home/kayvan/Repos/custom_backend/src/packets/packets.h
+
+/home/kayvan/Repos/custom_backend/src/packets/packets.h
+iostream
+-
+
+/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.h
+iostream
+-
+queue
+-
+thread
+-
+mutex
+-
+
+/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.h
+ring_buffer.h
+/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.h
+
+/home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp
+packet_handlers.h
+/home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
+../packets/packets.h
+/home/kayvan/Repos/custom_backend/src/packets/packets.h
+../packets/packet_ids.h
+/home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
+postgresql/libpq-fe.h
+-
+
+/home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
+../ring_buffer/virtual_socket.h
+/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.h
+

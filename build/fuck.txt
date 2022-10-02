@@ -1,0 +1,64 @@
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Generating config.h
+-- Generating config.h - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kayvan/Repos/custom_backend/build
+[  1%] Built target ring_buffer
+[  2%] Built target virtual_socket
+[ 45%] Built target Catch2
+[ 46%] Built target Catch2WithMain
+Scanning dependencies of target pqxx
+[ 46%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.o
+[ 46%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.o
+[ 47%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.o
+[ 47%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.o
+[ 48%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.o
+[ 48%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.o
+[ 49%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.o
+[ 49%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.o
+[ 50%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.o
+[ 50%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.o
+[ 50%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.o
+[ 51%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.o
+[ 51%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.o
+[ 52%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.o
+[ 52%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.o
+[ 53%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.o
+[ 53%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.o
+[ 53%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.o
+[ 54%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.o
+[ 54%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.o
+[ 55%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.o
+[ 55%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.o
+[ 56%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.o
+[ 56%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.o
+[ 56%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.o
+[ 57%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.o
+[ 57%] Building CXX object build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.o
+[ 58%] Linking CXX static library libpqxx-7.7.a
+[ 58%] Built target pqxx
+[ 59%] Built target packets
+Scanning dependencies of target handlers
+[ 59%] Building CXX object src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o
+src/CMakeFiles/handlers.dir/build.make:62: recipe for target 'src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o' failed
+CMakeFiles/Makefile2:1414: recipe for target 'src/CMakeFiles/handlers.dir/all' failed
+Makefile:162: recipe for target 'all' failed
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Generating config.h
+-- Generating config.h - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kayvan/Repos/custom_backend/build
+[  1%] Built target ring_buffer
+[  2%] Built target virtual_socket
+[ 45%] Built target Catch2
+[ 46%] Built target Catch2WithMain
+[ 58%] Built target pqxx
+[ 59%] Built target packets
+[ 59%] Building CXX object src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o
+src/CMakeFiles/handlers.dir/build.make:62: recipe for target 'src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o' failed
+CMakeFiles/Makefile2:1414: recipe for target 'src/CMakeFiles/handlers.dir/all' failed
+Makefile:162: recipe for target 'all' failed

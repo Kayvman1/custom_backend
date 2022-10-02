@@ -56,27 +56,39 @@ CMAKE_BINARY_DIR = /home/kayvan/Repos/custom_backend/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : edit_cache/fast
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-.PHONY : test/fast
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -88,6 +100,62 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/kayvan/Repos/custom_backend/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +190,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/server.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
+.PHONY : src/CMakeFiles/server.dir/rule
+
+# Convenience name for target.
+server: src/CMakeFiles/server.dir/rule
+
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+# Convenience name for target.
 src/CMakeFiles/packets.dir/rule:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/packets.dir/rule
 .PHONY : src/CMakeFiles/packets.dir/rule
@@ -137,19 +220,19 @@ packets/fast:
 .PHONY : packets/fast
 
 # Convenience name for target.
-src/CMakeFiles/server.dir/rule:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
-.PHONY : src/CMakeFiles/server.dir/rule
+src/CMakeFiles/handlers.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/handlers.dir/rule
+.PHONY : src/CMakeFiles/handlers.dir/rule
 
 # Convenience name for target.
-server: src/CMakeFiles/server.dir/rule
+handlers: src/CMakeFiles/handlers.dir/rule
 
-.PHONY : server
+.PHONY : handlers
 
 # fast build rule for target.
-server/fast:
-	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
-.PHONY : server/fast
+handlers/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/build
+.PHONY : handlers/fast
 
 packets/packets.o: packets/packets.cpp.o
 
@@ -177,6 +260,33 @@ packets/packets.s: packets/packets.cpp.s
 packets/packets.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/packets/packets.cpp.s
 .PHONY : packets/packets.cpp.s
+
+server/packet_handlers.o: server/packet_handlers.cpp.o
+
+.PHONY : server/packet_handlers.o
+
+# target to build an object file
+server/packet_handlers.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o
+.PHONY : server/packet_handlers.cpp.o
+
+server/packet_handlers.i: server/packet_handlers.cpp.i
+
+.PHONY : server/packet_handlers.i
+
+# target to preprocess a source file
+server/packet_handlers.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.i
+.PHONY : server/packet_handlers.cpp.i
+
+server/packet_handlers.s: server/packet_handlers.cpp.s
+
+.PHONY : server/packet_handlers.s
+
+# target to generate assembly for a file
+server/packet_handlers.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.s
+.PHONY : server/packet_handlers.cpp.s
 
 server/server.o: server/server.cpp.o
 
@@ -211,14 +321,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... packets"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... server"
+	@echo "... packets"
+	@echo "... handlers"
+	@echo "... package"
+	@echo "... package_source"
+	@echo "... install/local"
+	@echo "... test"
 	@echo "... packets/packets.o"
 	@echo "... packets/packets.i"
 	@echo "... packets/packets.s"
+	@echo "... server/packet_handlers.o"
+	@echo "... server/packet_handlers.i"
+	@echo "... server/packet_handlers.s"
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"

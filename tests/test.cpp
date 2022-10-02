@@ -302,15 +302,14 @@ TEST_CASE("SerializePacket", "[serialize]")
     login_request *msg1 = new login_request;
     login_request *msg2 = new login_request;
 
-    pac1->message_type = 0;
+    msg1->username = "username";
+    msg1->password = "password";
+
+    pac1->message_type = CONTROL_PACKET;
     pac1->message_id = login_request_id;
     pac1->magic = 1;
     pac1->session_token = 1;
     pac1->flags = 4;
-    pac1->buf_size = login_request::pack(msg1, buf);
-
-    msg1->username = "username";
-    msg1->password = "password";
 
     packet::pack(pac1, buf, msg1);
     msg2 = (login_request *)packet::unpack(pac2, buf);
@@ -495,62 +494,66 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 3);
     test(buf, 4);
 }
-TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
-{
-    ring_buffer *buf = new ring_buffer(400);
-    uint8_t *b = (uint8_t *)malloc(100);
-    uint8_t *read = (uint8_t *)malloc(100);
-    packet *p = new packet;
-    login_response *msg1 = new login_response;
-    login_response *msg2 = new login_response;
-    login_response *msg3 = new login_response;
-    login_response *msg4 = new login_response;
-    login_response *ret = new login_response;
-    account *user = new account;
-    int len;
+// TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
+// {
+//     ring_buffer *buf = new ring_buffer(400);
+//     uint8_t *b = (uint8_t *)malloc(100);
+//     uint8_t *read = (uint8_t *)malloc(100);
+//     packet *p = new packet;
+//     login_response *msg1 = new login_response;
+//     login_response *msg2 = new login_response;
+//     login_response *msg3 = new login_response;
+//     login_response *msg4 = new login_response;
+//     login_response *ret = new login_response;
+//     account *user = new account;
+//     int len;
 
-    p->message_id = login_response_id;
-    p->message_type = 0;
-    p->magic = 123456;
-    p->session_token = 1;
-    p->flags = 0;
-    user->username = "username";
-    msg1->status = 1;
-    msg1->auth_token = "1";
-    msg1->user = user;
-    msg2->status = 2;
-    msg2->auth_token = "2";
-    msg2->user = user;
-    msg3->status = 3;
-    msg3->auth_token = "3";
-    msg3->user = user;
-    msg4->status = 4;
-    msg4->auth_token = "4";
-    msg4->user = user;
+//     p->message_id = login_response_id;
+//     p->message_type = 0;
+//     p->magic = 123456;
+//     p->session_token = 1;
+//     p->flags = 0;
+//     user->username = "username";
+//     msg1->status = 1;
+//     msg1->auth_token = "1";
+//     msg1->user = user;
+//     msg2->status = 2;
+//     msg2->auth_token = "2";
+//     msg2->user = user;
+//     msg3->status = 3;
+//     msg3->auth_token = "3";
+//     msg3->user = user;
+//     msg4->status = 4;
+//     msg4->auth_token = "4";
+//     msg4->user = user;
 
-    len = packet::pack(p, b, msg1);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg2);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg3);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg4);
-    buf->write(b, len);
+//     len = packet::pack(p, b, msg1);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg2);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg3);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg4);
+//     buf->write(b, len);
 
-    std::thread clientThread1(test, buf, 1);
-    std::thread clientThread2(test, buf, 2);
-    std::thread clientThread3(test, buf, 3);
-    std::thread clientThread4(test, buf, 4);
+//     std::thread clientThread1(test, buf, 1);
+//     std::thread clientThread2(test, buf, 2);
+//     std::thread clientThread3(test, buf, 3);
+//     std::thread clientThread4(test, buf, 4);
 
-    clientThread1.join();
-    clientThread2.join();
-    clientThread3.join();
-    clientThread4.join();
-}
+//     clientThread1.join();
+//     clientThread2.join();
+//     clientThread3.join();
+//     clientThread4.join();
+// }
 
 int test(ring_buffer *ring_buf, int read_number)
 {
     packet *unpack = new packet;
+    while (ring_buf->read_bytes(&unpack->message_type, 0) == -1)
+    {
+    }
+
     ring_buf->read_bytes(&unpack->message_type, 1);
     ring_buf->read_bytes(&unpack->message_id, 1);
     ring_buf->read_bytes(&unpack->magic, 8);
@@ -596,16 +599,34 @@ TEST_CASE("VirtualConnection", "[Server]")
     uint8_t *buf = (uint8_t *)malloc(100);
     int packet_size;
 
+    p->message_type = TEST_PACKET;
     msg1->val = 5;
+    p->message_id = TEST_PACKET_IDS::test_request_id;
+
     packet_size = packet::pack(p, buf, msg1);
 
     vs->write(virtual_fd::SERVER, buf, packet_size);
     s->handle_message(vs);
-    vs->read(virtual_fd::CLIENT,buf,1);
 
-    uint8_t val;
-    memcpy(&val,buf,1);
+    uint8_t message_buffer[3000];
+    packet *unpack = new packet;
+    long val_read;
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
 
-    std::cout<<val;
-    //make s read from vs and then call handle message
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->magic, sizeof(packet::magic));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->session_token, sizeof(packet::session_token));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->flags, sizeof(packet::flags));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+
+    test_response *x = (test_response *)unpack->message_unpack(message_buffer);
+
+    REQUIRE(x->val == 5);
+    // make s read from vs and then call handle message
+}
+
+TEST_CASE("MacroAccess", "[Infrastructure]")
+{
+    packet_handlers::test_connection();
 }
