@@ -6,7 +6,6 @@
 #include <mutex>
 
 
-
 class server
 {
 public:
@@ -17,4 +16,6 @@ public:
     virtual_socket *new_virtual_connection();
     void terminate_virtual_connections(virtual_socket *connection);
     void handle_message(virtual_socket *socket);
+    
+
 };

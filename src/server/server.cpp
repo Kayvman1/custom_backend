@@ -14,14 +14,35 @@
 #include "../ring_buffer/virtual_socket.h"
 #include "../packets/packet_ids.h"
 #include "packet_handlers.h"
+#include <postgresql/libpq-fe.h>
+#include "client.h"
 
 void handle_new_connection(int new_socket);
 void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
 void test_response_handler(uint8_t *raw_msg, virtual_socket *vs);
 
-
 void server::start(int port_number)
 {
+
+static PGconn *conn;
+    int rec_count;
+    int row;
+    int col;
+
+    client::conn = PQconnectdb("dbname=test host=localhost user=kayvan password=Admin");
+
+    if (PQstatus(client::conn) == CONNECTION_BAD)
+    {
+        puts("We were unable to connect to the database");
+        exit(0);
+    }
+
+    else
+    {
+        puts("Connected to Database");
+    }
+
+   
     int server_fd, new_socket;
 
     long valread;
@@ -134,8 +155,6 @@ void handle_new_connection(int socket)
     unpack->message_unpack(message_buffer);
 }
 
-
-
 void server::handle_message(virtual_socket *socket)
 {
 
@@ -153,8 +172,5 @@ void server::handle_message(virtual_socket *socket)
     val_read = socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-    func (message_buffer, socket);
-
+    func(message_buffer, socket);
 }
-
-

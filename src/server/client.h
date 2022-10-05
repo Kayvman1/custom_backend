@@ -1,7 +1,9 @@
 #include "../ring_buffer/virtual_socket.h"
+
 class client
 {
-    public :
+public:
     virtual_socket vs;
     int SESSION_ID;
+    
 };

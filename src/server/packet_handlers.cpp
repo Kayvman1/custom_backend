@@ -2,29 +2,18 @@
 #include "../packets/packets.h"
 #include "../packets/packet_ids.h"
 #include <postgresql/libpq-fe.h>
+#include "server.cpp"
 
-void packet_handlers::test_connection()
+void packet_handlers::login_request_handler(uint8_t *raw_msg, virtual_socket *vs)
 {
-    PGconn *conn;
-    PGresult *res;
     int rec_count;
     int row;
     int col;
-
-    conn = PQconnectdb("dbname=test host=localhost user=kayvan password=Admin");
-
-    if (PQstatus(conn) == CONNECTION_BAD)
-    {
-        puts("We were unable to connect to the database");
-        exit(0);
-    }
-
-    else
-    {
-        puts("GOOD");
-    }
-
-    res = PQexec(conn,"SELECT first_name FROM account");
+    PGresult *res;
+    
+    login_request *req = (login_request *)raw_msg;
+    std::string query = "SELECT * FROM account WHERE username = '" + req->username + "' AND password =" + req->password;
+    res = PQexec(client::conn, query.c_str());
 
     if (PQresultStatus(res) != PGRES_TUPLES_OK)
     {
@@ -50,8 +39,9 @@ void packet_handlers::test_connection()
 
     PQclear(res);
 
-    PQfinish(conn);
+    PQfinish(client::conn);
 }
+
 void packet_handlers::test_request_handler(uint8_t *raw_msg, virtual_socket *vs)
 {
     test_request *req = new test_request();

@@ -628,5 +628,12 @@ TEST_CASE("VirtualConnection", "[Server]")
 
 TEST_CASE("MacroAccess", "[Infrastructure]")
 {
-    packet_handlers::test_connection();
+    uint8_t *buf = (uint8_t *)malloc(100);
+    login_request *req = new login_request();
+    req->username = "username";
+    req->password = "password";
+
+    login_request::pack(req,buf);
+
+    packet_handlers::login_request_handler(buf, NULL);
 }

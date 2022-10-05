@@ -7,4 +7,5 @@ public:
     static void response_handler(uint8_t *raw_msg, virtual_socket *vs);
     static void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
     static void test_connection();
+    static void login_request_handler(uint8_t *raw_msg, virtual_socket *vs);
 };

@@ -5,6 +5,9 @@ src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/packets/packet_
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/packets/packets.h
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/ring_buffer/ring_buffer.h
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/ring_buffer/virtual_socket.h
+src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/client.h
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/packet_handlers.cpp
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/packet_handlers.h
+src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/server.cpp
+src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/server.h
 
