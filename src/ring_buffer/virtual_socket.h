@@ -10,8 +10,8 @@ public:
     ring_buffer* server_endpoint;
     ring_buffer* client_endpoint;
 
-    ssize_t read(int sockfd, void *buffer, size_t num_bytes);
-    ssize_t write(int sockfd, void *buffer, size_t num_bytes);
+    ssize_t read(int sockfd, uint8_t *buffer, size_t num_bytes);
+    ssize_t write(int sockfd, uint8_t *buffer, size_t num_bytes);
 };
 
 enum virtual_fd

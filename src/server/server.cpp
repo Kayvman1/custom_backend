@@ -24,25 +24,6 @@ void test_response_handler(uint8_t *raw_msg, virtual_socket *vs);
 void server::start(int port_number)
 {
 
-static PGconn *conn;
-    int rec_count;
-    int row;
-    int col;
-
-    client::conn = PQconnectdb("dbname=test host=localhost user=kayvan password=Admin");
-
-    if (PQstatus(client::conn) == CONNECTION_BAD)
-    {
-        puts("We were unable to connect to the database");
-        exit(0);
-    }
-
-    else
-    {
-        puts("Connected to Database");
-    }
-
-   
     int server_fd, new_socket;
 
     long valread;
@@ -165,10 +146,10 @@ void server::handle_message(virtual_socket *socket)
     val_read = socket->read(virtual_fd::SERVER, &unpack->message_type, sizeof(packet::message_type));
     val_read = socket->read(virtual_fd::SERVER, &unpack->message_id, sizeof(packet::message_id));
 
-    val_read = socket->read(virtual_fd::SERVER, &unpack->magic, sizeof(packet::magic));
-    val_read = socket->read(virtual_fd::SERVER, &unpack->session_token, sizeof(packet::session_token));
-    val_read = socket->read(virtual_fd::SERVER, &unpack->flags, sizeof(packet::flags));
-    val_read = socket->read(virtual_fd::SERVER, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
     val_read = socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);

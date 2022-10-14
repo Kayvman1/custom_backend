@@ -556,10 +556,10 @@ int test(ring_buffer *ring_buf, int read_number)
 
     ring_buf->read_bytes(&unpack->message_type, 1);
     ring_buf->read_bytes(&unpack->message_id, 1);
-    ring_buf->read_bytes(&unpack->magic, 8);
-    ring_buf->read_bytes(&unpack->session_token, 8);
-    ring_buf->read_bytes(&unpack->flags, 4);
-    ring_buf->read_bytes(&unpack->buf_size, 4);
+    ring_buf->read_bytes((uint8_t *)&unpack->magic, 8);
+    ring_buf->read_bytes((uint8_t *)&unpack->session_token, 8);
+    ring_buf->read_bytes((uint8_t *)&unpack->flags, 4);
+    ring_buf->read_bytes((uint8_t *)&unpack->buf_size, 4);
 
     std::cout << unpack->buf_size << std::endl;
 
@@ -614,13 +614,14 @@ TEST_CASE("VirtualConnection", "[Server]")
     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
 
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->magic, sizeof(packet::magic));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->session_token, sizeof(packet::session_token));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->flags, sizeof(packet::flags));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->buf_size, sizeof(packet::buf_size));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    test_response *x = (test_response *)unpack->message_unpack(message_buffer);
+    test_response *x = new test_response();
+    x = (test_response *)unpack->message_unpack(message_buffer);
 
     REQUIRE(x->val == 5);
     // make s read from vs and then call handle message

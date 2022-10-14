@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/builder_stream.dir/builder_stream.cpp.o  -o builder_stream -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/lib/mongo-cxx-driver/src/bsoncxx ../../src/bsoncxx/libbsoncxx.so.3.7.0 

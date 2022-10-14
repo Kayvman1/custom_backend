@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/decimal128.dir/decimal128.cpp.o  -o decimal128 -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/lib/mongo-cxx-driver/src/bsoncxx ../../src/bsoncxx/libbsoncxx.so.3.7.0 

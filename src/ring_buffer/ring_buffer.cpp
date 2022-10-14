@@ -22,7 +22,7 @@ ring_buffer::ring_buffer(int l)
     stack = std::queue<uint8_t *>();
 }
 
-uint16_t ring_buffer::write(void *raw_data, uint16_t len)
+uint16_t ring_buffer::write(uint8_t *raw_data, uint16_t len)
 {
     // SEGMENT 1 AND 2
     //  first check to see if write fits
@@ -118,7 +118,7 @@ void ring_buffer::print()
     std::cout << "AA \n";
 }
 
-int ring_buffer::read_bytes(void *write_buf, int read_size)
+int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
 {
     //if the stack is empty there is nothing to read return -1
     if (stack.empty())

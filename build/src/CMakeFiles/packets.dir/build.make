@@ -59,16 +59,16 @@ include src/CMakeFiles/packets.dir/flags.make
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: src/CMakeFiles/packets.dir/flags.make
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/packets/packets.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/packets.dir/packets/packets.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/packets.dir/packets/packets.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/packets.dir/packets/packets.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/packets/packets.cpp > CMakeFiles/packets.dir/packets/packets.cpp.i
+	@echo "Preprocessing CXX source to CMakeFiles/packets.dir/packets/packets.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/packets/packets.cpp > CMakeFiles/packets.dir/packets/packets.cpp.i
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/packets.dir/packets/packets.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/packets/packets.cpp -o CMakeFiles/packets.dir/packets/packets.cpp.s
+	@echo "Compiling CXX source to assembly CMakeFiles/packets.dir/packets/packets.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/packets/packets.cpp -o CMakeFiles/packets.dir/packets/packets.cpp.s
 
 src/CMakeFiles/packets.dir/packets/packets.cpp.o.requires:
 
@@ -91,7 +91,7 @@ packets_EXTERNAL_OBJECTS =
 src/libpackets.a: src/CMakeFiles/packets.dir/packets/packets.cpp.o
 src/libpackets.a: src/CMakeFiles/packets.dir/build.make
 src/libpackets.a: src/CMakeFiles/packets.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libpackets.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libpackets.a"
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -P CMakeFiles/packets.dir/cmake_clean_target.cmake
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/packets.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ src/CMakeFiles/packets.dir/clean:
 .PHONY : src/CMakeFiles/packets.dir/clean
 
 src/CMakeFiles/packets.dir/depend:
-	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/packets.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/packets.dir/DependInfo.cmake
 .PHONY : src/CMakeFiles/packets.dir/depend
 

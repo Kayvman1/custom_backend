@@ -49,11 +49,11 @@ set_target_properties(libpqxx::pqxx PROPERTIES
   INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libpq.so"
 )
 
-# Import target "libpqxx::pqxx" for configuration "Debug"
-set_property(TARGET libpqxx::pqxx APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+# Import target "libpqxx::pqxx" for configuration ""
+set_property(TARGET libpqxx::pqxx APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(libpqxx::pqxx PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "/home/kayvan/Repos/custom_backend/build/build-pqxx/src/libpqxx-7.7.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
+  IMPORTED_LOCATION_NOCONFIG "/home/kayvan/Repos/custom_backend/build/build-pqxx/src/libpqxx-7.7.a"
   )
 
 # This file does not depend on other imported targets which have

@@ -59,16 +59,16 @@ include src/CMakeFiles/handlers.dir/flags.make
 
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: src/CMakeFiles/handlers.dir/flags.make
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o: ../src/server/packet_handlers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp
 
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handlers.dir/server/packet_handlers.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp > CMakeFiles/handlers.dir/server/packet_handlers.cpp.i
+	@echo "Preprocessing CXX source to CMakeFiles/handlers.dir/server/packet_handlers.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp > CMakeFiles/handlers.dir/server/packet_handlers.cpp.i
 
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handlers.dir/server/packet_handlers.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.s
+	@echo "Compiling CXX source to assembly CMakeFiles/handlers.dir/server/packet_handlers.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.s
 
 src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o.requires:
 
@@ -91,7 +91,7 @@ handlers_EXTERNAL_OBJECTS =
 src/libhandlers.a: src/CMakeFiles/handlers.dir/server/packet_handlers.cpp.o
 src/libhandlers.a: src/CMakeFiles/handlers.dir/build.make
 src/libhandlers.a: src/CMakeFiles/handlers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libhandlers.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libhandlers.a"
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -P CMakeFiles/handlers.dir/cmake_clean_target.cmake
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/handlers.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ src/CMakeFiles/handlers.dir/clean:
 .PHONY : src/CMakeFiles/handlers.dir/clean
 
 src/CMakeFiles/handlers.dir/depend:
-	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/handlers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/handlers.dir/DependInfo.cmake
 .PHONY : src/CMakeFiles/handlers.dir/depend
 

@@ -1,672 +1,537 @@
 [
 {
   "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include  -g   -pthread -g -lpqxx -lpq -std=gnu++14 -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/tests/test.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include  -g   -pthread -g -lpqxx -lpq -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
+  "command": "/usr/bin/g++   -I/usr/local/include -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -lhiredis -lredis++ -std=c++17 -std=gnu++1z -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
   "file": "/home/kayvan/Repos/custom_backend/runner/main.cpp"
 },
 {
+  "directory": "/home/kayvan/Repos/custom_backend/build",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -lhiredis -lredis++ -std=c++17 -std=gnu++1z -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/tests/test.cpp"
+},
+{
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++14 -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp"
 },
 {
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/array.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/array.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/array.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/binarystring.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/binarystring.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/binarystring.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/blob.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/blob.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/blob.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/connection.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/connection.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/connection.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/cursor.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/cursor.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/cursor.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/encodings.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/encodings.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/encodings.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/errorhandler.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/errorhandler.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/errorhandler.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/except.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/except.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/except.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/field.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/field.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/field.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/largeobject.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/largeobject.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/largeobject.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/notification.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/notification.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/notification.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/params.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/params.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/params.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/pipeline.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/pipeline.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/pipeline.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/result.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/result.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/result.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/robusttransaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/robusttransaction.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/robusttransaction.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/row.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/row.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/row.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/sql_cursor.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/sql_cursor.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/sql_cursor.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/strconv.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/strconv.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/strconv.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/stream_from.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_from.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_from.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/stream_to.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_to.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/stream_to.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/subtransaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/subtransaction.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/subtransaction.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/time.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/time.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/time.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/transaction.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/transaction_base.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction_base.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/transaction_base.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/util.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/util.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/util.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/version.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/version.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/version.cxx"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/build-pqxx/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/build/build-pqxx/include -I/home/kayvan/Repos/custom_backend/lib/libpqxx/include -I/usr/include/postgresql -I/usr/include/postgresql/10/server  -g   -std=c++1z -o CMakeFiles/pqxx.dir/wait.cxx.o -c /home/kayvan/Repos/custom_backend/lib/libpqxx/src/wait.cxx",
-  "file": "/home/kayvan/Repos/custom_backend/lib/libpqxx/src/wait.cxx"
-},
-{
   "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -std=gnu++1z -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/server/server.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/packets/packets.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
-  "command": "/usr/bin/g++  -Dring_buffer_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -o CMakeFiles/ring_buffer.dir/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp",
+  "command": "/usr/bin/g++  -Dring_buffer_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/ring_buffer.dir/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
-  "command": "/usr/bin/g++  -Dvirtual_socket_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -o CMakeFiles/virtual_socket.dir/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp",
+  "command": "/usr/bin/g++  -Dvirtual_socket_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/virtual_socket.dir/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp",
   "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp"
 }
 ]

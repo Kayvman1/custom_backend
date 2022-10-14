@@ -9,7 +9,7 @@ virtual_socket::virtual_socket()
     return;
 }
 
-ssize_t virtual_socket::write(int sockfd, void *buffer, size_t num_bytes)
+ssize_t virtual_socket::write(int sockfd, uint8_t *buffer, size_t num_bytes)
 {
     if (sockfd == virtual_fd::SERVER)
     {   
@@ -22,7 +22,7 @@ ssize_t virtual_socket::write(int sockfd, void *buffer, size_t num_bytes)
     }
 }
 
-ssize_t virtual_socket::read(int sockfd, void *buffer, size_t num_bytes)
+ssize_t virtual_socket::read(int sockfd, uint8_t *buffer, size_t num_bytes)
 {
     if (sockfd == virtual_fd::SERVER)
     {

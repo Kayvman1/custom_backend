@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/builder_core.dir/builder_core.cpp.o  -o builder_core -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/lib/mongo-cxx-driver-r3.7.0/src/bsoncxx ../../src/bsoncxx/libbsoncxx.so.3.7.0 

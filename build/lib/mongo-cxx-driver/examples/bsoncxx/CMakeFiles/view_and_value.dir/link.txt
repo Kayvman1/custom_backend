@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/view_and_value.dir/view_and_value.cpp.o  -o view_and_value -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/lib/mongo-cxx-driver/src/bsoncxx ../../src/bsoncxx/libbsoncxx.so.3.7.0 

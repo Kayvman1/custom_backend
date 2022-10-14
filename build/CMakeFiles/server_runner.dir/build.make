@@ -90,14 +90,15 @@ server_runner_EXTERNAL_OBJECTS =
 
 server_runner: CMakeFiles/server_runner.dir/runner/main.cpp.o
 server_runner: CMakeFiles/server_runner.dir/build.make
+server_runner: /usr/local/lib/libhiredis.so
+server_runner: /usr/local/lib/libhiredis.so
+server_runner: /usr/local/lib/libredis++.so
 server_runner: src/libpackets.a
 server_runner: src/ring_buffer/libring_buffer.so
 server_runner: src/libserver.a
 server_runner: src/ring_buffer/libvirtual_socket.so
-server_runner: build-pqxx/src/libpqxx-7.7.a
 server_runner: src/libpackets.a
 server_runner: src/libhandlers.a
-server_runner: /usr/lib/x86_64-linux-gnu/libpq.so
 server_runner: CMakeFiles/server_runner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server_runner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_runner.dir/link.txt --verbose=$(VERBOSE)

@@ -95,11 +95,9 @@ tests: src/libpackets.a
 tests: src/ring_buffer/libring_buffer.so
 tests: src/libserver.a
 tests: src/ring_buffer/libvirtual_socket.so
-tests: build-pqxx/src/libpqxx-7.7.a
 tests: lib/Catch2/src/libCatch2d.a
 tests: src/libpackets.a
 tests: src/libhandlers.a
-tests: /usr/lib/x86_64-linux-gnu/libpq.so
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)

@@ -14,7 +14,7 @@ CostDataFile:
 Site: DESKTOP-4MDPNOE
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-g++
+BuildName: Linux-clang++
 
 # Subprojects
 LabelsForSubprojects: 
@@ -37,7 +37,7 @@ NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
 ConfigureCommand: "/usr/bin/cmake" "/home/kayvan/Repos/custom_backend"
-MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -72,7 +72,7 @@ UpdateOptions:
 UpdateType: git
 
 # Compiler info
-Compiler: /usr/bin/g++
+Compiler: /usr/bin/clang++
 CompilerVersion: 7.5.0
 
 # Dynamic analysis (MemCheck)
