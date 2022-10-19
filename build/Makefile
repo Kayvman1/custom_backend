@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = /home/kayvan/Repos/custom_backend/build
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@echo "Running CMake to regenerate build system..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
 	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -69,7 +69,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target test
 test:
-	@echo "Running tests..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
 	/usr/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
@@ -80,7 +80,7 @@ test/fast: test
 
 # Special rule for the target package
 package: preinstall
-	@echo "Run CPack packaging tool..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
 	/usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
@@ -91,7 +91,7 @@ package/fast: package
 
 # Special rule for the target package_source
 package_source:
-	@echo "Run CPack packaging tool for source..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
 	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/kayvan/Repos/custom_backend/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
@@ -102,7 +102,7 @@ package_source/fast: package_source
 
 # Special rule for the target edit_cache
 edit_cache:
-	@echo "No interactive CMake dialog available..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
 	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
@@ -534,32 +534,6 @@ ExperimentalStart/fast:
 .PHONY : ExperimentalStart/fast
 
 #=============================================================================
-# Target rules for targets named Catch2
-
-# Build rule for target.
-Catch2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Catch2
-.PHONY : Catch2
-
-# fast build rule for target.
-Catch2/fast:
-	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/build
-.PHONY : Catch2/fast
-
-#=============================================================================
-# Target rules for targets named Catch2WithMain
-
-# Build rule for target.
-Catch2WithMain: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Catch2WithMain
-.PHONY : Catch2WithMain
-
-# fast build rule for target.
-Catch2WithMain/fast:
-	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build.make lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build
-.PHONY : Catch2WithMain/fast
-
-#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -623,6 +597,32 @@ virtual_socket: cmake_check_build_system
 virtual_socket/fast:
 	$(MAKE) -f src/ring_buffer/CMakeFiles/virtual_socket.dir/build.make src/ring_buffer/CMakeFiles/virtual_socket.dir/build
 .PHONY : virtual_socket/fast
+
+#=============================================================================
+# Target rules for targets named Catch2
+
+# Build rule for target.
+Catch2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Catch2
+.PHONY : Catch2
+
+# fast build rule for target.
+Catch2/fast:
+	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/build
+.PHONY : Catch2/fast
+
+#=============================================================================
+# Target rules for targets named Catch2WithMain
+
+# Build rule for target.
+Catch2WithMain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Catch2WithMain
+.PHONY : Catch2WithMain
+
+# fast build rule for target.
+Catch2WithMain/fast:
+	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build.make lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/build
+.PHONY : Catch2WithMain/fast
 
 runner/main.o: runner/main.cpp.o
 
@@ -719,13 +719,13 @@ help:
 	@echo "... Nightly"
 	@echo "... NightlyConfigure"
 	@echo "... ExperimentalStart"
-	@echo "... Catch2"
-	@echo "... Catch2WithMain"
 	@echo "... server"
 	@echo "... packets"
 	@echo "... handlers"
 	@echo "... ring_buffer"
 	@echo "... virtual_socket"
+	@echo "... Catch2"
+	@echo "... Catch2WithMain"
 	@echo "... runner/main.o"
 	@echo "... runner/main.i"
 	@echo "... runner/main.s"

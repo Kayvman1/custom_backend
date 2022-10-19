@@ -60,15 +60,15 @@ include CMakeFiles/server_runner.dir/flags.make
 CMakeFiles/server_runner.dir/runner/main.cpp.o: CMakeFiles/server_runner.dir/flags.make
 CMakeFiles/server_runner.dir/runner/main.cpp.o: ../runner/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_runner.dir/runner/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp
 
 CMakeFiles/server_runner.dir/runner/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_runner.dir/runner/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/runner/main.cpp > CMakeFiles/server_runner.dir/runner/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/runner/main.cpp > CMakeFiles/server_runner.dir/runner/main.cpp.i
 
 CMakeFiles/server_runner.dir/runner/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_runner.dir/runner/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/runner/main.cpp -o CMakeFiles/server_runner.dir/runner/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/runner/main.cpp -o CMakeFiles/server_runner.dir/runner/main.cpp.s
 
 CMakeFiles/server_runner.dir/runner/main.cpp.o.requires:
 
@@ -90,13 +90,12 @@ server_runner_EXTERNAL_OBJECTS =
 
 server_runner: CMakeFiles/server_runner.dir/runner/main.cpp.o
 server_runner: CMakeFiles/server_runner.dir/build.make
-server_runner: /usr/local/lib/libhiredis.so
-server_runner: /usr/local/lib/libhiredis.so
-server_runner: /usr/local/lib/libredis++.so
 server_runner: src/libpackets.a
 server_runner: src/ring_buffer/libring_buffer.so
 server_runner: src/libserver.a
 server_runner: src/ring_buffer/libvirtual_socket.so
+server_runner: /usr/local/lib/libhiredis.so
+server_runner: /usr/local/lib/libredis++.so
 server_runner: src/libpackets.a
 server_runner: src/libhandlers.a
 server_runner: CMakeFiles/server_runner.dir/link.txt

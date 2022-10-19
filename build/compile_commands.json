@@ -1,13 +1,38 @@
 [
 {
   "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/usr/local/include -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -lhiredis -lredis++ -std=c++17 -std=gnu++1z -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -std=gnu++1z -o CMakeFiles/server_runner.dir/runner/main.cpp.o -c /home/kayvan/Repos/custom_backend/runner/main.cpp",
   "file": "/home/kayvan/Repos/custom_backend/runner/main.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -pthread -g -lhiredis -lredis++ -std=c++17 -std=gnu++1z -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -pthread -g -std=gnu++1z -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/kayvan/Repos/custom_backend/tests/test.cpp",
   "file": "/home/kayvan/Repos/custom_backend/tests/test.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -std=gnu++1z -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/server/server.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/packets/packets.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
+  "command": "/usr/bin/g++  -Dring_buffer_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/ring_buffer.dir/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
+  "command": "/usr/bin/g++  -Dvirtual_socket_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/virtual_socket.dir/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp"
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
@@ -411,6 +436,11 @@
 },
 {
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
+  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_get_random_seed.cpp",
+  "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_get_random_seed.cpp"
+},
+{
+  "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
   "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp"
 },
@@ -508,30 +538,5 @@
   "directory": "/home/kayvan/Repos/custom_backend/build/lib/Catch2/src",
   "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/.. -I/home/kayvan/Repos/custom_backend/build/generated-includes  -g   -std=gnu++1z -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp",
   "file": "/home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_main.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src -I/home/kayvan/Repos/custom_backend/src/ring_buffer  -g   -std=gnu++1z -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/server/server.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/packets.dir/packets/packets.cpp.o -c /home/kayvan/Repos/custom_backend/src/packets/packets.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/packets/packets.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/src",
-  "command": "/usr/bin/g++   -I/home/kayvan/Repos/custom_backend/src  -g   -std=gnu++1z -o CMakeFiles/handlers.dir/server/packet_handlers.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/server/packet_handlers.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
-  "command": "/usr/bin/g++  -Dring_buffer_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/ring_buffer.dir/ring_buffer.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.cpp"
-},
-{
-  "directory": "/home/kayvan/Repos/custom_backend/build/src/ring_buffer",
-  "command": "/usr/bin/g++  -Dvirtual_socket_EXPORTS -I/home/kayvan/Repos/custom_backend/src/ring_buffer -I/home/kayvan/Repos/custom_backend/src  -g -fPIC   -std=gnu++1z -o CMakeFiles/virtual_socket.dir/virtual_socket.cpp.o -c /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp",
-  "file": "/home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.cpp"
 }
 ]

@@ -37,8 +37,6 @@ packet_handlers.h
 /home/kayvan/Repos/custom_backend/src/packets/packets.h
 ../packets/packet_ids.h
 /home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
-postgresql/libpq-fe.h
--
 server.h
 /home/kayvan/Repos/custom_backend/src/server/server.h
 sw/redis++/redis++.h
@@ -47,6 +45,8 @@ sw/redis++/redis++.h
 /home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
 ../ring_buffer/virtual_socket.h
 /home/kayvan/Repos/custom_backend/src/ring_buffer/virtual_socket.h
+server.h
+/home/kayvan/Repos/custom_backend/src/server/server.h
 
 /home/kayvan/Repos/custom_backend/src/server/server.h
 ../ring_buffer/virtual_socket.h

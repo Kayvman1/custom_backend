@@ -181,6 +181,8 @@
 /* #undef CATCH_CONFIG_PREFIX_ALL */
 /* #undef CATCH_CONFIG_WINDOWS_CRTDBG */
 
+/* #undef CATCH_CONFIG_SHARED_LIBRARY */
+
 
 // ------
 // "Variable" defines, these have actual values

@@ -1,20 +1,19 @@
 #include "packet_handlers.h"
 #include "../packets/packets.h"
 #include "../packets/packet_ids.h"
-#include <postgresql/libpq-fe.h>
 #include "server.h"
 
 #include <sw/redis++/redis++.h>
 // # include <iostream>
 using namespace sw::redis;
 
-void packet_handlers::login_request_handler(uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
 {
     auto redis = Redis("tcp://127.0.0.1:6379");
     std::cout << redis.ping() << std::endl;
 }
 
-void packet_handlers::test_request_handler(uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
 {
     test_request *req = new test_request();
     test_response *resp = new test_response();
@@ -31,7 +30,7 @@ void packet_handlers::test_request_handler(uint8_t *raw_msg, virtual_socket *vs)
     return;
 }
 
-void packet_handlers::response_handler(uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::response_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
 {
     return;
 }

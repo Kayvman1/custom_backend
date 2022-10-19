@@ -59,16 +59,16 @@ include src/CMakeFiles/server.dir/flags.make
 
 src/CMakeFiles/server.dir/server/server.cpp.o: src/CMakeFiles/server.dir/flags.make
 src/CMakeFiles/server.dir/server/server.cpp.o: ../src/server/server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/server.dir/server/server.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/server.dir/server/server.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server/server.cpp.o -c /home/kayvan/Repos/custom_backend/src/server/server.cpp
 
 src/CMakeFiles/server.dir/server/server.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/server.dir/server/server.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/server.cpp > CMakeFiles/server.dir/server/server.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/server/server.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/src/server/server.cpp > CMakeFiles/server.dir/server/server.cpp.i
 
 src/CMakeFiles/server.dir/server/server.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/server.dir/server/server.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/server.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/src/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
 
 src/CMakeFiles/server.dir/server/server.cpp.o.requires:
 
@@ -91,7 +91,7 @@ server_EXTERNAL_OBJECTS =
 src/libserver.a: src/CMakeFiles/server.dir/server/server.cpp.o
 src/libserver.a: src/CMakeFiles/server.dir/build.make
 src/libserver.a: src/CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libserver.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libserver.a"
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean_target.cmake
 	cd /home/kayvan/Repos/custom_backend/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ src/CMakeFiles/server.dir/clean:
 .PHONY : src/CMakeFiles/server.dir/clean
 
 src/CMakeFiles/server.dir/depend:
-	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/server.dir/DependInfo.cmake
+	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/src /home/kayvan/Repos/custom_backend/build/src/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/server.dir/depend
 

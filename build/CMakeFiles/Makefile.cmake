@@ -64,10 +64,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "DartConfiguration.tcl"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/Catch2/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/Catch2/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/ring_buffer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/Catch2/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/Catch2/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -102,11 +102,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Nightly.dir/DependInfo.cmake"
   "CMakeFiles/NightlyConfigure.dir/DependInfo.cmake"
   "CMakeFiles/ExperimentalStart.dir/DependInfo.cmake"
-  "lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
-  "lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
   "src/CMakeFiles/server.dir/DependInfo.cmake"
   "src/CMakeFiles/packets.dir/DependInfo.cmake"
   "src/CMakeFiles/handlers.dir/DependInfo.cmake"
   "src/ring_buffer/CMakeFiles/ring_buffer.dir/DependInfo.cmake"
   "src/ring_buffer/CMakeFiles/virtual_socket.dir/DependInfo.cmake"
+  "lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
+  "lib/Catch2/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
   )

@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = /home/kayvan/Repos/custom_backend/build
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@echo "Running CMake to regenerate build system..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
 	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -69,7 +69,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@echo "No interactive CMake dialog available..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
 	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
@@ -80,7 +80,7 @@ edit_cache/fast: edit_cache
 
 # Special rule for the target package
 package: preinstall
-	@echo "Run CPack packaging tool..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
 	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
@@ -91,7 +91,7 @@ package/fast: package
 
 # Special rule for the target package_source
 package_source:
-	@echo "Run CPack packaging tool for source..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
 	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/kayvan/Repos/custom_backend/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
@@ -102,7 +102,7 @@ package_source/fast: package_source
 
 # Special rule for the target test
 test:
-	@echo "Running tests..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
 	/usr/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
@@ -361,6 +361,33 @@ catch2/catch_config.s: catch2/catch_config.cpp.s
 catch2/catch_config.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s
 .PHONY : catch2/catch_config.cpp.s
+
+catch2/catch_get_random_seed.o: catch2/catch_get_random_seed.cpp.o
+
+.PHONY : catch2/catch_get_random_seed.o
+
+# target to build an object file
+catch2/catch_get_random_seed.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o
+.PHONY : catch2/catch_get_random_seed.cpp.o
+
+catch2/catch_get_random_seed.i: catch2/catch_get_random_seed.cpp.i
+
+.PHONY : catch2/catch_get_random_seed.i
+
+# target to preprocess a source file
+catch2/catch_get_random_seed.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.i
+.PHONY : catch2/catch_get_random_seed.cpp.i
+
+catch2/catch_get_random_seed.s: catch2/catch_get_random_seed.cpp.s
+
+.PHONY : catch2/catch_get_random_seed.s
+
+# target to generate assembly for a file
+catch2/catch_get_random_seed.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.s
+.PHONY : catch2/catch_get_random_seed.cpp.s
 
 catch2/catch_message.o: catch2/catch_message.cpp.o
 
@@ -2907,6 +2934,9 @@ help:
 	@echo "... catch2/catch_config.o"
 	@echo "... catch2/catch_config.i"
 	@echo "... catch2/catch_config.s"
+	@echo "... catch2/catch_get_random_seed.o"
+	@echo "... catch2/catch_get_random_seed.i"
+	@echo "... catch2/catch_get_random_seed.s"
 	@echo "... catch2/catch_message.o"
 	@echo "... catch2/catch_message.i"
 	@echo "... catch2/catch_message.s"

@@ -7,4 +7,5 @@ src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/packets/packets.h
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/ring_buffer/ring_buffer.h
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/ring_buffer/virtual_socket.h
 src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/server/packet_handlers.h
+src/CMakeFiles/packets.dir/packets/packets.cpp.o: ../src/server/server.h
 

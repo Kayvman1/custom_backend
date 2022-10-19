@@ -6,6 +6,7 @@
 #include <thread>
 #include "../src/ring_buffer/virtual_socket.h"
 #include "../src/server/server.h"
+#include <string.h>
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -636,5 +637,5 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
 
     login_request::pack(req,buf);
 
-    packet_handlers::login_request_handler(buf, NULL);
+    //packet_handlers::login_request_handler(buf, NULL);
 }

@@ -79,6 +79,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o"
+  "CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o"
   "CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o"

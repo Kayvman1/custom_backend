@@ -59,16 +59,16 @@ include lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_automake.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o.requires:
 
@@ -83,16 +83,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_common_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o.requires:
 
@@ -107,16 +107,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_compact.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o.requires:
 
@@ -131,16 +131,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_console.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o.requires:
 
@@ -155,16 +155,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_cumulative_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o.requires:
 
@@ -179,16 +179,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_event_listener.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o.requires:
 
@@ -203,16 +203,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_liste
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_helpers.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o.requires:
 
@@ -227,16 +227,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_junit.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o.requires:
 
@@ -251,16 +251,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_multi.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o.requires:
 
@@ -275,16 +275,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_registrars.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o.requires:
 
@@ -299,16 +299,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_sonarqube.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o.requires:
 
@@ -323,16 +323,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.c
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_streaming_base.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o.requires:
 
@@ -347,16 +347,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_b
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_tap.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o.requires:
 
@@ -371,16 +371,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o.p
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_teamcity.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o.requires:
 
@@ -395,16 +395,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o: ../lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp > CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/reporters/catch_reporter_xml.cpp -o CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o.requires:
 
@@ -419,16 +419,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o.p
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o: ../lib/Catch2/src/catch2/catch_approx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp > CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp > CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_approx.cpp -o CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o.requires:
 
@@ -443,16 +443,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o.provides.build: l
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o: ../lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_assertion_handler.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o.requires:
 
@@ -467,16 +467,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o: ../lib/Catch2/src/catch2/catch_assertion_result.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp > CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp > CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_assertion_result.cpp -o CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o.requires:
 
@@ -491,16 +491,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o.provide
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o: ../lib/Catch2/src/catch2/internal/catch_clara.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_clara.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o.requires:
 
@@ -515,16 +515,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o.provides.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o: ../lib/Catch2/src/catch2/internal/catch_commandline.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_commandline.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o.requires:
 
@@ -539,16 +539,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o.pro
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o: ../lib/Catch2/src/catch2/internal/catch_source_line_info.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_source_line_info.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o.requires:
 
@@ -563,16 +563,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o: ../lib/Catch2/src/catch2/catch_config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_config.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp > CMakeFiles/Catch2.dir/catch2/catch_config.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_config.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp > CMakeFiles/Catch2.dir/catch2/catch_config.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_config.cpp -o CMakeFiles/Catch2.dir/catch2/catch_config.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o.requires:
 
@@ -587,16 +587,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o.provides.build: l
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o: ../lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_case_insensitive_comparisons.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o.requires:
 
@@ -611,16 +611,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o: ../lib/Catch2/src/catch2/internal/catch_console_colour.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_console_colour.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o.requires:
 
@@ -635,16 +635,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o: ../lib/Catch2/src/catch2/internal/catch_context.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_context.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o.requires:
 
@@ -659,16 +659,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o.provide
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o: ../lib/Catch2/src/catch2/internal/catch_debug_console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debug_console.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o.requires:
 
@@ -683,16 +683,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o.p
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o: ../lib/Catch2/src/catch2/internal/catch_debugger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_debugger.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o.requires:
 
@@ -707,16 +707,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o.provid
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o: ../lib/Catch2/src/catch2/internal/catch_enforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enforce.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o.requires:
 
@@ -731,16 +731,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o.provide
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_enum_values_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o.requires:
 
@@ -755,16 +755,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_exception_translator_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o.requires:
 
@@ -779,16 +779,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o: ../lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_fatal_condition_handler.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o.requires:
 
@@ -803,16 +803,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handl
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o: ../lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_floating_point_helpers.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o.requires:
 
@@ -827,16 +827,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helper
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o: ../lib/Catch2/src/catch2/internal/catch_istream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_istream.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o.requires:
 
@@ -851,16 +851,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o.provide
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_generatortracker.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o.requires:
 
@@ -875,16 +875,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generato
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o.requires:
 
@@ -899,16 +899,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o: ../lib/Catch2/src/catch2/internal/catch_list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_list.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o.requires:
 
@@ -923,16 +923,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o.provides.b
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_floating_point.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o.requires:
 
@@ -947,16 +947,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_poi
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_quantifiers.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o.requires:
 
@@ -971,16 +971,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_string.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o.requires:
 
@@ -995,16 +995,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_templated.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o.requires:
 
@@ -1019,16 +1019,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o: ../lib/Catch2/src/catch2/catch_message.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_message.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp > CMakeFiles/Catch2.dir/catch2/catch_message.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_message.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp > CMakeFiles/Catch2.dir/catch2/catch_message.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_message.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_message.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_message.cpp -o CMakeFiles/Catch2.dir/catch2/catch_message.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o.requires:
 
@@ -1043,16 +1043,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o.provides.build: 
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o: ../lib/Catch2/src/catch2/internal/catch_output_redirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_output_redirect.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o.requires:
 
@@ -1067,16 +1067,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o: ../lib/Catch2/src/catch2/catch_registry_hub.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp > CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp > CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_registry_hub.cpp -o CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o.requires:
 
@@ -1091,16 +1091,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o.provides.bu
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o: ../lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_number_generator.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o.requires:
 
@@ -1115,16 +1115,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generat
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o: ../lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_random_seed_generation.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o.requires:
 
@@ -1139,16 +1139,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generatio
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o.requires:
 
@@ -1163,16 +1163,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o: ../lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reporter_spec_parser.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o.requires:
 
@@ -1187,16 +1187,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o: ../lib/Catch2/src/catch2/internal/catch_result_type.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_result_type.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o.requires:
 
@@ -1211,16 +1211,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o.pro
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o: ../lib/Catch2/src/catch2/internal/catch_run_context.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_run_context.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o.requires:
 
@@ -1235,16 +1235,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o.pro
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o: ../lib/Catch2/src/catch2/internal/catch_section.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_section.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o.requires:
 
@@ -1259,16 +1259,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o.provide
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o: ../lib/Catch2/src/catch2/internal/catch_stdstreams.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stdstreams.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o.requires:
 
@@ -1283,16 +1283,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o.prov
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o: ../lib/Catch2/src/catch2/catch_session.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_session.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp > CMakeFiles/Catch2.dir/catch2/catch_session.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_session.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp > CMakeFiles/Catch2.dir/catch2/catch_session.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_session.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_session.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_session.cpp -o CMakeFiles/Catch2.dir/catch2/catch_session.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o.requires:
 
@@ -1307,16 +1307,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o.provides.build: 
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o: ../lib/Catch2/src/catch2/internal/catch_singletons.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_singletons.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o.requires:
 
@@ -1331,16 +1331,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o.prov
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o: ../lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_reusable_string_stream.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o.requires:
 
@@ -1355,16 +1355,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_strea
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o: ../lib/Catch2/src/catch2/internal/catch_stringref.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_stringref.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o.requires:
 
@@ -1379,16 +1379,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o.provi
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o: ../lib/Catch2/src/catch2/internal/catch_string_manip.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_string_manip.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o.requires:
 
@@ -1403,16 +1403,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o.pr
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_tag_alias_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o.requires:
 
@@ -1427,16 +1427,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o: ../lib/Catch2/src/catch2/catch_test_case_info.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp > CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp > CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_case_info.cpp -o CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o.requires:
 
@@ -1451,16 +1451,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o.provides.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o: ../lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_registry_impl.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o.requires:
 
@@ -1475,16 +1475,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_im
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o: ../lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_tracker.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o.requires:
 
@@ -1499,16 +1499,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_test_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o.requires:
 
@@ -1523,16 +1523,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o.p
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o: ../lib/Catch2/src/catch2/internal/catch_textflow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_textflow.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o.requires:
 
@@ -1547,16 +1547,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o.provid
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o: ../lib/Catch2/src/catch2/catch_test_spec.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp > CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp > CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_test_spec.cpp -o CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o.requires:
 
@@ -1571,16 +1571,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o.provides.build
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o: ../lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_spec_parser.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o.requires:
 
@@ -1595,16 +1595,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o: ../lib/Catch2/src/catch2/catch_timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp > CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp > CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_timer.cpp -o CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o.requires:
 
@@ -1619,16 +1619,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o.provides.build: li
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o: ../lib/Catch2/src/catch2/catch_tostring.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp > CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp > CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tostring.cpp -o CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o.requires:
 
@@ -1643,16 +1643,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o.provides.build:
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o: ../lib/Catch2/src/catch2/catch_totals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp > CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp > CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_totals.cpp -o CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o.requires:
 
@@ -1667,16 +1667,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o.provides.build: l
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o: ../lib/Catch2/src/catch2/catch_version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_version.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp > CMakeFiles/Catch2.dir/catch2/catch_version.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_version.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp > CMakeFiles/Catch2.dir/catch2/catch_version.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_version.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_version.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_version.cpp -o CMakeFiles/Catch2.dir/catch2/catch_version.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o.requires:
 
@@ -1691,16 +1691,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o.provides.build: 
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o: ../lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_wildcard_pattern.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o.requires:
 
@@ -1715,16 +1715,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o: ../lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_xmlwriter.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o.requires:
 
@@ -1739,16 +1739,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o.provi
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o: ../lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_test_case_info_hasher.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o.requires:
 
@@ -1763,16 +1763,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o: ../lib/Catch2/src/catch2/generators/catch_generators_random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators_random.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o.requires:
 
@@ -1787,16 +1787,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.c
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o: ../lib/Catch2/src/catch2/generators/catch_generator_exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generator_exception.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o.requires:
 
@@ -1811,16 +1811,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o: ../lib/Catch2/src/catch2/generators/catch_generators.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp > CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/generators/catch_generators.cpp -o CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o.requires:
 
@@ -1835,16 +1835,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o.pr
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o.requires:
 
@@ -1859,16 +1859,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o.provid
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_container_properties.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o.requires:
 
@@ -1883,16 +1883,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_pr
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_exception.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o.requires:
 
@@ -1907,16 +1907,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o: ../lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp > CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/catch_matchers_predicate.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o.requires:
 
@@ -1931,16 +1931,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o: ../lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp > CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp > CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/matchers/internal/catch_matchers_impl.cpp -o CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o.requires:
 
@@ -1955,16 +1955,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_imp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o: ../lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp > CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp > CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_tag_alias_autoregistrar.cpp -o CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o.requires:
 
@@ -1977,18 +1977,42 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o.
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o.provides.build: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o
 
 
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o: ../lib/Catch2/src/catch2/catch_get_random_seed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_get_random_seed.cpp
+
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_get_random_seed.cpp > CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.i
+
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/catch_get_random_seed.cpp -o CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.s
+
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.requires:
+
+.PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.requires
+
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.provides: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.requires
+	$(MAKE) -f lib/Catch2/src/CMakeFiles/Catch2.dir/build.make lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.provides.build
+.PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.provides
+
+lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.provides.build: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o
+
+
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o: ../lib/Catch2/src/catch2/internal/catch_decomposer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_decomposer.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o.requires:
 
@@ -2003,16 +2027,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o.prov
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o: ../lib/Catch2/src/catch2/internal/catch_errno_guard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_errno_guard.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o.requires:
 
@@ -2027,16 +2051,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o.pro
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o: ../lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_lazy_expr.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o.requires:
 
@@ -2051,16 +2075,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o.provi
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o: ../lib/Catch2/src/catch2/internal/catch_leak_detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_leak_detector.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o.requires:
 
@@ -2075,16 +2099,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o.p
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o: ../lib/Catch2/src/catch2/internal/catch_message_info.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_message_info.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o.requires:
 
@@ -2099,16 +2123,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o.pr
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o: ../lib/Catch2/src/catch2/internal/catch_polyfills.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_polyfills.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o.requires:
 
@@ -2123,16 +2147,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o.provi
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o: ../lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_startup_exception_registry.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o.requires:
 
@@ -2147,16 +2171,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_reg
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o: ../lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp > CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/internal/catch_uncaught_exceptions.cpp -o CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o.requires:
 
@@ -2171,16 +2195,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.c
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_capture.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o.requires:
 
@@ -2195,16 +2219,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_config.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o.requires:
 
@@ -2219,16 +2243,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.c
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_exception.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o.requires:
 
@@ -2243,16 +2267,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exceptio
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_registry_hub.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o.requires:
 
@@ -2267,16 +2291,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o.requires:
 
@@ -2291,16 +2315,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_reporter_registry.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o.requires:
 
@@ -2315,16 +2339,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o: ../lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp > CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/interfaces/catch_interfaces_testcase.cpp -o CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o.requires:
 
@@ -2339,16 +2363,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o: ../lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/catch_chronometer.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o.requires:
 
@@ -2363,16 +2387,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o.pr
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o: ../lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_benchmark_function.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o.requires:
 
@@ -2387,16 +2411,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_fun
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o: ../lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_run_for_at_least.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o.requires:
 
@@ -2411,16 +2435,16 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_le
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o: lib/Catch2/src/CMakeFiles/Catch2.dir/flags.make
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o: ../lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o -c /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.i: cmake_force
-	@echo "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.i"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.i"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp > CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.i
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.s: cmake_force
-	@echo "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.s"
-	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.s"
+	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayvan/Repos/custom_backend/lib/Catch2/src/catch2/benchmark/detail/catch_stats.cpp -o CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.s
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o.requires:
 
@@ -2515,6 +2539,7 @@ Catch2_OBJECTS = \
 "CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o" \
 "CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o" \
 "CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o" \
+"CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o" \
 "CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o" \
 "CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o" \
 "CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o" \
@@ -2538,113 +2563,114 @@ Catch2_OBJECTS = \
 # External object files for target Catch2
 Catch2_EXTERNAL_OBJECTS =
 
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/build.make
-lib/Catch2/src/libCatch2.a: lib/Catch2/src/CMakeFiles/Catch2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Linking CXX static library libCatch2.a"
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_registry.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/build.make
+lib/Catch2/src/libCatch2d.a: lib/Catch2/src/CMakeFiles/Catch2.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayvan/Repos/custom_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Linking CXX static library libCatch2d.a"
 	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && $(CMAKE_COMMAND) -P CMakeFiles/Catch2.dir/cmake_clean_target.cmake
 	cd /home/kayvan/Repos/custom_backend/build/lib/Catch2/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Catch2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-lib/Catch2/src/CMakeFiles/Catch2.dir/build: lib/Catch2/src/libCatch2.a
+lib/Catch2/src/CMakeFiles/Catch2.dir/build: lib/Catch2/src/libCatch2d.a
 
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/build
 
@@ -2728,6 +2754,7 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o.requires
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o.requires
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o.requires
+lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.requires
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o.requires
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o.requires
 lib/Catch2/src/CMakeFiles/Catch2.dir/requires: lib/Catch2/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o.requires
@@ -2755,6 +2782,6 @@ lib/Catch2/src/CMakeFiles/Catch2.dir/clean:
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/clean
 
 lib/Catch2/src/CMakeFiles/Catch2.dir/depend:
-	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/lib/Catch2/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/lib/Catch2/src /home/kayvan/Repos/custom_backend/build/lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake
+	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayvan/Repos/custom_backend /home/kayvan/Repos/custom_backend/lib/Catch2/src /home/kayvan/Repos/custom_backend/build /home/kayvan/Repos/custom_backend/build/lib/Catch2/src /home/kayvan/Repos/custom_backend/build/lib/Catch2/src/CMakeFiles/Catch2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/Catch2/src/CMakeFiles/Catch2.dir/depend
 
