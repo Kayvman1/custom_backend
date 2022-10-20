@@ -33,7 +33,7 @@ TEST_CASE("SerializeLoginResponse", "[serialize]")
     login_response *msg1 = new login_response;
     login_response *msg2 = new login_response;
 
-    msg1->status = 200;
+    msg1->status = 201;
     msg1->auth_token = "ABCDEFGHI";
     msg1->user = new account;
     msg1->user->username = "username";
@@ -562,8 +562,6 @@ int test(ring_buffer *ring_buf, int read_number)
     ring_buf->read_bytes((uint8_t *)&unpack->flags, 4);
     ring_buf->read_bytes((uint8_t *)&unpack->buf_size, 4);
 
-    std::cout << unpack->buf_size << std::endl;
-
     uint8_t *team = (uint8_t *)malloc(unpack->buf_size);
     ring_buf->read_bytes(team, unpack->buf_size);
 
@@ -632,10 +630,25 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
 {
     uint8_t *buf = (uint8_t *)malloc(100);
     login_request *req = new login_request();
-    req->username = "username";
+    req->username = "kayvman123";
     req->password = "password";
+    packet *unpack = new packet;
 
-    login_request::pack(req,buf);
+    login_request::pack(req, buf);
 
-    //packet_handlers::login_request_handler(buf, NULL);
+    virtual_socket * vs = new virtual_socket;
+    int val_read;
+    packet_handlers::login_request_handler(NULL, buf, vs);
+    uint8_t message_buffer[3000];
+
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+
+    std::cout << unpack->magic<< std::endl ;
 }

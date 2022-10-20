@@ -34,7 +34,7 @@ uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
     pack_pointer func = GET_PACK_FOR_MESSAGE(msg);
     message_size = func(raw_msg, buf + index);
 
-    //TODO REMOVE THIS, DEBUGGING ? 
+    // TODO REMOVE THIS, DEBUGGING ?
     msg->buf_size = message_size;
 
     std::memcpy(buf + buf_size_addr, &message_size, sizeof(message_size));
@@ -178,8 +178,10 @@ uint32_t login_response::pack(void *raw_msg, uint8_t *buf)
     std::strncpy((char *)buf + index, msg->auth_token.c_str(), TOKEN_LEN + 1);
     index += TOKEN_LEN + 1;
 
-    index += account::pack(msg->user, buf + index);
-
+    if (msg->status == 201)
+    {
+        index += account::pack(msg->user, buf + index);
+    }
     return index;
 }
 
@@ -197,10 +199,13 @@ void login_response::unpack(void *raw_msg, uint8_t *buf)
     msg->auth_token = std::string((char *)buf + index);
     index = index + TOKEN_LEN + 1;
 
-    msg->user = new account;
-    index += account::unpack(msg->user, buf + index);
+    //TODO verify this logic
+    if (msg->status == 201)
+    {
+        msg->user = new account;
+        index += account::unpack(msg->user, buf + index);
+    }
 }
-
 uint32_t refresh_token_request::pack(void *raw_msg, uint8_t *buf)
 {
     refresh_token_request *msg = (refresh_token_request *)raw_msg;

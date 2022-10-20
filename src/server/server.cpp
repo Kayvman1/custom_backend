@@ -16,17 +16,16 @@
 #include "packet_handlers.h"
 #include <postgresql/libpq-fe.h>
 #include "client.h"
-#include <sw/redis++/redis++.h>
 
 void handle_new_connection(int new_socket);
 void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
 void test_response_handler(uint8_t *raw_msg, virtual_socket *vs);
 
-sw::redis::Redis redis;
+sw::redis::Redis *redis;
 
 void server::start(int port_number)
 {
-    redis = sw::redis::Redis("tcp://127.0.0.1:6379");
+    *redis = sw::redis::Redis("tcp://127.0.0.1:6379");
     int server_fd, new_socket;
 
     long valread;

@@ -61,7 +61,8 @@
         "variant": "cpp",
         "packets_cpp_expanded": "cpp",
         "pqxx": "cpp",
-        "composite": "cpp"
+        "composite": "cpp",
+        "unordered_set": "cpp"
     },
     "cSpell.words": [
         "mongocxx"
