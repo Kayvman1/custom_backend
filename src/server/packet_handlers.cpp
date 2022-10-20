@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <sw/redis++/redis++.h>
 // # include <iostream>
-//using namespace sw::redis;
+// using namespace sw::redis;
 
 extern sw::redis::Redis *redis;
 
@@ -16,8 +16,9 @@ public:
     std::string message;
 };
 
-
-//CORRECT id generation
+// CORRECT id generation
+// Create an interface or wrapper class that contains either a vs or socket
+//Create error message with status code (that you define, and a response with text explaining the issue )
 void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
@@ -42,6 +43,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual
         int packet_size = packet::pack(p, buffer, resp);
         vs->write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
+        free(buffer);
         return;
     }
     else
@@ -61,10 +63,10 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual
     resp->status = 201;
     resp->user = new account;
 
-
     int packet_size = packet::pack(p, buffer, resp);
     vs->write(virtual_fd::CLIENT, buffer, packet_size);
     free(raw_msg);
+    free(buffer);
     return;
 }
 
