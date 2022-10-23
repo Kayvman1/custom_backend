@@ -21,6 +21,10 @@ find_package(Threads REQUIRED)
 target_link_libraries(server_runner PUBLIC Threads::Threads)
 target_link_libraries(tests PUBLIC Threads::Threads)
 
+find_package(OpenSSL REQUIRED)
+target_link_libraries(server_runner PUBLIC OpenSSL::SSL)
+target_link_libraries(tests PUBLIC OpenSSL::SSL)
+
 
 # <------------ add hiredis dependency --------------->
 find_path(HIREDIS_HEADER hiredis)

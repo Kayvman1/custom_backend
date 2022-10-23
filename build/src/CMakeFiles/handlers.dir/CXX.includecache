@@ -43,6 +43,10 @@ stdio.h
 -
 sw/redis++/redis++.h
 -
+openssl/sha.h
+-
+functional
+-
 
 /home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
 ../ring_buffer/virtual_socket.h

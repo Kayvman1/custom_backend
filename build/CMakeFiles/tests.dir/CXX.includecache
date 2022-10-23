@@ -67,6 +67,8 @@ thread
 /home/kayvan/Repos/custom_backend/src/server/server.h
 string.h
 -
+functional
+-
 
 /usr/local/include/catch2/catch_assertion_info.hpp
 catch2/internal/catch_result_type.hpp

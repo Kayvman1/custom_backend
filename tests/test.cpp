@@ -7,7 +7,7 @@
 #include "../src/ring_buffer/virtual_socket.h"
 #include "../src/server/server.h"
 #include <string.h>
-
+#include <functional>
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
     uint8_t *buf = (uint8_t *)malloc(100);
@@ -630,13 +630,13 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
 {
     uint8_t *buf = (uint8_t *)malloc(100);
     login_request *req = new login_request();
-    req->username = "kayvman123";
+    req->username = "abcds";
     req->password = "password";
     packet *unpack = new packet;
 
     login_request::pack(req, buf);
 
-    virtual_socket * vs = new virtual_socket;
+    virtual_socket *vs = new virtual_socket;
     int val_read;
     packet_handlers::login_request_handler(NULL, buf, vs);
     uint8_t message_buffer[3000];
@@ -650,5 +650,5 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    std::cout << unpack->magic<< std::endl ;
+    std::cout << unpack->magic << std::endl;
 }

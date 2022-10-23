@@ -82,7 +82,36 @@ void *packet::message_unpack(uint8_t *buf)
     return m;
 }
 
-/////////////////////////// TEST PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////// ERROR MESSAGES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+uint32_t error_response::pack(void *raw_msg, uint8_t *buf)
+{
+    error_response *msg = (error_response *)raw_msg;
+    uint8_t response_length = msg->response.length();
+
+    int index = 0;
+    memcpy(buf, &msg->status, sizeof(msg->status));
+    index += sizeof(msg->status);
+
+    memcpy(buf, &response_length, sizeof(response_length));
+    index += response_length;
+    memcpy(buf, msg->response.c_str(), msg->response.length());
+}
+
+void error_response::unpack(void *raw_msg, uint8_t * buf)
+{
+    error_response * msg = (error_response *) raw_msg;
+    int index = 0;
+    uint8_t response_length;
+
+    memcpy(&msg->status, buf + index, sizeof(msg->status));
+    index += sizeof(msg->status);
+    memcpy(&response_length, buf, sizeof(response_length));
+    index += sizeof(response_length);
+    memcpy(&msg->response, buf, response_length);
+}
+
+/////////////////////////// TEST Messages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 uint32_t test_request::pack(void *raw_msg, uint8_t *buf)
 {
@@ -120,7 +149,7 @@ void test_response::unpack(void *raw_msg, uint8_t *buf)
     return;
 }
 
-/////////////////////////// CONTROL PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////////////// CONTROL MESSAGES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 uint32_t login_request::pack(void *raw_msg, uint8_t *buf)
@@ -199,7 +228,7 @@ void login_response::unpack(void *raw_msg, uint8_t *buf)
     msg->auth_token = std::string((char *)buf + index);
     index = index + TOKEN_LEN + 1;
 
-    //TODO verify this logic
+    // TODO verify this logic
     if (msg->status == 201)
     {
         msg->user = new account;

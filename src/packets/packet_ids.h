@@ -7,6 +7,9 @@ using handler_pointer = void (*)(server *, uint8_t *, virtual_socket *);
 using pack_pointer = uint32_t (*)(void *, uint8_t *);
 using unpack_pointer = void (*)(void *raw_msg, uint8_t *buf);
 
+#define ERROR_PACKET_TABLE(XX) \
+    XX(error_response, 1, packet_handlers::response_handler, error_response::pack, error_response::unpack)
+
 #define TEST_PACKET_TABLE(XX)                                                                            \
     XX(test_request, 1, packet_handlers::test_request_handler, test_request::pack, test_request::unpack) \
     XX(test_response, 2, packet_handlers::response_handler, test_response::pack, test_response::unpack)
@@ -23,6 +26,14 @@ enum MESSAGE_TYPE
 {
     TEST_PACKET = 100,
     CONTROL_PACKET = 0,
+    ERROR_PACKET = 1,
+};
+
+enum ERROR_PACKETS_IDS
+{
+#define PACKET_HANDLER(CLASS, ID, HANDLER, PACK, UNPACK) \
+    CLASS##_id = ID,
+    ERROR_PACKET_TABLE(PACKET_HANDLER)
 };
 
 enum TEST_PACKET_IDS

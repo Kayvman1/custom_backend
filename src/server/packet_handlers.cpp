@@ -4,6 +4,8 @@
 #include "server.h"
 #include <stdio.h>
 #include <sw/redis++/redis++.h>
+#include <openssl/sha.h>
+#include <functional>
 // # include <iostream>
 // using namespace sw::redis;
 
@@ -16,58 +18,73 @@ public:
     std::string message;
 };
 
-// CORRECT id generation
-// Create an interface or wrapper class that contains either a vs or socket
-//Create error message with status code (that you define, and a response with text explaining the issue )
-void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
-
-    login_request *message = new login_request;
-    login_request::unpack(message, raw_msg);
-    login_response *resp = new login_response();
     packet *p = new packet;
-    p->message_type = MESSAGE_TYPE::CONTROL_PACKET;
-    p->message_id = CONTROL_PACKET_IDS::login_response_id;
+    // Ring Buffer ?
     uint8_t *buffer = (uint8_t *)malloc(3000);
 
-    auto response = redis->get("username:" + message->username);
+    create_user_request *message = new create_user_request;
+    create_user_request::unpack(message, raw_msg);
 
-    if (response)
+    auto redis_response = redis->get("username:" + message->username);
+
+    if (redis_response)
     {
+        p->message_type = ERROR_PACKET;
+        p->message_id = error_response_id;
         p->flags = 0;
         p->magic = 54321;
         p->session_token = 0;
-        resp->status = 400;
-
-        int packet_size = packet::pack(p, buffer, resp);
+        error_response response = error_response();
+        response.response = "User Already Exists";
+        response.status = 0;
+        int packet_size = packet::pack(p, buffer, &response);
         vs->write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         return;
     }
-    else
-        std::cout << "no response" << std::endl;
 
-    auto incr = redis->incr("userIdCount");
-    std::string id = std::to_string(incr);
-    redis->set("username:" + message->username, id);
-    std::string value = "username " + message->username + " password " + message->password;
-    std::string key = "user:" + id;
-    redis->hset(key, "USERNAME", message->username);
-    redis->hset(key, "PASSWORD", message->password);
-
+    p->message_type = MESSAGE_TYPE::CONTROL_PACKET;
+    p->message_id = CONTROL_PACKET_IDS::login_response_id;
     p->flags = 0;
     p->magic = 12345;
     p->session_token = 0;
-    resp->status = 201;
-    resp->user = new account;
+    create_user_response response = create_user_response();
 
-    int packet_size = packet::pack(p, buffer, resp);
+    std::hash<std::string> hasher;
+    unsigned char hash_out[64];
+    SHA256((const unsigned char *)message->username.c_str(), message->username.length(), hash_out);
+    uint64_t *val = (uint64_t *)hash_out;
+    auto id = std::to_string(*val);
+    std::string key = "user:" + id;
+    redis->set("username:" + message->username, id);
+    redis->hset(key, "USERNAME", message->username);
+    redis->hset(key, "PASSWORD", message->password);
+
+    response.status = 201;
+    response.user = new account;
+
+    int packet_size = packet::pack(p, buffer, &response);
     vs->write(virtual_fd::CLIENT, buffer, packet_size);
     free(raw_msg);
     free(buffer);
     return;
+}
+
+// CORRECT id generation
+// Create an interface or wrapper class that contains either a vs or socket
+// Create error message with status code (that you define, and a response with text explaining the issue )
+void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+{
+    redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
+
+    login_request * msg = new login_request;
+    login_request::unpack(msg, raw_msg);
+
+    redis->get("username:"+msg->username);
 }
 
 void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)

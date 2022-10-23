@@ -64,6 +64,15 @@ public:
     static void unpack(void *raw_msg, uint8_t *buf);
 };
 
+class error_response
+{
+public:
+    uint16_t status;
+    std::string response;
+    static uint32_t pack(void *raw_msg, uint8_t *buf);
+    static void unpack(void *raw_msg, uint8_t *buf);
+};
+
 // MESSAGE CLASS 0: CONTROL PACKETS
 
 class login_request
