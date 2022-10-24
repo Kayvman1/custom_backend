@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,libring_buffer.so -o libring_buffer.so CMakeFiles/ring_buffer.dir/ring_buffer.cpp.o 

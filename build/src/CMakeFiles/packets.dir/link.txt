@@ -1,2 +1,0 @@
-/usr/bin/ar qc libpackets.a  CMakeFiles/packets.dir/packets/packets.cpp.o
-/usr/bin/ranlib libpackets.a

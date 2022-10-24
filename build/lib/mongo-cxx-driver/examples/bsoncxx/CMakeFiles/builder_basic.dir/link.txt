@@ -1,1 +1,0 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/builder_basic.dir/builder_basic.cpp.o  -o builder_basic -Wl,-rpath,/home/kayvan/Repos/custom_backend/build/lib/mongo-cxx-driver/src/bsoncxx ../../src/bsoncxx/libbsoncxx.so.3.7.0 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libposts.a  CMakeFiles/posts.dir/posts/post.cpp.o
-/usr/bin/ranlib libposts.a
