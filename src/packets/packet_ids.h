@@ -2,8 +2,9 @@
 
 #include "../server/packet_handlers.h"
 #include "../packets/packets.h"
+#include "../server/client.h"
 
-using handler_pointer = void (*)(server *, uint8_t *, virtual_socket *);
+using handler_pointer = void (*)(server *, uint8_t *, client *);
 using pack_pointer = uint32_t (*)(void *, uint8_t *);
 using unpack_pointer = void (*)(void *raw_msg, uint8_t *buf);
 

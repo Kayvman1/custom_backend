@@ -17,6 +17,8 @@
 #include <postgresql/libpq-fe.h>
 #include "client.h"
 
+#define VIRTUAL
+
 void handle_new_connection(int new_socket);
 void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
 void test_response_handler(uint8_t *raw_msg, virtual_socket *vs);
@@ -155,7 +157,8 @@ void server::handle_message(virtual_socket *socket)
     val_read = socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-    func(this, message_buffer, socket);
+    client * c = new client;
+    func(this, message_buffer, c);
 }
 
 

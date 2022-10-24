@@ -636,9 +636,12 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
 
     login_request::pack(req, buf);
 
-    virtual_socket *vs = new virtual_socket;
+    client *c = new client;
+    c->socket.vs = new virtual_socket;
+
+    virtual_socket *vs = c->socket.vs;
     int val_read;
-    packet_handlers::login_request_handler(NULL, buf, vs);
+    packet_handlers::login_request_handler(NULL, buf, c);
     uint8_t message_buffer[3000];
 
     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));

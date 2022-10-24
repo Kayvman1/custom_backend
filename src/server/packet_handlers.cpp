@@ -20,7 +20,7 @@ public:
     std::string message;
 };
 
-void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, client *user)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     packet *p = new packet;
@@ -43,7 +43,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, v
         response.response = "User Already Exists";
         response.status = 0;
         int packet_size = packet::pack(p, buffer, &response);
-        vs->write(virtual_fd::CLIENT, buffer, packet_size);
+        user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         return;
@@ -70,7 +70,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, v
     response.user = new account;
 
     int packet_size = packet::pack(p, buffer, &response);
-    vs->write(virtual_fd::CLIENT, buffer, packet_size);
+    user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
     free(raw_msg);
     free(buffer);
     return;
@@ -79,7 +79,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, v
 // CORRECT id generation
 // Create an interface or wrapper class that contains either a vs or socket
 // Create error message with status code (that you define, and a response with text explaining the issue )
-void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client *user)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
 
@@ -102,7 +102,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual
         response.response = "User Not Found";
         response.status = 0;
         int packet_size = packet::pack(p, buffer, &response);
-        vs->write(virtual_fd::CLIENT, buffer, packet_size);
+        user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         return;
@@ -135,7 +135,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual
     // create client instance
 }
 
-void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *user)
 {
     test_request *req = new test_request();
     test_response *resp = new test_response();
@@ -147,12 +147,12 @@ void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, virtual_
     p->message_type = TEST_PACKET;
     p->message_id = TEST_PACKET_IDS::test_response_id;
     size_t packet_size = packet::pack(p, buf, resp);
-    vs->write(virtual_fd::CLIENT, buf, packet_size);
+    user->socket.write(virtual_fd::CLIENT, buf, packet_size);
 
     return;
 }
 
-void packet_handlers::response_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)
+void packet_handlers::response_handler(server *s, uint8_t *raw_msg, client *user)
 {
     return;
 }
