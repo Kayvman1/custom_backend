@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/kayvan/Repos/custom_backend/src/accounts/account.h
+iostream
+-
+
 /home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
 ../server/packet_handlers.h
 /home/kayvan/Repos/custom_backend/src/server/packet_handlers.h
@@ -23,10 +27,26 @@ packets.h
 /home/kayvan/Repos/custom_backend/src/packets/packets.h
 packet_ids.h
 /home/kayvan/Repos/custom_backend/src/packets/packet_ids.h
+../posts/post.h
+/home/kayvan/Repos/custom_backend/src/posts/post.h
+../accounts/account.h
+/home/kayvan/Repos/custom_backend/src/accounts/account.h
 
 /home/kayvan/Repos/custom_backend/src/packets/packets.h
 iostream
 -
+../posts/post.h
+/home/kayvan/Repos/custom_backend/src/posts/post.h
+../accounts/account.h
+/home/kayvan/Repos/custom_backend/src/accounts/account.h
+../posts/post.h
+/home/kayvan/Repos/custom_backend/src/posts/post.h
+
+/home/kayvan/Repos/custom_backend/src/posts/post.h
+iostream
+-
+../accounts/account.h
+/home/kayvan/Repos/custom_backend/src/accounts/account.h
 
 /home/kayvan/Repos/custom_backend/src/ring_buffer/ring_buffer.h
 iostream

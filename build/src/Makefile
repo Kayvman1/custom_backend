@@ -67,6 +67,28 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/kayvan/Repos/custom_backend/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,28 +110,6 @@ package: preinstall
 package/fast: package
 
 .PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/kayvan/Repos/custom_backend/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/kayvan/Repos/custom_backend/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -142,6 +142,21 @@ preinstall/fast:
 depend:
 	cd /home/kayvan/Repos/custom_backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/CMakeFiles/accounts.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/accounts.dir/rule
+.PHONY : src/CMakeFiles/accounts.dir/rule
+
+# Convenience name for target.
+accounts: src/CMakeFiles/accounts.dir/rule
+
+.PHONY : accounts
+
+# fast build rule for target.
+accounts/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/accounts.dir/build.make src/CMakeFiles/accounts.dir/build
+.PHONY : accounts/fast
 
 # Convenience name for target.
 src/CMakeFiles/server.dir/rule:
@@ -188,6 +203,48 @@ handlers/fast:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/build
 .PHONY : handlers/fast
 
+# Convenience name for target.
+src/CMakeFiles/posts.dir/rule:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/posts.dir/rule
+.PHONY : src/CMakeFiles/posts.dir/rule
+
+# Convenience name for target.
+posts: src/CMakeFiles/posts.dir/rule
+
+.PHONY : posts
+
+# fast build rule for target.
+posts/fast:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/posts.dir/build.make src/CMakeFiles/posts.dir/build
+.PHONY : posts/fast
+
+accounts/account.o: accounts/account.cpp.o
+
+.PHONY : accounts/account.o
+
+# target to build an object file
+accounts/account.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/accounts.dir/build.make src/CMakeFiles/accounts.dir/accounts/account.cpp.o
+.PHONY : accounts/account.cpp.o
+
+accounts/account.i: accounts/account.cpp.i
+
+.PHONY : accounts/account.i
+
+# target to preprocess a source file
+accounts/account.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/accounts.dir/build.make src/CMakeFiles/accounts.dir/accounts/account.cpp.i
+.PHONY : accounts/account.cpp.i
+
+accounts/account.s: accounts/account.cpp.s
+
+.PHONY : accounts/account.s
+
+# target to generate assembly for a file
+accounts/account.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/accounts.dir/build.make src/CMakeFiles/accounts.dir/accounts/account.cpp.s
+.PHONY : accounts/account.cpp.s
+
 packets/packets.o: packets/packets.cpp.o
 
 .PHONY : packets/packets.o
@@ -214,6 +271,33 @@ packets/packets.s: packets/packets.cpp.s
 packets/packets.cpp.s:
 	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/packets.dir/build.make src/CMakeFiles/packets.dir/packets/packets.cpp.s
 .PHONY : packets/packets.cpp.s
+
+posts/post.o: posts/post.cpp.o
+
+.PHONY : posts/post.o
+
+# target to build an object file
+posts/post.cpp.o:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/posts.dir/build.make src/CMakeFiles/posts.dir/posts/post.cpp.o
+.PHONY : posts/post.cpp.o
+
+posts/post.i: posts/post.cpp.i
+
+.PHONY : posts/post.i
+
+# target to preprocess a source file
+posts/post.cpp.i:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/posts.dir/build.make src/CMakeFiles/posts.dir/posts/post.cpp.i
+.PHONY : posts/post.cpp.i
+
+posts/post.s: posts/post.cpp.s
+
+.PHONY : posts/post.s
+
+# target to generate assembly for a file
+posts/post.cpp.s:
+	cd /home/kayvan/Repos/custom_backend/build && $(MAKE) -f src/CMakeFiles/posts.dir/build.make src/CMakeFiles/posts.dir/posts/post.cpp.s
+.PHONY : posts/post.cpp.s
 
 server/packet_handlers.o: server/packet_handlers.cpp.o
 
@@ -276,16 +360,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... package_source"
+	@echo "... accounts"
 	@echo "... server"
 	@echo "... packets"
 	@echo "... handlers"
+	@echo "... edit_cache"
+	@echo "... posts"
 	@echo "... package"
-	@echo "... package_source"
-	@echo "... test"
+	@echo "... accounts/account.o"
+	@echo "... accounts/account.i"
+	@echo "... accounts/account.s"
 	@echo "... packets/packets.o"
 	@echo "... packets/packets.i"
 	@echo "... packets/packets.s"
+	@echo "... posts/post.o"
+	@echo "... posts/post.i"
+	@echo "... posts/post.s"
 	@echo "... server/packet_handlers.o"
 	@echo "... server/packet_handlers.i"
 	@echo "... server/packet_handlers.s"

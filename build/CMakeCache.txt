@@ -485,16 +485,22 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
 //Dependencies for target
-handlers_LIB_DEPENDS:STATIC=
+accounts_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
-packets_LIB_DEPENDS:STATIC=
+handlers_LIB_DEPENDS:STATIC=
+
+//Dependencies for the target
+packets_LIB_DEPENDS:STATIC=general;accounts;general;posts;
+
+//Dependencies for target
+posts_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
 ring_buffer_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
-server_LIB_DEPENDS:STATIC=general;virtual_socket;general;packets;general;handlers;
+server_LIB_DEPENDS:STATIC=general;virtual_socket;general;packets;general;handlers;general;ring_buffer;
 
 //Dependencies for the target
 virtual_socket_LIB_DEPENDS:STATIC=general;ring_buffer;

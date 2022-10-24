@@ -534,6 +534,19 @@ ExperimentalStart/fast:
 .PHONY : ExperimentalStart/fast
 
 #=============================================================================
+# Target rules for targets named accounts
+
+# Build rule for target.
+accounts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 accounts
+.PHONY : accounts
+
+# fast build rule for target.
+accounts/fast:
+	$(MAKE) -f src/CMakeFiles/accounts.dir/build.make src/CMakeFiles/accounts.dir/build
+.PHONY : accounts/fast
+
+#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -571,6 +584,19 @@ handlers: cmake_check_build_system
 handlers/fast:
 	$(MAKE) -f src/CMakeFiles/handlers.dir/build.make src/CMakeFiles/handlers.dir/build
 .PHONY : handlers/fast
+
+#=============================================================================
+# Target rules for targets named posts
+
+# Build rule for target.
+posts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 posts
+.PHONY : posts
+
+# fast build rule for target.
+posts/fast:
+	$(MAKE) -f src/CMakeFiles/posts.dir/build.make src/CMakeFiles/posts.dir/build
+.PHONY : posts/fast
 
 #=============================================================================
 # Target rules for targets named ring_buffer
@@ -719,9 +745,11 @@ help:
 	@echo "... Nightly"
 	@echo "... NightlyConfigure"
 	@echo "... ExperimentalStart"
+	@echo "... accounts"
 	@echo "... server"
 	@echo "... packets"
 	@echo "... handlers"
+	@echo "... posts"
 	@echo "... ring_buffer"
 	@echo "... virtual_socket"
 	@echo "... Catch2"

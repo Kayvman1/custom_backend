@@ -6,6 +6,8 @@
 #include <sw/redis++/redis++.h>
 #include <openssl/sha.h>
 #include <functional>
+#include "../accounts/account.h"
+#include "../posts/post.h"
 // # include <iostream>
 // using namespace sw::redis;
 
@@ -81,10 +83,56 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, virtual
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
 
-    login_request * msg = new login_request;
+    uint8_t *buffer = (uint8_t *)malloc(3000);
+    packet *p = new packet;
+    login_request *msg = new login_request;
     login_request::unpack(msg, raw_msg);
 
-    redis->get("username:"+msg->username);
+    auto redis_response_id = redis->get("username:" + msg->username);
+
+    if (!redis_response_id)
+    {
+        // USERNOT FOUND
+        p->message_type = ERROR_PACKET;
+        p->message_id = error_response_id;
+        p->flags = 0;
+        p->magic = 54321;
+        p->session_token = 0;
+        error_response response = error_response();
+        response.response = "User Not Found";
+        response.status = 0;
+        int packet_size = packet::pack(p, buffer, &response);
+        vs->write(virtual_fd::CLIENT, buffer, packet_size);
+        free(raw_msg);
+        free(buffer);
+        return;
+    }
+    // std::unordered_map<std::string, std::string> m = {
+    //     {"field1", "val1"},
+    //     {"field2", "val2"}};
+    // m.clear();
+
+    // auto redis_response = redis->hgetall("user:" + *redis_response_id, m);
+
+    // auto password = m.find("PASSWORD");
+    // if (password->first != msg->password)
+    // {
+    //     p->message_type = ERROR_PACKET;
+    //     p->message_id = error_response_id;
+    //     p->flags = 0;
+    //     p->magic = 54321;
+    //     p->session_token = 0;
+    //     error_response response = error_response();
+    //     response.response = "Incorrect Password";
+    //     response.status = 0;
+    //     int packet_size = packet::pack(p, buffer, &response);
+    //     vs->write(virtual_fd::CLIENT, buffer, packet_size);
+    //     free(raw_msg);
+    //     free(buffer);
+    //     return;
+    // }
+
+    // create client instance
 }
 
 void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, virtual_socket *vs)

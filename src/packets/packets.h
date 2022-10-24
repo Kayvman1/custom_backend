@@ -1,36 +1,11 @@
 #pragma once
 
 #include <iostream>
-#define USERNAME_LEN 31
-#define PASSWORD_LEN 31
-#define TOKEN_LEN 31
-#define EMAIL_LEN 127
+#include "../posts/post.h"
 
-// TODO MOVE THESE MACROS
-#define TITLE_LEN 50
-#define CONTENT_LEN 50
+#include "../accounts/account.h"
+#include "../posts/post.h"
 #pragma once
-// TODO THIS MUST BE MOVED
-class account
-{
-public:
-    std::string username;
-
-    static uint32_t pack(void *raw_msg, uint8_t *buf);
-    static uint32_t unpack(void *raw_msg, uint8_t *buf);
-};
-
-class poem
-{
-public:
-    int poem_id;
-    std::string title;
-    std::string content;
-    account *author;
-
-    static uint32_t pack(void *raw_msg, uint8_t *buf);
-    static uint32_t unpack(void *raw_msg, uint8_t *buf);
-};
 
 class packet
 {

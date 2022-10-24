@@ -10,8 +10,8 @@ add_executable(tests tests/test.cpp)
 add_executable(server_runner runner/main.cpp)
 
 add_subdirectory(src)
-target_link_libraries(server_runner PUBLIC packets ring_buffer server virtual_socket )
-target_link_libraries(tests PUBLIC  packets ring_buffer server virtual_socket)
+target_link_libraries(server_runner PUBLIC server)
+target_link_libraries(tests PUBLIC  packets server)
 
 add_subdirectory(lib/Catch2)
 target_link_libraries(tests PUBLIC Catch2::Catch2WithMain)
