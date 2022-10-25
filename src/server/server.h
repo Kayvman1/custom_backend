@@ -5,6 +5,7 @@
 #include <vector>
 #include <mutex>
 #include <sw/redis++/redis++.h>
+#include "client.h"
 
 
 
@@ -19,5 +20,5 @@ public:
 
     void start(int port_number);
     void terminate_virtual_connections(virtual_socket *connection);
-    void handle_message(virtual_socket *socket);
+    void handle_message(client *user);
 };

@@ -328,28 +328,28 @@ TEST_CASE("SerializePacket", "[serialize]")
 
 TEST_CASE("RingBufferWrite", "[ring_buffer]")
 {
-    ring_buffer *buf = new ring_buffer(10);
+    ring_buffer *ring_buf = new ring_buffer(10);
 
     for (int i = 1; i < 12; i++)
     {
         uint8_t val = i;
-        buf->write(&val, 1);
+        ring_buf->write(&val, 1);
     }
 
-    REQUIRE(buf->buf[0] == 11);
+    REQUIRE(ring_buf->buf[0] == 11);
 }
 
 TEST_CASE("RingBufferRead", "[ring_buffer]")
 {
-    ring_buffer *buf = new ring_buffer(10);
+    ring_buffer *ring_buf = new ring_buffer(10);
 
     for (int i = 1; i < 12; i++)
     {
         uint8_t val = i;
-        buf->write(&val, 1);
+        ring_buf->write(&val, 1);
     }
 
-    uint8_t *x = (uint8_t *)buf->read();
+    uint8_t *x = (uint8_t *)ring_buf->read();
     REQUIRE((uint8_t)*x == 11);
 }
 
@@ -495,58 +495,7 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 3);
     test(buf, 4);
 }
-// TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
-// {
-//     ring_buffer *buf = new ring_buffer(400);
-//     uint8_t *b = (uint8_t *)malloc(100);
-//     uint8_t *read = (uint8_t *)malloc(100);
-//     packet *p = new packet;
-//     login_response *msg1 = new login_response;
-//     login_response *msg2 = new login_response;
-//     login_response *msg3 = new login_response;
-//     login_response *msg4 = new login_response;
-//     login_response *ret = new login_response;
-//     account *user = new account;
-//     int len;
 
-//     p->message_id = login_response_id;
-//     p->message_type = 0;
-//     p->magic = 123456;
-//     p->session_token = 1;
-//     p->flags = 0;
-//     user->username = "username";
-//     msg1->status = 1;
-//     msg1->auth_token = "1";
-//     msg1->user = user;
-//     msg2->status = 2;
-//     msg2->auth_token = "2";
-//     msg2->user = user;
-//     msg3->status = 3;
-//     msg3->auth_token = "3";
-//     msg3->user = user;
-//     msg4->status = 4;
-//     msg4->auth_token = "4";
-//     msg4->user = user;
-
-//     len = packet::pack(p, b, msg1);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg2);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg3);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg4);
-//     buf->write(b, len);
-
-//     std::thread clientThread1(test, buf, 1);
-//     std::thread clientThread2(test, buf, 2);
-//     std::thread clientThread3(test, buf, 3);
-//     std::thread clientThread4(test, buf, 4);
-
-//     clientThread1.join();
-//     clientThread2.join();
-//     clientThread3.join();
-//     clientThread4.join();
-// }
 
 int test(ring_buffer *ring_buf, int read_number)
 {
@@ -592,7 +541,8 @@ TEST_CASE("VirtualSocketServerRead", "[virtualSocket]")
 TEST_CASE("VirtualConnection", "[Server]")
 {
     server *s = new server();
-    virtual_socket *vs = s->new_virtual_connection();
+    client *user = new client;
+    user->socket->vs = s->new_virtual_connection();
     packet *p = new packet();
     test_request *msg1 = new test_request();
     uint8_t *buf = (uint8_t *)malloc(100);
@@ -604,8 +554,9 @@ TEST_CASE("VirtualConnection", "[Server]")
 
     packet_size = packet::pack(p, buf, msg1);
 
+    virtual_socket *vs = user->socket->vs;
     vs->write(virtual_fd::SERVER, buf, packet_size);
-    s->handle_message(vs);
+    s->handle_message(user);
 
     uint8_t message_buffer[3000];
     packet *unpack = new packet;
@@ -637,9 +588,9 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
     login_request::pack(req, buf);
 
     client *c = new client;
-    c->socket.vs = new virtual_socket;
+    c->socket->vs = new virtual_socket;
 
-    virtual_socket *vs = c->socket.vs;
+    virtual_socket *vs = c->socket->vs;
     int val_read;
     packet_handlers::login_request_handler(NULL, buf, c);
     uint8_t message_buffer[3000];
@@ -653,5 +604,6 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    std::cout << unpack->magic << std::endl;
+    // std::cout << unpack->magic << std::endl;
 }
+

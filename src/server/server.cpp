@@ -17,7 +17,7 @@
 #include <postgresql/libpq-fe.h>
 #include "client.h"
 
-#define VIRTUAL
+
 
 void handle_new_connection(int new_socket);
 void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
@@ -140,25 +140,22 @@ void handle_new_connection(int socket)
     unpack->message_unpack(message_buffer);
 }
 
-void server::handle_message(virtual_socket *socket)
+void server::handle_message(client *user)
 {
 
     uint8_t message_buffer[3000];
     packet *unpack = new packet;
 
     long val_read;
-    val_read = socket->read(virtual_fd::SERVER, &unpack->message_type, sizeof(packet::message_type));
-    val_read = socket->read(virtual_fd::SERVER, &unpack->message_id, sizeof(packet::message_id));
-
-    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
+    val_read = user->socket->read(virtual_fd::SERVER, &unpack->message_type, sizeof(packet::message_type));
+    val_read = user->socket->read(virtual_fd::SERVER, &unpack->message_id, sizeof(packet::message_id));
+    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    val_read = user->socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-    client * c = new client;
-    func(this, message_buffer, c);
+
+    func(this, message_buffer, user);
 }
-
-

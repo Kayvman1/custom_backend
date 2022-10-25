@@ -26,4 +26,3 @@ target_link_libraries(packets PUBLIC accounts posts)
 
 
 
-set(CMAKE_BUILD_TYPE Debug)

@@ -8,6 +8,8 @@
 #include <functional>
 #include "../accounts/account.h"
 #include "../posts/post.h"
+#include <optional>
+#include <iterator>
 // # include <iostream>
 // using namespace sw::redis;
 
@@ -43,7 +45,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, c
         response.response = "User Already Exists";
         response.status = 0;
         int packet_size = packet::pack(p, buffer, &response);
-        user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
+        user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         return;
@@ -70,7 +72,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, c
     response.user = new account;
 
     int packet_size = packet::pack(p, buffer, &response);
-    user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
+    user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
     free(raw_msg);
     free(buffer);
     return;
@@ -88,7 +90,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
     login_request *msg = new login_request;
     login_request::unpack(msg, raw_msg);
 
-    auto redis_response_id = redis->get("username:" + msg->username);
+    std::optional<std::string> redis_response_id = redis->get("username:" + msg->username);
 
     if (!redis_response_id)
     {
@@ -102,37 +104,50 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
         response.response = "User Not Found";
         response.status = 0;
         int packet_size = packet::pack(p, buffer, &response);
-        user->socket.write(virtual_fd::CLIENT, buffer, packet_size);
+        user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         return;
     }
-    // std::unordered_map<std::string, std::string> m = {
-    //     {"field1", "val1"},
-    //     {"field2", "val2"}};
-    // m.clear();
+    std::unordered_map<std::string, std::string> m = {
+        {"field1", "val1"},
+        {"field2", "val2"}};
+    m.clear();
 
-    // auto redis_response = redis->hgetall("user:" + *redis_response_id, m);
+    redis->hgetall("user:" + redis_response_id.value(), std::inserter(m, m.begin()));
 
-    // auto password = m.find("PASSWORD");
-    // if (password->first != msg->password)
-    // {
-    //     p->message_type = ERROR_PACKET;
-    //     p->message_id = error_response_id;
-    //     p->flags = 0;
-    //     p->magic = 54321;
-    //     p->session_token = 0;
-    //     error_response response = error_response();
-    //     response.response = "Incorrect Password";
-    //     response.status = 0;
-    //     int packet_size = packet::pack(p, buffer, &response);
-    //     vs->write(virtual_fd::CLIENT, buffer, packet_size);
-    //     free(raw_msg);
-    //     free(buffer);
-    //     return;
-    // }
-
-    // create client instance
+    auto password = m.find("PASSWORD");
+    if (password->second != msg->password)
+    {
+        p->message_type = ERROR_PACKET;
+        p->message_id = error_response_id;
+        p->flags = 0;
+        p->magic = 54321;
+        p->session_token = 0;
+        error_response response = error_response();
+        response.response = "Incorrect Password";
+        response.status = 0;
+        int packet_size = packet::pack(p, buffer, &response);
+        user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+        free(raw_msg);
+        free(buffer);
+        return;
+    }
+        p->message_type = ERROR_PACKET;
+        p->message_id = error_response_id;
+        p->flags = 0;
+        p->magic = 54321;
+        p->session_token = 0;
+        login_response * response = new login_response;
+        response->user = new account;
+        response->auth_token = "123123123";
+        response->status = 200;
+        int packet_size = packet::pack(p, buffer, &response);
+        user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+        free(raw_msg);
+        free(buffer);
+        return;
+ 
 }
 
 void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *user)
@@ -147,7 +162,7 @@ void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *
     p->message_type = TEST_PACKET;
     p->message_id = TEST_PACKET_IDS::test_response_id;
     size_t packet_size = packet::pack(p, buf, resp);
-    user->socket.write(virtual_fd::CLIENT, buf, packet_size);
+    user->socket->write(virtual_fd::CLIENT, buf, packet_size);
 
     return;
 }
