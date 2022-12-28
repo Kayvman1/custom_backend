@@ -496,7 +496,6 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 4);
 }
 
-
 int test(ring_buffer *ring_buf, int read_number)
 {
     packet *unpack = new packet;
@@ -604,6 +603,57 @@ TEST_CASE("MacroAccess", "[Infrastructure]")
     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
+    login_response *resp = (login_response *)unpack->message_unpack(message_buffer);
+    REQUIRE(resp->auth_token == "INVALID");
+    REQUIRE(resp->status == control_errors::user_not_found);
+
     // std::cout << unpack->magic << std::endl;
 }
+std::string random_string(std::size_t length)
+{
+    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
+    std::random_device random_device;
+    std::mt19937 generator(random_device());
+    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+
+    std::string random_string;
+
+    for (std::size_t i = 0; i < length; ++i)
+    {
+        random_string += CHARACTERS[distribution(generator)];
+    }
+
+    return random_string;
+}
+TEST_CASE("Test Create New User", "[USER]")
+{
+    uint8_t *buf = (uint8_t *)malloc(100);
+    create_user_request *req = new create_user_request;
+    req->email = "test user*";
+    req->username = random_string(25);
+    req->password = "password";
+    packet *unpack = new packet;
+
+    login_request::pack(req, buf);
+
+    client *c = new client;
+    c->socket->vs = new virtual_socket;
+
+    virtual_socket *vs = c->socket->vs;
+    int val_read;
+    packet_handlers::create_user_request_handler(NULL, buf, c);
+    uint8_t message_buffer[3000];
+
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+
+    create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
+    REQUIRE(resp->status == 201);
+}

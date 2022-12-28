@@ -68,6 +68,11 @@ enum CONTROL_PACKET_IDS
         {                                        \
             CONTROL_PACKET_TABLE(PACKET_HANDLER) \
         }                                        \
+    case ERROR_PACKET:                           \
+        switch (p->message_id)                   \
+        {                                        \
+            ERROR_PACKET_TABLE(PACKET_HANDLER)   \
+        }                                        \
     default:                                     \
         return NULL;                             \
     }
@@ -109,3 +114,11 @@ static void *GET_POINTER_MESSAGE(packet *p)
     expand
 #undef PACKET_HANDLER
 }
+
+// Control Packet Errors
+enum control_errors
+{
+    create_user_failed = 1,
+    incorrect_password = 2,
+    user_not_found = 3
+};

@@ -1,6 +1,8 @@
 #pragma once
 
 #define qwerty 5
+//TODO fix this qwerty bullshit, its currently used as a 
+//signal for when a virtual socket is being used
 #include "../ring_buffer/virtual_socket.h"
 #include "../accounts/account.h"
 
@@ -12,7 +14,7 @@ public:
     ssize_t write(int sockfd, uint8_t *ibuff, size_t num_bytes);
     virtual_socket *vs;
     int socket_fd;
-    int x = qwerty;
+
 };
 
 class client
