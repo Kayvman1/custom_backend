@@ -10,6 +10,9 @@
 #include "../posts/post.h"
 #include <optional>
 #include <iterator>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
 // # include <iostream>
 // using namespace sw::redis;
 
@@ -59,7 +62,8 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, c
     }
 
     int packet_size = packet::pack(p, buffer, response);
-    user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+    //user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+    write(user->socket_fd,buffer,packet_size);
     free(raw_msg);
     free(buffer);
     return;
@@ -90,7 +94,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
         response->user = new account;
         response->status = control_errors::user_not_found;
         int packet_size = packet::pack(p, buffer, response);
-        user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+        //user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
         free(raw_msg);
         free(buffer);
         free(response);
@@ -122,7 +126,7 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
     }
 
     int packet_size = packet::pack(p, buffer, response);
-    user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+    write(user->socket_fd, buffer, packet_size);
     free(raw_msg);
     free(buffer);
     free(response);
@@ -141,7 +145,7 @@ void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *
     p->message_type = TEST_PACKET;
     p->message_id = TEST_PACKET_IDS::test_response_id;
     size_t packet_size = packet::pack(p, buf, resp);
-    user->socket->write(virtual_fd::CLIENT, buf, packet_size);
+    write(user->socket_fd, buf, packet_size);
 
     return;
 }

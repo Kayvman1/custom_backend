@@ -11,23 +11,18 @@
 #include <cstddef>
 
 #include "server.h"
-#include "../ring_buffer/virtual_socket.h"
 #include "../packets/packet_ids.h"
 #include "packet_handlers.h"
 #include <postgresql/libpq-fe.h>
 #include "client.h"
 
-
-
-void handle_new_connection(int new_socket);
-void test_request_handler(uint8_t *raw_msg, virtual_socket *vs);
-void test_response_handler(uint8_t *raw_msg, virtual_socket *vs);
-
+#include <errno.h>
 sw::redis::Redis *redis;
+void handle_new_connection(client* c);
 
 void server::start(int port_number)
 {
-    *redis = sw::redis::Redis("tcp://127.0.0.1:6379");
+    redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     int server_fd, new_socket;
 
     long valread;
@@ -92,53 +87,72 @@ void server::start(int port_number)
 
         else
         {
-            std::thread clientThread(handle_new_connection, new_socket);
+            client *c = new client;
+            c->is_active = true;
+            c->session_id = 0; // TODO generate this
+            c->socket_fd = new_socket;
+            std::thread clientThread(handle_new_connection, c);
             clientThread.detach();
+            printf("CONNECTION");
         }
+        // lru
     }
     return;
 }
 
-virtual_socket *server::new_virtual_connection()
-{
-    virtual_socket *sock = new virtual_socket;
-    lock.lock();
-    connections.push_back(sock);
-    lock.unlock();
-    return sock;
-}
+// use client
+// anything that is kind of uniquely belonging to the connection
+// thread dedicated to poll and select, pass in a list of FDs
+// wake which ever threads have data on them so they can continue (signal sempahore)
 
-void server::terminate_virtual_connections(virtual_socket *connection)
+void read_attribute(uint8_t *buf, int size, client *c)
 {
-    lock.lock();
-    for (int i = 0; i < connections.size(); i++)
+    int b_count = 0;
+    int val_read;
+    while (b_count < size)
     {
-        if (connections[i] == connection)
+        val_read = read(c->socket_fd, buf + b_count, sizeof(packet::message_type));
+        b_count += val_read;
+
+        if (val_read < sizeof(packet::message_type))
         {
-            connections.erase(connections.begin() + i - 1);
+            if (errno = EWOULDBLOCK)
+            {
+                // sleep
+                // semaphore
+                // your gonna have some table of semaphores
+            }
+            else
+            {
+            }
         }
     }
-    lock.unlock();
 }
 
-void handle_new_connection(int socket)
+void handle_new_connection(client *c)
 {
+    while (c->is_active)
+    {
+        uint8_t message_buffer[3000];
+        uint8_t assembly_buffer[3000];
+        packet *unpack = new packet;
+        int val_read = 0;
+        int b_count = 0;
 
-    uint8_t message_buffer[3000];
-    packet *unpack = new packet;
+        read_attribute(&unpack->message_type, sizeof(packet::message_type), c);
+        read_attribute(&unpack->message_id, sizeof(packet::message_id), c);
+        read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c);
+        read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c);
+        read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c);
+        read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c);
+        read_attribute(message_buffer, unpack->buf_size, c);
 
-    long val_read;
-    val_read = read(socket, &unpack->message_type, sizeof(packet::message_type));
-    val_read = read(socket, &unpack->message_id, sizeof(packet::message_id));
-
-    val_read = read(socket, &unpack->magic, sizeof(packet::magic));
-    val_read = read(socket, &unpack->session_token, sizeof(packet::session_token));
-    val_read = read(socket, &unpack->flags, sizeof(packet::flags));
-    val_read = read(socket, &unpack->buf_size, sizeof(packet::buf_size));
-    val_read = read(socket, message_buffer, unpack->buf_size);
-
-    unpack->message_unpack(message_buffer);
+        unpack->message_unpack(message_buffer);
 }
+    }
+
+
+    
 
 void server::handle_message(client *user)
 {
@@ -147,13 +161,13 @@ void server::handle_message(client *user)
     packet *unpack = new packet;
 
     long val_read;
-    val_read = user->socket->read(virtual_fd::SERVER, &unpack->message_type, sizeof(packet::message_type));
-    val_read = user->socket->read(virtual_fd::SERVER, &unpack->message_id, sizeof(packet::message_id));
-    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = user->socket->read(virtual_fd::SERVER, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = user->socket->read(virtual_fd::SERVER, message_buffer, unpack->buf_size);
+    val_read = read(user->socket_fd, &unpack->message_type, sizeof(packet::message_type));
+    val_read = read(user->socket_fd, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    val_read = read(user->socket_fd, &unpack->message_id, sizeof(packet::message_id));
+    val_read = read(user->socket_fd, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    val_read = read(user->socket_fd, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    val_read = read(user->socket_fd, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    val_read = read(user->socket_fd, message_buffer, unpack->buf_size);
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
 

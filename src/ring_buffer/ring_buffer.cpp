@@ -136,7 +136,7 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
         {
             memcpy(write_buf, read_pointer, read_size);
             read_pointer += read_size;
-            return size;
+            return read_size;
         }
 
         if (bytes_left_message <= read_size)

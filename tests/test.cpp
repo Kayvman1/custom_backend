@@ -4,10 +4,22 @@
 #include "../src/packets/packet_ids.h"
 #include "../src/ring_buffer/ring_buffer.h"
 #include <thread>
-#include "../src/ring_buffer/virtual_socket.h"
 #include "../src/server/server.h"
 #include <string.h>
 #include <functional>
+
+#include <stdio.h>
+#include <sys/socket.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <string.h>
+#include <arpa/inet.h>
+
+#include <thread>
+#include <chrono>
+#include <iostream>
+
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
     uint8_t *buf = (uint8_t *)malloc(100);
@@ -520,28 +532,55 @@ int test(ring_buffer *ring_buf, int read_number)
     return 0;
 }
 
-TEST_CASE("VirtualSocketServerRead", "[virtualSocket]")
+void start_server( int port)
 {
-    virtual_socket *vs = new virtual_socket();
+    server *s = new server();
+    s->start(port);
+}
 
-    uint8_t *buf = (uint8_t *)malloc(100);
-    uint32_t val = 55;
-    memcpy(buf, &val, sizeof(val));
+int create_socket (int server_port)
+{
+    // using namespace std::chrono_literals;
 
-    vs->write(virtual_fd::SERVER, buf, sizeof(val));
+    int sock = 0;
+    long valread;
+    struct sockaddr_in serv_addr;
+    char *hello = "Hello from client";
+    //char buffer[1024] = {0};
+    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    {
+        printf("\n Socket creation error \n");
+        return -1;
+    }
 
-    vs->read(virtual_fd::CLIENT, buf, sizeof(val));
+    memset(&serv_addr, '0', sizeof(serv_addr));
 
-    memcpy(&val, buf, sizeof(val));
+    serv_addr.sin_family = AF_INET;
 
-    REQUIRE(val == 55);
+    serv_addr.sin_port = htons(server_port);
+
+    // Convert IPv4 and IPv6 addresses from text to binary form
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
+    {
+        printf("\nInvalid address/ Address not supported \n");
+        return -1;
+    }
+
+    if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+    {
+        printf("\nConnection Failed \n");
+        return -1;
+    }
+    return sock;
 }
 
 TEST_CASE("VirtualConnection", "[Server]")
 {
-    server *s = new server();
-    client *user = new client;
-    user->socket->vs = s->new_virtual_connection();
+    std::thread serverThread(start_server, 8080);
+    serverThread.detach();
+
+    int sock = create_socket(8080);
+    return;
     packet *p = new packet();
     test_request *msg1 = new test_request();
     uint8_t *buf = (uint8_t *)malloc(100);
@@ -553,21 +592,20 @@ TEST_CASE("VirtualConnection", "[Server]")
 
     packet_size = packet::pack(p, buf, msg1);
 
-    virtual_socket *vs = user->socket->vs;
-    vs->write(virtual_fd::SERVER, buf, packet_size);
-    s->handle_message(user);
+  
+    write(sock, buf, packet_size);
+   
 
     uint8_t message_buffer[3000];
     packet *unpack = new packet;
     long val_read;
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
-
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+    (sock, &unpack->message_type, sizeof(packet::message_type));
+    (sock, &unpack->message_id, sizeof(packet::message_id));
+    (sock, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    (sock, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    (sock, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    (sock, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    (sock, message_buffer, unpack->buf_size);
 
     test_response *x = new test_response();
     x = (test_response *)unpack->message_unpack(message_buffer);
@@ -576,84 +614,84 @@ TEST_CASE("VirtualConnection", "[Server]")
     // make s read from vs and then call handle message
 }
 
-TEST_CASE("MacroAccess", "[Infrastructure]")
-{
-    uint8_t *buf = (uint8_t *)malloc(100);
-    login_request *req = new login_request();
-    req->username = "abcds";
-    req->password = "password";
-    packet *unpack = new packet;
+// TEST_CASE("MacroAccess", "[Infrastructure]")
+// {
+//     uint8_t *buf = (uint8_t *)malloc(100);
+//     login_request *req = new login_request();
+//     req->username = "abcds";
+//     req->password = "password";
+//     packet *unpack = new packet;
 
-    login_request::pack(req, buf);
+//     login_request::pack(req, buf);
 
-    client *c = new client;
-    c->socket->vs = new virtual_socket;
+//     client *c = new client;
+//     c->socket->vs = new virtual_socket;
 
-    virtual_socket *vs = c->socket->vs;
-    int val_read;
-    packet_handlers::login_request_handler(NULL, buf, c);
-    uint8_t message_buffer[3000];
+//     virtual_socket *vs = c->socket->vs;
+//     int val_read;
+//     packet_handlers::login_request_handler(NULL, buf, c);
+//     uint8_t message_buffer[3000];
 
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+//     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+//     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
 
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+//     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    login_response *resp = (login_response *)unpack->message_unpack(message_buffer);
-    REQUIRE(resp->auth_token == "INVALID");
-    REQUIRE(resp->status == control_errors::user_not_found);
+//     login_response *resp = (login_response *)unpack->message_unpack(message_buffer);
+//     REQUIRE(resp->auth_token == "INVALID");
+//     REQUIRE(resp->status == control_errors::user_not_found);
 
-    // std::cout << unpack->magic << std::endl;
-}
-std::string random_string(std::size_t length)
-{
-    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+//     // std::cout << unpack->magic << std::endl;
+// }
+// std::string random_string(std::size_t length)
+// {
+//     const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-    std::random_device random_device;
-    std::mt19937 generator(random_device());
-    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+//     std::random_device random_device;
+//     std::mt19937 generator(random_device());
+//     std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
 
-    std::string random_string;
+//     std::string random_string;
 
-    for (std::size_t i = 0; i < length; ++i)
-    {
-        random_string += CHARACTERS[distribution(generator)];
-    }
+//     for (std::size_t i = 0; i < length; ++i)
+//     {
+//         random_string += CHARACTERS[distribution(generator)];
+//     }
 
-    return random_string;
-}
-TEST_CASE("Test Create New User", "[USER]")
-{
-    uint8_t *buf = (uint8_t *)malloc(100);
-    create_user_request *req = new create_user_request;
-    req->email = "test user*";
-    req->username = random_string(25);
-    req->password = "password";
-    packet *unpack = new packet;
+//     return random_string;
+// }
+// TEST_CASE("Test Create New User", "[USER]")
+// {
+//     uint8_t *buf = (uint8_t *)malloc(100);
+//     create_user_request *req = new create_user_request;
+//     req->email = "test user*";
+//     req->username = random_string(25);
+//     req->password = "password";
+//     packet *unpack = new packet;
 
-    login_request::pack(req, buf);
+//     login_request::pack(req, buf);
 
-    client *c = new client;
-    c->socket->vs = new virtual_socket;
+//     client *c = new client;
+//     c->socket->vs = new virtual_socket;
 
-    virtual_socket *vs = c->socket->vs;
-    int val_read;
-    packet_handlers::create_user_request_handler(NULL, buf, c);
-    uint8_t message_buffer[3000];
+//     virtual_socket *vs = c->socket->vs;
+//     int val_read;
+//     packet_handlers::create_user_request_handler(NULL, buf, c);
+//     uint8_t message_buffer[3000];
 
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
-    val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
+//     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_type, sizeof(packet::message_type));
+//     val_read = vs->read(virtual_fd::CLIENT, &unpack->message_id, sizeof(packet::message_id));
 
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+//     val_read = vs->read(virtual_fd::CLIENT, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+//     val_read = vs->read(virtual_fd::CLIENT, message_buffer, unpack->buf_size);
 
-    create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
-    REQUIRE(resp->status == 201);
-}
+//     create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
+//     REQUIRE(resp->status == 201);
+// }

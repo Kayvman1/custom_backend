@@ -21,8 +21,8 @@ target_include_directories(client      PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 
-target_link_libraries(server PUBLIC virtual_socket packets handlers ring_buffer client)
+target_link_libraries(server PUBLIC  packets handlers ring_buffer client)
 target_link_libraries(packets PUBLIC accounts posts)
 
-
+target_link_libraries(handlers PUBLIC  server)
 
