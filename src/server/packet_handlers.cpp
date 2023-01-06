@@ -18,7 +18,7 @@
 
 extern sw::redis::Redis *redis;
 
-void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, client *user)
+void packet_handlers::create_user_request_handler(uint8_t *raw_msg, packet *in, client *user)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     packet *p = new packet;
@@ -36,7 +36,7 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, c
     p->magic = 12345;
     p->session_token = 0;
 
-    create_user_response * response = new create_user_response();
+    create_user_response *response = new create_user_response();
     if (redis_response)
     {
         response->status = control_errors::create_user_failed;
@@ -62,14 +62,13 @@ void packet_handlers::create_user_request_handler(server *s, uint8_t *raw_msg, c
     }
 
     int packet_size = packet::pack(p, buffer, response);
-    //user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
-    write(user->socket_fd,buffer,packet_size);
-    free(raw_msg);
+    // user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
+    write(user->socket_fd, buffer, packet_size);
     free(buffer);
     return;
 }
 
-void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client *user)
+void packet_handlers::login_request_handler(uint8_t *raw_msg, packet *in, client *user)
 {
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
 
@@ -94,8 +93,8 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
         response->user = new account;
         response->status = control_errors::user_not_found;
         int packet_size = packet::pack(p, buffer, response);
-        //user->socket->write(virtual_fd::CLIENT, buffer, packet_size);
-        free(raw_msg);
+        write(user->socket_fd, buffer, packet_size);
+
         free(buffer);
         free(response);
         return;
@@ -127,13 +126,12 @@ void packet_handlers::login_request_handler(server *s, uint8_t *raw_msg, client 
 
     int packet_size = packet::pack(p, buffer, response);
     write(user->socket_fd, buffer, packet_size);
-    free(raw_msg);
     free(buffer);
     free(response);
     return;
 }
 
-void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *user)
+void packet_handlers::test_request_handler(uint8_t *raw_msg, packet *in, client *user)
 {
     test_request *req = new test_request();
     test_response *resp = new test_response();
@@ -144,13 +142,14 @@ void packet_handlers::test_request_handler(server *s, uint8_t *raw_msg, client *
     packet *p = new packet();
     p->message_type = TEST_PACKET;
     p->message_id = TEST_PACKET_IDS::test_response_id;
+    p->session_token = in->session_token;
     size_t packet_size = packet::pack(p, buf, resp);
     write(user->socket_fd, buf, packet_size);
 
     return;
 }
 
-void packet_handlers::response_handler(server *s, uint8_t *raw_msg, client *user)
+void packet_handlers::response_handler(uint8_t *raw_msg, packet *in, client *user)
 {
     return;
 }

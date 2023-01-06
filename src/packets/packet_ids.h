@@ -4,7 +4,7 @@
 #include "../packets/packets.h"
 #include "../server/client.h"
 
-using handler_pointer = void (*)(server *, uint8_t *, client *);
+using handler_pointer = void (*)(uint8_t *, packet *, client *);
 using pack_pointer = uint32_t (*)(void *, uint8_t *);
 using unpack_pointer = void (*)(void *raw_msg, uint8_t *buf);
 
@@ -16,11 +16,11 @@ using unpack_pointer = void (*)(void *raw_msg, uint8_t *buf);
     XX(test_response, 2, packet_handlers::response_handler, test_response::pack, test_response::unpack)
 
 #define CONTROL_PACKET_TABLE(XX)                                                                      \
-    XX(login_request, 1, NULL, login_request::pack, login_request::unpack)                            \
+    XX(login_request, 1, packet_handlers::login_request_handler, login_request::pack, login_request::unpack)                            \
     XX(login_response, 2, NULL, login_response::pack, login_response::unpack)                         \
     XX(refresh_token_request, 3, NULL, refresh_token_request::pack, refresh_token_request::unpack)    \
     XX(refresh_token_response, 4, NULL, refresh_token_response::pack, refresh_token_response::unpack) \
-    XX(create_user_request, 5, NULL, create_user_request::pack, create_user_request::unpack)            \ 
+    XX(create_user_request, 5, packet_handlers::create_user_request_handler, create_user_request::pack, create_user_request::unpack)            \ 
     XX(create_user_response, 6, NULL, create_user_response::pack, create_user_response::unpack)
 
 enum MESSAGE_TYPE

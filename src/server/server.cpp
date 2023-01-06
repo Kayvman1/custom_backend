@@ -18,7 +18,7 @@
 
 #include <errno.h>
 sw::redis::Redis *redis;
-void handle_new_connection(client* c);
+void handle_new_connection(client *c);
 
 void server::start(int port_number)
 {
@@ -70,6 +70,7 @@ void server::start(int port_number)
 
     // accept client and then pass forward to code
     // that handels communications
+
     printf("\n+++++++ Waiting for new connection ++++++++\n\n");
 
     int i = 0;
@@ -87,13 +88,15 @@ void server::start(int port_number)
 
         else
         {
+            printf("CONNECTION\n");
             client *c = new client;
             c->is_active = true;
             c->session_id = 0; // TODO generate this
             c->socket_fd = new_socket;
-            std::thread clientThread(handle_new_connection, c);
-            clientThread.detach();
-            printf("CONNECTION");
+
+            handle_new_connection(c);
+            // std::thread clientThread(handle_new_connection, c);
+            // clientThread.detach();
         }
         // lru
     }
@@ -107,14 +110,15 @@ void server::start(int port_number)
 
 void read_attribute(uint8_t *buf, int size, client *c)
 {
+    printf("new attribute\n");
     int b_count = 0;
     int val_read;
     while (b_count < size)
     {
-        val_read = read(c->socket_fd, buf + b_count, sizeof(packet::message_type));
+        val_read = read(c->socket_fd, buf + b_count, size - b_count);
         b_count += val_read;
 
-        if (val_read < sizeof(packet::message_type))
+        if (val_read + b_count < size)
         {
             if (errno = EWOULDBLOCK)
             {
@@ -124,6 +128,7 @@ void read_attribute(uint8_t *buf, int size, client *c)
             }
             else
             {
+                read(c->socket_fd, buf + b_count, size - b_count);
             }
         }
     }
@@ -131,6 +136,7 @@ void read_attribute(uint8_t *buf, int size, client *c)
 
 void handle_new_connection(client *c)
 {
+    printf("new thread\n");
     while (c->is_active)
     {
         uint8_t message_buffer[3000];
@@ -146,13 +152,14 @@ void handle_new_connection(client *c)
         read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c);
         read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c);
         read_attribute(message_buffer, unpack->buf_size, c);
+        printf("Complete Read \n");
+        // unpack->message_unpack(message_buffer);
 
-        unpack->message_unpack(message_buffer);
-}
+        handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
+
+        func(message_buffer, unpack, c);
     }
-
-
-    
+}
 
 void server::handle_message(client *user)
 {
@@ -171,5 +178,5 @@ void server::handle_message(client *user)
 
     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
 
-    func(this, message_buffer, user);
+    // func(this, message_buffer, user);
 }
