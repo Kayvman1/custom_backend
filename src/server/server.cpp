@@ -13,15 +13,18 @@
 #include "server.h"
 #include "../packets/packet_ids.h"
 #include "packet_handlers.h"
-#include <postgresql/libpq-fe.h>
+
 #include "client.h"
 
 #include <errno.h>
+#include "spdlog/spdlog.h"
+#include "sem.h"
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
 
 void server::start(int port_number)
 {
+    spdlog::set_level(spdlog::level::debug);
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     int server_fd, new_socket;
 
@@ -51,27 +54,28 @@ void server::start(int port_number)
 
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
-        perror("In bind");
+        spdlog::error("Error binding to port");
         exit(EXIT_FAILURE);
     }
     else
     {
-        printf("Successful binding on port %i\n", port_number);
+        spdlog::info("Successful binding on port {}", port_number);
     }
     if (listen(server_fd, 50) < 0)
     {
-        perror("In listen");
+        spdlog::error("Error listening to port");
         exit(EXIT_FAILURE);
     }
     else
     {
-        printf("Successfully listening\n");
+
+        spdlog::info("Successfully listening");
     }
 
     // accept client and then pass forward to code
     // that handels communications
 
-    printf("\n+++++++ Waiting for new connection ++++++++\n\n");
+    spdlog::info("Waiting for connections");
 
     int i = 0;
 
@@ -83,22 +87,27 @@ void server::start(int port_number)
                             &addr_size);
         if (new_socket < 0)
         {
-            perror("connection acception failed");
+            spdlog::error("connection acception failed");
         }
 
         else
         {
-            printf("CONNECTION\n");
+            spdlog::info("New connection");
             client *c = new client;
             c->is_active = true;
             c->session_id = 0; // TODO generate this
             c->socket_fd = new_socket;
 
-            handle_new_connection(c);
-            // std::thread clientThread(handle_new_connection, c);
-            // clientThread.detach();
+            // handle_new_connection(c);
+            std::thread clientThread(handle_new_connection, c);
+
+            semaphore *x =  new semaphore (1);
+            //m.insert(new_socket, *x);
+
+            clientThread.detach();
+
         }
-        // lru
+        //TODO SPAWN LRU tread
     }
     return;
 }
@@ -110,7 +119,7 @@ void server::start(int port_number)
 
 void read_attribute(uint8_t *buf, int size, client *c)
 {
-    printf("new attribute\n");
+    spdlog::debug("new attribute");
     int b_count = 0;
     int val_read;
     while (b_count < size)
@@ -122,7 +131,9 @@ void read_attribute(uint8_t *buf, int size, client *c)
         {
             if (errno = EWOULDBLOCK)
             {
-                // sleep
+                semaphore *x = new semaphore(1);
+                x->down();
+               // sleep
                 // semaphore
                 // your gonna have some table of semaphores
             }
@@ -136,7 +147,6 @@ void read_attribute(uint8_t *buf, int size, client *c)
 
 void handle_new_connection(client *c)
 {
-    printf("new thread\n");
     while (c->is_active)
     {
         uint8_t message_buffer[3000];
@@ -152,31 +162,11 @@ void handle_new_connection(client *c)
         read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c);
         read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c);
         read_attribute(message_buffer, unpack->buf_size, c);
-        printf("Complete Read \n");
+        spdlog::debug("Complete Read \n");
         // unpack->message_unpack(message_buffer);
 
         handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
 
         func(message_buffer, unpack, c);
     }
-}
-
-void server::handle_message(client *user)
-{
-
-    uint8_t message_buffer[3000];
-    packet *unpack = new packet;
-
-    long val_read;
-    val_read = read(user->socket_fd, &unpack->message_type, sizeof(packet::message_type));
-    val_read = read(user->socket_fd, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-    val_read = read(user->socket_fd, &unpack->message_id, sizeof(packet::message_id));
-    val_read = read(user->socket_fd, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-    val_read = read(user->socket_fd, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-    val_read = read(user->socket_fd, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-    val_read = read(user->socket_fd, message_buffer, unpack->buf_size);
-
-    handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-
-    // func(this, message_buffer, user);
 }

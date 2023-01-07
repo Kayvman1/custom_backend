@@ -31,12 +31,20 @@ target_link_libraries(server_runner PUBLIC ${REDIS_PLUS_PLUS_LIB})
 target_link_libraries(tests PUBLIC ${REDIS_PLUS_PLUS_LIB})
 
 
-add_subdirectory(src)
+add_subdirectory(src) 
 target_link_libraries(server_runner PUBLIC server)
 target_link_libraries(tests PUBLIC  packets server)
 
 add_subdirectory(lib/Catch2)
 target_link_libraries(tests PUBLIC Catch2::Catch2WithMain)
+
+# if(NOT TARGET spdlog)
+#     # Stand-alone build
+   find_package(spdlog REQUIRED)
+# endif()
+
+target_link_libraries(tests PUBLIC spdlog::spdlog)
+target_link_libraries(server_runner PUBLIC spdlog::spdlog)
 
 
 find_package(Threads REQUIRED)

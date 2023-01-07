@@ -1,0 +1,7 @@
+install cmake 
+sudo apt install libssl-dev
+pull catch 2 into lib
+install hiredis
+install redis
+install redis-server
+install spdlog
