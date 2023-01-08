@@ -120,6 +120,8 @@ void ring_buffer::print()
 
 int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
 {
+    lock.lock();
+
     //if the stack is empty there is nothing to read return -1
     if (stack.empty())
     {
@@ -136,6 +138,7 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
         {
             memcpy(write_buf, read_pointer, read_size);
             read_pointer += read_size;
+            lock.unlock();
             return read_size;
         }
 
@@ -144,7 +147,7 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
             memcpy(write_buf, read_pointer, bytes_left_message);
             read_pointer += bytes_left_message;
             stack.pop();
-
+            lock.unlock();
             return bytes_left_message;
         }
     }
@@ -159,6 +162,7 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
             memcpy(write_buf, read_pointer, segment_right);
             memcpy(write_buf + segment_right, buf, segment_left);
             read_pointer = buf + segment_left;
+            lock.unlock();
             return size;
         }
         if (segment_left + segment_right <= read_size)
@@ -169,6 +173,7 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
             memcpy(write_buf + segment_right, buf, bytes_left_message);
             read_pointer = buf + bytes_left_message;
             stack.pop();
+            lock.unlock();
             return bytes_left_message + segment_right;
         }
     }

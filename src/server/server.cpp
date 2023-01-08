@@ -19,6 +19,8 @@
 #include <errno.h>
 #include "spdlog/spdlog.h"
 #include "sem.h"
+
+#include <sys/epoll.h>
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
 
@@ -101,16 +103,13 @@ void server::start(int port_number)
             // handle_new_connection(c);
             std::thread clientThread(handle_new_connection, c);
 
-            semaphore *x =  new semaphore (1);
-            //m.insert(new_socket, *x);
-
             clientThread.detach();
-
         }
-        //TODO SPAWN LRU tread
+        // TODO SPAWN LRU tread
     }
     return;
 }
+
 
 // use client
 // anything that is kind of uniquely belonging to the connection
@@ -131,9 +130,8 @@ void read_attribute(uint8_t *buf, int size, client *c)
         {
             if (errno = EWOULDBLOCK)
             {
-                semaphore *x = new semaphore(1);
-                x->down();
-               // sleep
+
+                // sleep
                 // semaphore
                 // your gonna have some table of semaphores
             }

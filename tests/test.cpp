@@ -508,12 +508,65 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 4);
 }
 
+TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
+{
+    ring_buffer *buf = new ring_buffer(400);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    packet *p = new packet;
+    login_response *msg1 = new login_response;
+    login_response *msg2 = new login_response;
+    login_response *msg3 = new login_response;
+    login_response *msg4 = new login_response;
+    login_response *ret = new login_response;
+    account *user = new account;
+    int len;
+
+    p->message_id = login_response_id;
+    p->message_type = 0;
+    p->magic = 123456;
+    p->session_token = 1;
+    p->flags = 0;
+    user->username = "username";
+    msg1->status = 1;
+    msg1->auth_token = "1";
+    msg1->user = user;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+    msg2->user = user;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+    msg3->user = user;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+    msg4->user = user;
+
+    len = packet::pack(p, b, msg1);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg2);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg3);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg4);
+    buf->write(b, len);
+
+    std::thread clientThread1(test, buf, 1);
+    std::thread clientThread2(test, buf, 2);
+    std::thread clientThread3(test, buf, 3);
+    std::thread clientThread4(test, buf, 4);
+
+    clientThread1.join();
+    clientThread2.join();
+    clientThread3.join();
+    clientThread4.join();
+}
+
 int test(ring_buffer *ring_buf, int read_number)
 {
     packet *unpack = new packet;
-    while (ring_buf->read_bytes(&unpack->message_type, 0) == -1)
-    {
-    }
+    // while (ring_buf->read_bytes(&unpack->message_type, 0) == -1)
+    // {
+    // }
 
     ring_buf->read_bytes(&unpack->message_type, 1);
     ring_buf->read_bytes(&unpack->message_id, 1);
@@ -521,6 +574,8 @@ int test(ring_buffer *ring_buf, int read_number)
     ring_buf->read_bytes((uint8_t *)&unpack->session_token, 8);
     ring_buf->read_bytes((uint8_t *)&unpack->flags, 4);
     ring_buf->read_bytes((uint8_t *)&unpack->buf_size, 4);
+
+    std::cout << unpack->buf_size << std::endl;
 
     uint8_t *team = (uint8_t *)malloc(unpack->buf_size);
     ring_buf->read_bytes(team, unpack->buf_size);
@@ -749,13 +804,12 @@ TEST_CASE("Invalid Login", "[Infrastructure]")
     outgoing->session_token = 1;
     outgoing->flags = 1;
 
-
     int packet_size = packet::pack(outgoing, buf, req);
 
     packet *unpack = new packet;
 
     uint8_t message_buffer[1000];
-    write(sock,buf, packet_size);
+    write(sock, buf, packet_size);
     int val_read;
     val_read = read(sock, &unpack->message_type, sizeof(packet::message_type));
     val_read = read(sock, &unpack->message_id, sizeof(packet::message_id));
@@ -802,7 +856,6 @@ TEST_CASE("Test Create New User", "[USER]")
     packet *unpack = new packet;
 
     int packet_size = packet::pack(outgoing, buf, req);
-
 
     int val_read;
 
