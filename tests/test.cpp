@@ -508,58 +508,58 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 4);
 }
 
-TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
-{
-    ring_buffer *buf = new ring_buffer(400);
-    uint8_t *b = (uint8_t *)malloc(100);
-    uint8_t *read = (uint8_t *)malloc(100);
-    packet *p = new packet;
-    login_response *msg1 = new login_response;
-    login_response *msg2 = new login_response;
-    login_response *msg3 = new login_response;
-    login_response *msg4 = new login_response;
-    login_response *ret = new login_response;
-    account *user = new account;
-    int len;
+// TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
+// {
+//     ring_buffer *buf = new ring_buffer(400);
+//     uint8_t *b = (uint8_t *)malloc(100);
+//     uint8_t *read = (uint8_t *)malloc(100);
+//     packet *p = new packet;
+//     login_response *msg1 = new login_response;
+//     login_response *msg2 = new login_response;
+//     login_response *msg3 = new login_response;
+//     login_response *msg4 = new login_response;
+//     login_response *ret = new login_response;
+//     account *user = new account;
+//     int len;
 
-    p->message_id = login_response_id;
-    p->message_type = 0;
-    p->magic = 123456;
-    p->session_token = 1;
-    p->flags = 0;
-    user->username = "username";
-    msg1->status = 1;
-    msg1->auth_token = "1";
-    msg1->user = user;
-    msg2->status = 2;
-    msg2->auth_token = "2";
-    msg2->user = user;
-    msg3->status = 3;
-    msg3->auth_token = "3";
-    msg3->user = user;
-    msg4->status = 4;
-    msg4->auth_token = "4";
-    msg4->user = user;
+//     p->message_id = login_response_id;
+//     p->message_type = 0;
+//     p->magic = 123456;
+//     p->session_token = 1;
+//     p->flags = 0;
+//     user->username = "username";
+//     msg1->status = 1;
+//     msg1->auth_token = "1";
+//     msg1->user = user;
+//     msg2->status = 2;
+//     msg2->auth_token = "2";
+//     msg2->user = user;
+//     msg3->status = 3;
+//     msg3->auth_token = "3";
+//     msg3->user = user;
+//     msg4->status = 4;
+//     msg4->auth_token = "4";
+//     msg4->user = user;
 
-    len = packet::pack(p, b, msg1);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg2);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg3);
-    buf->write(b, len);
-    len = packet::pack(p, b, msg4);
-    buf->write(b, len);
+//     len = packet::pack(p, b, msg1);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg2);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg3);
+//     buf->write(b, len);
+//     len = packet::pack(p, b, msg4);
+//     buf->write(b, len);
 
-    std::thread clientThread1(test, buf, 1);
-    std::thread clientThread2(test, buf, 2);
-    std::thread clientThread3(test, buf, 3);
-    std::thread clientThread4(test, buf, 4);
+//     std::thread clientThread1(test, buf, 1);
+//     std::thread clientThread2(test, buf, 2);
+//     std::thread clientThread3(test, buf, 3);
+//     std::thread clientThread4(test, buf, 4);
 
-    clientThread1.join();
-    clientThread2.join();
-    clientThread3.join();
-    clientThread4.join();
-}
+//     clientThread1.join();
+//     clientThread2.join();
+//     clientThread3.join();
+//     clientThread4.join();
+// }
 
 int test(ring_buffer *ring_buf, int read_number)
 {

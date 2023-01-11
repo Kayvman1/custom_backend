@@ -54,6 +54,10 @@ void server::start(int port_number)
     // removes the garabage values from the rest of the address
     memset(address.sin_zero, '\0', sizeof address.sin_zero);
 
+    int reuse = 1;
+    setsockopt(server_fd,SOL_SOCKET,SO_REUSEADDR, (const char *) &reuse, sizeof(reuse));
+        setsockopt(server_fd,SOL_SOCKET,SO_REUSEPORT, (const char *) &reuse, sizeof(reuse));
+
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
         spdlog::error("Error binding to port");
