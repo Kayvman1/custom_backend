@@ -615,7 +615,7 @@ int create_socket(int server_port)
     serv_addr.sin_port = htons(server_port);
 
     // Convert IPv4 and IPv6 addresses from text to binary form
-    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
+    if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
     {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
@@ -634,10 +634,10 @@ TEST_CASE("Test Message", "[Server]")
 {
     // std::thread serverThread(start_server, 8080);
 
-    int x1;
-    std::cout << "Enter Server Port ";
-    std::cin >> x1;
-    sock = create_socket(x1);
+    // int x1;
+    // std::cout << "Enter Server Port ";
+    // std::cin >> x1;
+    sock = create_socket(47479);
 
     packet *p = new packet();
     test_request *msg1 = new test_request();
