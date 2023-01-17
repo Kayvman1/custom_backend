@@ -11,3 +11,4 @@ add_library(
 target_include_directories(packet_handlers        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(client                 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries     (packet_handler         PUBLIC client packet_handlers)
+

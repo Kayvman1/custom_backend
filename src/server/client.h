@@ -13,4 +13,5 @@ public:
     int session_id;
     int socket_fd;
     bool is_active = true;
+    bool is_reading = false;
 };

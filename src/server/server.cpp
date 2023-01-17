@@ -20,7 +20,9 @@
 #include "spdlog/spdlog.h"
 #include "sem.h"
 
-#include <sys/epoll.h>
+#include <poll.h>
+
+#include <sys/ioctl.h>
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
 
@@ -55,8 +57,9 @@ void server::start(int port_number)
     memset(address.sin_zero, '\0', sizeof address.sin_zero);
 
     int reuse = 1;
-    setsockopt(server_fd,SOL_SOCKET,SO_REUSEADDR, (const char *) &reuse, sizeof(reuse));
-        setsockopt(server_fd,SOL_SOCKET,SO_REUSEPORT, (const char *) &reuse, sizeof(reuse));
+
+    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (const char *)&reuse, sizeof(reuse));
+    setsockopt(server_fd, SOL_SOCKET, SO_REUSEPORT, (const char *)&reuse, sizeof(reuse));
 
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
@@ -85,6 +88,7 @@ void server::start(int port_number)
 
     int i = 0;
 
+    std::thread listen_thread(&server::poll_listener_thread, this);
     while (true) // TODO WAKE ON CONNECTION
     {
         addr_size = sizeof(serverStorage);
@@ -93,82 +97,181 @@ void server::start(int port_number)
                             &addr_size);
         if (new_socket < 0)
         {
-            spdlog::error("connection acception failed");
+            // spdlog::error("connection acception failed");
         }
 
         else
         {
-            spdlog::info("New connection");
+            spdlog::debug("New connection on fd {}", new_socket);
             client *c = new client;
             c->is_active = true;
             c->session_id = 0; // TODO generate this
             c->socket_fd = new_socket;
 
-            // handle_new_connection(c);
-            std::thread clientThread(handle_new_connection, c);
+            int flags = fcntl(new_socket, F_GETFL, 0);
+            fcntl(new_socket, F_SETFL, flags | O_NONBLOCK);
 
-            clientThread.detach();
+            m.insert(std::pair<int, client *>(c->socket_fd, c));
+            spdlog::info("{}", c->socket_fd);
+
+            pollers[connections] = pollfd();
+            pollers[connections].events = POLLIN;
+            pollers[connections].fd = new_socket;
+            connections++;
         }
         // TODO SPAWN LRU tread
     }
     return;
 }
 
+void server::poll_listener_thread()
+{
+
+    spdlog::info("Poll thread created");
+
+    while (true)
+    {
+
+        if (poll(pollers, connections, 1000) > 0)
+        {
+            for (int i = 0; i < connections; i++)
+            {
+                if (pollers[i].revents & POLLIN)
+                {
+                    int fd = pollers[i].fd;
+                    client *c = m.at(fd);
+                    int num_bytes = 0;
+
+                    ioctl(fd, FIONREAD, &num_bytes);
+                    spdlog::info("Number of bytes available: {}", num_bytes);
+                    char blah[3000];
+                    if (num_bytes == 0)
+                    {
+                        num_bytes = read(fd, blah, UINT32_MAX);
+                        spdlog::info("Errno: {}, read: {}", errno, num_bytes);
+                    }
+                    if (read(fd, blah, 0) == -1)
+                    {
+                        break;
+                    }
+                    handle_new_connection(c);
+                }
+            }
+        }
+    }
+}
 
 // use client
 // anything that is kind of uniquely belonging to the connection
 // thread dedicated to poll and select, pass in a list of FDs
 // wake which ever threads have data on them so they can continue (signal sempahore)
 
-void read_attribute(uint8_t *buf, int size, client *c)
+int read_attribute(uint8_t *buf, int size, client *c)
 {
-    spdlog::debug("new attribute");
+    spdlog::debug("Attribute read size {}: ", size);
     int b_count = 0;
     int val_read;
+
     while (b_count < size)
     {
         val_read = read(c->socket_fd, buf + b_count, size - b_count);
-        b_count += val_read;
+
+        if (errno != 0 && errno != EWOULDBLOCK)
+        {
+            spdlog::debug("Non-0 Errno {}: Valread {}: ", errno, val_read);
+        }
+
+        if (val_read > 0)
+        {
+            b_count += val_read;
+        }
+
+        if (val_read == 0 && errno != EWOULDBLOCK)
+        {
+            spdlog::debug("Connection closed");
+            return -1;
+        }
 
         if (val_read + b_count < size)
         {
-            if (errno = EWOULDBLOCK)
+            if (errno == EWOULDBLOCK)
             {
-
+                spdlog::debug("EWOULDBLOCK");
                 // sleep
                 // semaphore
                 // your gonna have some table of semaphores
+                if (val_read != 0)
+                    spdlog::info("{}", val_read);
             }
             else
             {
-                read(c->socket_fd, buf + b_count, size - b_count);
+                if (val_read != 0)
+                    spdlog::info("{}", val_read);
             }
         }
     }
+    return 1;
 }
 
-void handle_new_connection(client *c)
+void server::disconnect_from_client(client *c)
 {
-    while (c->is_active)
+    shutdown(c->socket_fd, SHUT_RDWR);
+    connections --;
+
+}
+
+void server::handle_new_connection(client *c)
+{
+
+    uint8_t message_buffer[3000];
+    uint8_t assembly_buffer[3000];
+    packet *unpack = new packet;
+    int val_read = 0;
+    int b_count = 0;
+
+    if (read_attribute(&unpack->message_type, sizeof(packet::message_type), c) == -1)
     {
-        uint8_t message_buffer[3000];
-        uint8_t assembly_buffer[3000];
-        packet *unpack = new packet;
-        int val_read = 0;
-        int b_count = 0;
+        spdlog::debug("Disconncet");
+        disconnect_from_client(c);
 
-        read_attribute(&unpack->message_type, sizeof(packet::message_type), c);
-        read_attribute(&unpack->message_id, sizeof(packet::message_id), c);
-        read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c);
-        read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c);
-        read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c);
-        read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c);
-        read_attribute(message_buffer, unpack->buf_size, c);
-        spdlog::debug("Complete Read \n");
-        // unpack->message_unpack(message_buffer);
-
-        handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-
-        func(message_buffer, unpack, c);
+        return;
     }
+    if (read_attribute(&unpack->message_id, sizeof(packet::message_id), c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    if (read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    if (read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    if (read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    if (read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    if (read_attribute(message_buffer, unpack->buf_size, c) == -1)
+    {
+        spdlog::error("ERROR on read");
+        return;
+    }
+    spdlog::debug("Complete Read \n");
+
+    // unpack->message_unpack(message_buffer);
+
+    handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
+
+    func(message_buffer, unpack, c);
+    c->is_reading = false;
 }

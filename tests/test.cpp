@@ -615,7 +615,8 @@ int create_socket(int server_port)
     serv_addr.sin_port = htons(server_port);
 
     // Convert IPv4 and IPv6 addresses from text to binary form
-    if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
+    // if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
     {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
@@ -667,6 +668,7 @@ TEST_CASE("Test Message", "[Server]")
     x = (test_response *)unpack->message_unpack(message_buffer);
 
     REQUIRE(x->val == 5);
+    printf("%i", x->val == 5);
     // make s read from vs and then call handle message
 }
 
@@ -788,6 +790,7 @@ TEST_CASE("Test Message one byte sent at a time", "[Server]")
     x = (test_response *)unpack->message_unpack(message_buffer);
 
     REQUIRE(x->val == 5);
+
     // make s read from vs and then call handle message
 }
 
@@ -861,7 +864,11 @@ TEST_CASE("Test Create New User", "[USER]")
 
     uint8_t message_buffer[3000];
 
+    printf("Size of buffer: %i", packet_size);
+
     write(sock, buf, packet_size);
+
+
 
     val_read = read(sock, &unpack->message_type, sizeof(packet::message_type));
     val_read = read(sock, &unpack->message_id, sizeof(packet::message_id));
@@ -873,5 +880,10 @@ TEST_CASE("Test Create New User", "[USER]")
     val_read = read(sock, message_buffer, unpack->buf_size);
 
     create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
+
+    shutdown(sock, SHUT_RDWR);
+    close(sock);
+
     REQUIRE(resp->status == 201);
+
 }

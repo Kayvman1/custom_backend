@@ -25,4 +25,6 @@ target_link_libraries(server PUBLIC  packets handlers ring_buffer client)
 target_link_libraries(packets PUBLIC accounts posts)
 
 target_link_libraries(handlers PUBLIC  server)
+target_compile_options(server PUBLIC -g )
 
+set(CMAKE_BUILD_TYPE Debug)
