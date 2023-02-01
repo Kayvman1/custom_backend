@@ -76,7 +76,6 @@ void *ring_buffer::read()
         memcpy(return_buffer, read_pointer, stop_pointer - read_pointer);
         read_pointer = stop_pointer;
 
-        std::cout << *return_buffer << std::endl;
     }
 
     // The message wraps around

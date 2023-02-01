@@ -564,16 +564,11 @@ TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
 int test(ring_buffer *ring_buf, int read_number)
 {
 
-    printf("thread %d: has begun\n", read_number);
     packet *unpack = new packet;
-    // while (ring_buf->read_bytes(&unpack->message_type, 0) == -1)
-    // {
-    // }
 
     uint8_t *in = (uint8_t *)ring_buf->read();
 
     login_response *msg;
-    std::cout<< *(in+1) << "UH" << std::endl;
 
     msg = (login_response *)packet::unpack(unpack, in);
     
@@ -666,8 +661,6 @@ TEST_CASE("Test Message", "[Server]")
     x = (test_response *)unpack->message_unpack(message_buffer);
 
     REQUIRE(x->val == 5);
-    printf("%i", x->val == 5);
-    // make s read from vs and then call handle message
 }
 
 TEST_CASE("TestMessage with one delayed byte", "[Server]")
@@ -862,7 +855,6 @@ TEST_CASE("Test Create New User", "[USER]")
 
     uint8_t message_buffer[3000];
 
-    printf("Size of buffer: %i", packet_size);
 
     write(sock, buf, packet_size);
 
