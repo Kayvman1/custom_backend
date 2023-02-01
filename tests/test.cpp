@@ -508,84 +508,81 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     test(buf, 4);
 }
 
-// TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
-// {
-//     ring_buffer *buf = new ring_buffer(400);
-//     uint8_t *b = (uint8_t *)malloc(100);
-//     uint8_t *read = (uint8_t *)malloc(100);
-//     packet *p = new packet;
-//     login_response *msg1 = new login_response;
-//     login_response *msg2 = new login_response;
-//     login_response *msg3 = new login_response;
-//     login_response *msg4 = new login_response;
-//     login_response *ret = new login_response;
-//     account *user = new account;
-//     int len;
+TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
+{
+    ring_buffer *buf = new ring_buffer(400);
+    uint8_t *b = (uint8_t *)malloc(100);
+    uint8_t *read = (uint8_t *)malloc(100);
+    packet *p = new packet;
+    login_response *msg1 = new login_response;
+    login_response *msg2 = new login_response;
+    login_response *msg3 = new login_response;
+    login_response *msg4 = new login_response;
+    login_response *ret = new login_response;
+    account *user = new account;
+    int len;
 
-//     p->message_id = login_response_id;
-//     p->message_type = 0;
-//     p->magic = 123456;
-//     p->session_token = 1;
-//     p->flags = 0;
-//     user->username = "username";
-//     msg1->status = 1;
-//     msg1->auth_token = "1";
-//     msg1->user = user;
-//     msg2->status = 2;
-//     msg2->auth_token = "2";
-//     msg2->user = user;
-//     msg3->status = 3;
-//     msg3->auth_token = "3";
-//     msg3->user = user;
-//     msg4->status = 4;
-//     msg4->auth_token = "4";
-//     msg4->user = user;
+    p->message_id = login_response_id;
+    p->message_type = 0;
+    p->magic = 123456;
+    p->session_token = 1;
+    p->flags = 0;
+    user->username = "username";
+    msg1->status = 1;
+    msg1->auth_token = "1";
+    msg1->user = user;
+    msg2->status = 2;
+    msg2->auth_token = "2";
+    msg2->user = user;
+    msg3->status = 3;
+    msg3->auth_token = "3";
+    msg3->user = user;
+    msg4->status = 4;
+    msg4->auth_token = "4";
+    msg4->user = user;
 
-//     len = packet::pack(p, b, msg1);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg2);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg3);
-//     buf->write(b, len);
-//     len = packet::pack(p, b, msg4);
-//     buf->write(b, len);
+    len = packet::pack(p, b, msg1);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg2);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg3);
+    buf->write(b, len);
+    len = packet::pack(p, b, msg4);
+    buf->write(b, len);
 
-//     std::thread clientThread1(test, buf, 1);
-//     std::thread clientThread2(test, buf, 2);
-//     std::thread clientThread3(test, buf, 3);
-//     std::thread clientThread4(test, buf, 4);
+    std::thread clientThread1(test, buf, 1);
+    std::thread clientThread2(test, buf, 2);
+    std::thread clientThread3(test, buf, 3);
+    std::thread clientThread4(test, buf, 4);
 
-//     clientThread1.join();
-//     clientThread2.join();
-//     clientThread3.join();
-//     clientThread4.join();
-// }
+    clientThread1.join();
+    clientThread2.join();
+    clientThread3.join();
+    clientThread4.join();
+}
 
 int test(ring_buffer *ring_buf, int read_number)
 {
+
+    printf("thread %d: has begun\n", read_number);
     packet *unpack = new packet;
     // while (ring_buf->read_bytes(&unpack->message_type, 0) == -1)
     // {
     // }
 
-    ring_buf->read_bytes(&unpack->message_type, 1);
-    ring_buf->read_bytes(&unpack->message_id, 1);
-    ring_buf->read_bytes((uint8_t *)&unpack->magic, 8);
-    ring_buf->read_bytes((uint8_t *)&unpack->session_token, 8);
-    ring_buf->read_bytes((uint8_t *)&unpack->flags, 4);
-    ring_buf->read_bytes((uint8_t *)&unpack->buf_size, 4);
-
-    std::cout << unpack->buf_size << std::endl;
-
-    uint8_t *team = (uint8_t *)malloc(unpack->buf_size);
-    ring_buf->read_bytes(team, unpack->buf_size);
+    uint8_t *in = (uint8_t *)ring_buf->read(read_number);
 
     login_response *msg;
-    msg = (login_response *)unpack->message_unpack(team);
+    std::cout<< *(in+1) << "UH" << std::endl;
 
+    msg = (login_response *)packet::unpack(unpack, in);
+    
+    REQUIRE(unpack->message_id == login_response_id);
     REQUIRE(msg->status == atoi(msg->auth_token.c_str()));
     return 0;
 }
+
+
 
 void start_server(int port)
 {
@@ -616,6 +613,7 @@ int create_socket(int server_port)
 
     // Convert IPv4 and IPv6 addresses from text to binary form
     // if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
+    //if (inet_pton(AF_INET, "108.48.69.131", &serv_addr.sin_addr) <= 0)
     if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
     {
         printf("\nInvalid address/ Address not supported \n");

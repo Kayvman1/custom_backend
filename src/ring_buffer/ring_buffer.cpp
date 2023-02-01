@@ -6,8 +6,8 @@
 
 ring_buffer::ring_buffer()
 {
-    size = RING_SIZE;
-    buf = (uint8_t *)malloc(size);
+    RING_SIZE;
+    buf = (uint8_t *)malloc(3000);
     read_pointer = buf;
     write_pointer = buf;
     stack = std::queue<uint8_t *>();
@@ -51,32 +51,55 @@ uint16_t ring_buffer::write(uint8_t *raw_data, uint16_t len)
     return len;
 }
 
+void *ring_buffer::read(int num)
+{
+
+    printf("thread %d: has begun reading\n", num);
+    void *ret = read();
+    printf("thread %d: has finished reading\n", num);
+    return ret;
+}
+
 // HAVE The caller pass in a buffer and write to it.
 // Think about what to do if buffer passed in is two small
 void *ring_buffer::read()
 {
+    lock.lock();
     // if there is nothing to read return -1:
 
     if (stack.empty())
     {
+
+        lock.unlock();
         return NULL;
     }
 
+    
     uint8_t *stop_pointer = stack.front();
     stack.pop();
     uint8_t *return_buffer;
 
+    // The entire message is in order
     if (stop_pointer > read_pointer)
     {
         int buf_size = stop_pointer - read_pointer;
         return_buffer = (uint8_t *)malloc(buf_size);
-
+        std::cout<< "buffer size allocated is: " << *read_pointer << std::endl;
+        std::cout << "buf size is :" <<  buf_size << std::endl;
         memcpy(return_buffer, read_pointer, stop_pointer - read_pointer);
         read_pointer = stop_pointer;
+
+        printf("HIT\n");  
+
+       std::cout << return_buffer[1] <<std::endl;   
     }
+
+    //The message wraps around
     else
     {
+        // Start at the end of the buffer and count back to read pointer start
         int segment_right = buf + size - read_pointer;
+        //Then count from the wrap point to stop pointer
         int segment_left = stop_pointer - buf;
 
         return_buffer = (uint8_t *)malloc(segment_right + segment_left);
@@ -84,8 +107,11 @@ void *ring_buffer::read()
         memcpy(return_buffer + segment_right, buf, segment_left);
 
         read_pointer = buf + segment_left;
+        
+        printf("HIT2\n");     
     }
 
+    lock.unlock();
     return return_buffer;
 }
 
@@ -113,16 +139,10 @@ int ring_buffer::size_of_next_message()
     return buffer_size;
 }
 
-void ring_buffer::print()
-{
-    std::cout << "AA \n";
-}
-
 int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
 {
-    lock.lock();
 
-    //if the stack is empty there is nothing to read return -1
+    // if the stack is empty there is nothing to read return -1
     if (stack.empty())
     {
         return -1;
@@ -138,7 +158,6 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
         {
             memcpy(write_buf, read_pointer, read_size);
             read_pointer += read_size;
-            lock.unlock();
             return read_size;
         }
 
@@ -146,8 +165,6 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
         {
             memcpy(write_buf, read_pointer, bytes_left_message);
             read_pointer += bytes_left_message;
-            stack.pop();
-            lock.unlock();
             return bytes_left_message;
         }
     }
@@ -162,7 +179,6 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
             memcpy(write_buf, read_pointer, segment_right);
             memcpy(write_buf + segment_right, buf, segment_left);
             read_pointer = buf + segment_left;
-            lock.unlock();
             return size;
         }
         if (segment_left + segment_right <= read_size)
@@ -172,8 +188,6 @@ int ring_buffer::read_bytes(uint8_t *write_buf, int read_size)
 
             memcpy(write_buf + segment_right, buf, bytes_left_message);
             read_pointer = buf + bytes_left_message;
-            stack.pop();
-            lock.unlock();
             return bytes_left_message + segment_right;
         }
     }

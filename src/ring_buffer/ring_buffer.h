@@ -24,6 +24,7 @@ public:
     void *read();
     int size_of_next_message();
     int read_bytes(uint8_t *buf, int size);
+    void *read(int num);
 };
 //#endif
  

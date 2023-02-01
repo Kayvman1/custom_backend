@@ -6,9 +6,10 @@
 #include <sw/redis++/redis++.h>
 #include "client.h"
 #include <map>
-#include "sem.h"
 #include <poll.h>
 
+
+#define MAX_EVENTS 10
 class server
 {
 public:
@@ -17,14 +18,12 @@ public:
     void start(int port_number);
 
 private:
+
     std::map<int, client *> m;
     void poll_listener_thread();
-    pollfd pollers [100];
+    pollfd pollers[100];
     int connections = 0;
-    static void poop(void *);
     void disconnect_from_client(client *c);
     void handle_new_connection(client *c);
+    int epollfd;
 };
-
-
-
