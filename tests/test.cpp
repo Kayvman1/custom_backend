@@ -570,7 +570,7 @@ int test(ring_buffer *ring_buf, int read_number)
     // {
     // }
 
-    uint8_t *in = (uint8_t *)ring_buf->read(read_number);
+    uint8_t *in = (uint8_t *)ring_buf->read();
 
     login_response *msg;
     std::cout<< *(in+1) << "UH" << std::endl;
