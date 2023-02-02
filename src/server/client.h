@@ -1,8 +1,5 @@
 #pragma once
 #include <sys/epoll.h>
-#define qwerty 5
-//TODO fix this qwerty bullshit, its currently used as a 
-//signal for when a virtual socket is being used
 #include "../accounts/account.h"
 
 class client

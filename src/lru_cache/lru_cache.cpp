@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <map>
-#include "client.h"
+#include "server/client.h"
 #include "lru_cache.h"
 
 lru_node::lru_node(int k, client *v)

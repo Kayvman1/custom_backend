@@ -1,20 +1,23 @@
-#include "packet_handlers.h"
-#include "../packets/packets.h"
-#include "../packets/packet_ids.h"
-#include "server.h"
 #include <stdio.h>
-#include <sw/redis++/redis++.h>
-#include <openssl/sha.h>
 #include <functional>
-#include "../accounts/account.h"
-#include "../posts/post.h"
 #include <optional>
 #include <iterator>
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include <unistd.h>
 #include <iostream>
-// using namespace sw::redis;
+
+#include <openssl/sha.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sw/redis++/redis++.h>
+
+#include "../accounts/account.h"
+#include "../posts/post.h"
+#include "../packets/packets.h"
+#include "../packets/packet_ids.h"
+
+#include "server.h"
+#include "packet_handlers.h"
+
 
 extern sw::redis::Redis *redis;
 

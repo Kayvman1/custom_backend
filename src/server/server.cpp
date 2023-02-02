@@ -1,30 +1,26 @@
 #include <unistd.h>
-#include <semaphore.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <signal.h>
-
 #include <string>
 #include <cstring>
 #include <iostream>
 #include <thread>
 #include <cstddef>
-
-#include "server.h"
-#include "../packets/packet_ids.h"
-#include "packet_handlers.h"
-
-#include "client.h"
-
 #include <errno.h>
-#include "spdlog/spdlog.h"
-
-
+#include <signal.h>
 #include <poll.h>
+
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include "spdlog/spdlog.h"
 #include <sys/epoll.h>
 #include <sys/ioctl.h>
 
-#include"../lru_cache/lru_cache.h"
+#include "../packets/packet_ids.h"
+#include "packet_handlers.h"
+
+#include "../lru_cache/lru_cache.h"
+
+#include "client.h"
+#include "server.h"
 
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
@@ -32,7 +28,7 @@ void handle_new_connection(client *c);
 void server::start(int port_number)
 {
 
-    lru_cache * cache = new lru_cache(100);
+    cache = new lru_cache(2);
     epollfd = epoll_create(1);
 
     if (epollfd == -1)
@@ -40,7 +36,7 @@ void server::start(int port_number)
         spdlog::error("Error creating epoll instance");
     }
 
-    spdlog::set_level(spdlog::level::debug);
+    spdlog::set_level(spdlog::level::info);
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     int server_fd, new_socket;
 
@@ -90,7 +86,7 @@ void server::start(int port_number)
     else
     {
 
-        spdlog::info("Successfully listening");
+        spdlog::info("Successfully listening\n");
     }
 
     // accept client and then pass forward to code
@@ -114,7 +110,7 @@ void server::start(int port_number)
 
         else
         {
-            spdlog::debug("New connection on fd {}", new_socket);
+            spdlog::info("New connection on FD: {}", new_socket);
 
             client *c = new client;
             c->is_active = true;
@@ -125,6 +121,12 @@ void server::start(int port_number)
             fcntl(new_socket, F_SETFL, flags | O_NONBLOCK);
 
             m.insert(std::pair<int, client *>(c->socket_fd, c));
+            client *evicted = cache->put(new_socket, c);
+            if (evicted)
+            {
+                spdlog::info("Evicting FD: {}", evicted->socket_fd);
+                disconnect_from_client(evicted);
+            }
 
             connections++;
 
@@ -146,17 +148,18 @@ void server::poll_listener_thread()
 
     while (true)
     {
-        client * has_messages [ 100];
+        client *has_messages[100];
         struct epoll_event events[MAX_EVENTS];
         spdlog::debug("PREWAIT");
         int nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);
-        spdlog::info("NFDS: {}", nfds);
+        spdlog::debug("NFDS: {}", nfds);
         for (int i = 0; i < nfds; i++)
         {
 
             int fd = events[i].data.fd;
             spdlog::debug("PostWait {}", fd);
             client *c = m.at(fd);
+            c = cache->get(fd);
 
             int num_bytes = 0;
             ioctl(fd, FIONREAD, &num_bytes);
@@ -164,7 +167,6 @@ void server::poll_listener_thread()
 
             has_messages[i] = c;
             handle_new_connection(c);
-
         }
     }
 }
@@ -208,8 +210,8 @@ int read_attribute(uint8_t *buf, int size, client *c)
                 usleep(100);
             }
             else
-            {   
-                spdlog::error("Expected {}, but read {}",size, b_count);
+            {
+                spdlog::error("Expected {}, but read {}", size, b_count);
                 return b_count;
             }
         }
@@ -221,6 +223,7 @@ int read_attribute(uint8_t *buf, int size, client *c)
 
 void server::disconnect_from_client(client *c)
 {
+    spdlog::info("Disconnecting from FD: {}", c->socket_fd);
     shutdown(c->socket_fd, SHUT_RDWR);
     connections--;
     epoll_ctl(epollfd, EPOLL_CTL_DEL, c->socket_fd, NULL);
@@ -238,39 +241,38 @@ void server::handle_new_connection(client *c)
     if (read_attribute(&unpack->message_type, sizeof(packet::message_type), c) == -1)
     {
         spdlog::debug("Disconncet");
-
         disconnect_from_client(c);
 
         return;
     }
     if (read_attribute(&unpack->message_id, sizeof(packet::message_id), c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     if (read_attribute(message_buffer, unpack->buf_size, c) == -1)
     {
-        spdlog::error("ERROR on read");
+        spdlog::error("Error durning read on FD: {}", c->socket_fd);
         return;
     }
     spdlog::debug("Complete Read \n");
