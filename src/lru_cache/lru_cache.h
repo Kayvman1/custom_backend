@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <map>
 #include "server/client.h"
+#include <mutex>
 
 class lru_node
 {
@@ -27,6 +28,8 @@ private:
     void remove(lru_node *n);
     void append(lru_node *n);
     lru_node *evict();
+
+    std::mutex lock;
 
 public:
     lru_cache(int capacity);

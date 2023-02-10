@@ -28,7 +28,7 @@ void handle_new_connection(client *c);
 void server::start(int port_number)
 {
 
-    cache = new lru_cache(2);
+    cache = new lru_cache(6);
     epollfd = epoll_create(1);
 
     if (epollfd == -1)
@@ -36,7 +36,7 @@ void server::start(int port_number)
         spdlog::error("Error creating epoll instance");
     }
 
-    spdlog::set_level(spdlog::level::info);
+    spdlog::set_level(spdlog::level::debug);
     redis = new sw::redis::Redis("tcp://127.0.0.1:6379");
     int server_fd, new_socket;
 
@@ -121,8 +121,10 @@ void server::start(int port_number)
             fcntl(new_socket, F_SETFL, flags | O_NONBLOCK);
 
             m.insert(std::pair<int, client *>(c->socket_fd, c));
+
             client *evicted = cache->put(new_socket, c);
-            if (evicted)
+
+            if (evicted != NULL)
             {
                 spdlog::info("Evicting FD: {}", evicted->socket_fd);
                 disconnect_from_client(evicted);
@@ -150,14 +152,14 @@ void server::poll_listener_thread()
     {
         client *has_messages[100];
         struct epoll_event events[MAX_EVENTS];
-        spdlog::debug("PREWAIT");
+        spdlog::debug("Pre wait");
         int nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);
-        spdlog::debug("NFDS: {}", nfds);
+        spdlog::debug("Post wait NFDS: {}", nfds);
         for (int i = 0; i < nfds; i++)
         {
 
             int fd = events[i].data.fd;
-            spdlog::debug("PostWait {}", fd);
+            spdlog::debug("Handling FD: {}", fd);
             client *c = m.at(fd);
             c = cache->get(fd);
 
@@ -183,6 +185,12 @@ int read_attribute(uint8_t *buf, int size, client *c)
 
     while (b_count < size)
     {
+        // if (c == NULL)
+        // {
+        //     std::cout << std::endl
+        //               << ("AHHHHHHHHHHHHHHHHHH") << std::endl;
+        //     return -1;
+        // }
         val_read = read(c->socket_fd, buf + b_count, size - b_count);
 
         // Real error on reading
@@ -227,6 +235,7 @@ void server::disconnect_from_client(client *c)
     shutdown(c->socket_fd, SHUT_RDWR);
     connections--;
     epoll_ctl(epollfd, EPOLL_CTL_DEL, c->socket_fd, NULL);
+    c->is_active = false;
 }
 
 void server::handle_new_connection(client *c)

@@ -14,7 +14,11 @@ lru_node::lru_node(int k, client *v)
 
 lru_node::lru_node()
 {
-    lru_node(-1, NULL);
+    key = -1;
+    value = NULL;
+
+    next = NULL;
+    prev = NULL;
 };
 
 lru_cache::lru_cache(int capacity)
@@ -31,7 +35,7 @@ lru_cache::lru_cache(int capacity)
 
 client *lru_cache::get(int key)
 {
-
+    lock.lock();
     if (data.count(key) == 0)
         return NULL;
 
@@ -39,25 +43,17 @@ client *lru_cache::get(int key)
     remove(n);
     append(n);
 
+    lock.unlock();
     return n->value;
-}
-
-lru_node *lru_cache::evict()
-{
-    lru_node *evicted = head->next;
-    lru_node *new_first = evicted->next;
-
-    head->next = new_first;
-    new_first->prev = head;
-
-    num_elements--;
-
-    return evicted;
 }
 
 client *lru_cache::put(int key, client *value)
 {
+
+    lock.lock();
+
     lru_node *evicted = new lru_node();
+    // evicted->value = NULL
     if (data.count(key) != 0)
     {
         lru_node *n = data.at(key);
@@ -74,12 +70,27 @@ client *lru_cache::put(int key, client *value)
     }
 
     lru_node *n = new lru_node();
+
     n->key = key;
     n->value = value;
     append(n);
     data.insert(std::pair<int, lru_node *>(key, n));
 
+    lock.unlock();
     return evicted->value;
+}
+
+lru_node *lru_cache::evict()
+{
+    lru_node *evicted = head->next;
+    lru_node *new_first = evicted->next;
+
+    head->next = new_first;
+    new_first->prev = head;
+
+    num_elements--;
+
+    return evicted;
 }
 
 void lru_cache::remove(lru_node *n)

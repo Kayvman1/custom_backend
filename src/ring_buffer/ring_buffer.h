@@ -13,7 +13,8 @@ public:
     uint8_t *buf;
     uint8_t *read_pointer;
     uint8_t *write_pointer;
-    std::queue<uint8_t *> stack;
+    std::queue<uint8_t *> unread_stack;
+    
     int size = RING_SIZE;
 
     ring_buffer();

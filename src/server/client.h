@@ -1,6 +1,6 @@
 #pragma once
-#include <sys/epoll.h>
 #include "../accounts/account.h"
+#include "../ring_buffer/ring_buffer.h"
 
 class client
 {
@@ -11,4 +11,5 @@ public:
     int socket_fd;
     bool is_active = true;
     bool is_reading = false;
+    ring_buffer *buffer;
 };
