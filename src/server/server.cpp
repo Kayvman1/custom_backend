@@ -178,19 +178,13 @@ void server::poll_listener_thread()
 // thread dedicated to poll and select, pass in a list of FDs
 // wake which ever threads have data on them so they can continue (signal sempahore)
 
-int read_attribute(uint8_t *buf, int size, client *c)
+int server::read_attribute(uint8_t *buf, int size, client *c)
 {
     int b_count = 0;
     int val_read;
 
     while (b_count < size)
     {
-        // if (c == NULL)
-        // {
-        //     std::cout << std::endl
-        //               << ("AHHHHHHHHHHHHHHHHHH") << std::endl;
-        //     return -1;
-        // }
         val_read = read(c->socket_fd, buf + b_count, size - b_count);
 
         // Real error on reading
@@ -203,6 +197,7 @@ int read_attribute(uint8_t *buf, int size, client *c)
         if (val_read == 0)
         {
             spdlog::debug("Connection closed");
+            c->failedCycles = 0;
             return -1;
         }
 
@@ -211,15 +206,24 @@ int read_attribute(uint8_t *buf, int size, client *c)
             b_count += val_read;
         }
 
-        if (val_read + b_count < size)
+        if (b_count < size)
         {
             if (errno == EWOULDBLOCK)
             {
-                usleep(100);
+                usleep(250000);
+                c->failedCycles ++;
+
+                if (c->failedCycles == 100)
+                {
+                    spdlog::error("Too many EAGAIN errors", size, b_count);
+                    disconnect_from_client(c);
+                }
             }
+
             else
             {
                 spdlog::error("Expected {}, but read {}", size, b_count);
+                c->failedCycles = 0;
                 return b_count;
             }
         }
@@ -256,32 +260,32 @@ void server::handle_new_connection(client *c)
     }
     if (read_attribute(&unpack->message_id, sizeof(packet::message_id), c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, MessageID", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, Magic", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, Session Token", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, Flags", c->socket_fd);
         return;
     }
     if (read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, BufSize", c->socket_fd);
         return;
     }
     if (read_attribute(message_buffer, unpack->buf_size, c) == -1)
     {
-        spdlog::error("Error durning read on FD: {}", c->socket_fd);
+        spdlog::error("Error durning read on FD: {}, Buffer", c->socket_fd);
         return;
     }
     spdlog::debug("Complete Read \n");

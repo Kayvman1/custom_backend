@@ -27,5 +27,6 @@ private:
     int connections = 0;
     void disconnect_from_client(client *c);
     void handle_new_connection(client *c);
+    int read_attribute(uint8_t *buf, int size, client *c);
     int epollfd;
 };

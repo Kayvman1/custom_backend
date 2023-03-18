@@ -571,13 +571,11 @@ int test(ring_buffer *ring_buf, int read_number)
     login_response *msg;
 
     msg = (login_response *)packet::unpack(unpack, in);
-    
+
     REQUIRE(unpack->message_id == login_response_id);
     REQUIRE(msg->status == atoi(msg->auth_token.c_str()));
     return 0;
 }
-
-
 
 void start_server(int port)
 {
@@ -608,8 +606,8 @@ int create_socket(int server_port)
 
     // Convert IPv4 and IPv6 addresses from text to binary form
     // if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
-    if (inet_pton(AF_INET, "108.48.69.131", &serv_addr.sin_addr) <= 0)
-    //if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
+    // if (inet_pton(AF_INET, "108.48.69.131", &serv_addr.sin_addr) <= 0)
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
     {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
@@ -855,10 +853,7 @@ TEST_CASE("Test Create New User", "[USER]")
 
     uint8_t message_buffer[3000];
 
-
     write(sock, buf, packet_size);
-
-
 
     val_read = read(sock, &unpack->message_type, sizeof(packet::message_type));
     val_read = read(sock, &unpack->message_id, sizeof(packet::message_id));
@@ -871,9 +866,38 @@ TEST_CASE("Test Create New User", "[USER]")
 
     create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
 
+    REQUIRE(resp->status == 201);
+}
+
+TEST_CASE("Test malformed message - Too Short", "[Networking]")
+{
+    uint8_t *buf = (uint8_t *)malloc(1000);
+    create_user_request *req = new create_user_request;
+    req->email = "test user*";
+    req->username = random_string(25);
+    req->password = "password";
+    packet *outgoing = new packet;
+    outgoing->message_type = CONTROL_PACKET;
+    outgoing->message_id = create_user_request_id;
+    packet *unpack = new packet;
+
+    uint32_t fake = 555;
+
+    int packet_size = packet::pack(outgoing, buf, req);
+
+    std::memcpy(buf+22, &fake, sizeof(uint32_t));
+
+    int val_read;
+
+    uint8_t message_buffer[3000];
+
+    write(sock, buf, packet_size);
+
+    val_read = read(sock, &unpack->message_type, sizeof(packet::message_type));
+}
+
+TEST_CASE("CLEANUP", "[ADMIN]")
+{
     shutdown(sock, SHUT_RDWR);
     close(sock);
-
-    REQUIRE(resp->status == 201);
-
 }

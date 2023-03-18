@@ -12,4 +12,6 @@ public:
     bool is_active = true;
     bool is_reading = false;
     ring_buffer *buffer;
+
+    int failedCycles = 0;
 };
