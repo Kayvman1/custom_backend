@@ -143,6 +143,14 @@ void server::start(int port_number)
     return;
 }
 
+void readin(client *c)
+{
+    //26
+    uint8_t * buffer ;
+   
+
+}
+
 void server::poll_listener_thread()
 {
 
@@ -158,6 +166,7 @@ void server::poll_listener_thread()
         for (int i = 0; i < nfds; i++)
         {
 
+        
             int fd = events[i].data.fd;
             spdlog::debug("Handling FD: {}", fd);
             client *c = m.at(fd);
@@ -197,7 +206,6 @@ int server::read_attribute(uint8_t *buf, int size, client *c)
         if (val_read == 0)
         {
             spdlog::debug("Connection closed");
-            c->failedCycles = 0;
             return -1;
         }
 
@@ -210,20 +218,14 @@ int server::read_attribute(uint8_t *buf, int size, client *c)
         {
             if (errno == EWOULDBLOCK)
             {
-                usleep(250000);
-                c->failedCycles ++;
+                sleep(1);
 
-                if (c->failedCycles == 100)
-                {
-                    spdlog::error("Too many EAGAIN errors", size, b_count);
-                    disconnect_from_client(c);
-                }
+ 
             }
 
             else
             {
                 spdlog::error("Expected {}, but read {}", size, b_count);
-                c->failedCycles = 0;
                 return b_count;
             }
         }

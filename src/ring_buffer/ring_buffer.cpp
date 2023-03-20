@@ -9,7 +9,6 @@ ring_buffer::ring_buffer()
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
-    stack = std::queue<uint8_t *>();
 }
 
 ring_buffer::ring_buffer(int l)
@@ -18,7 +17,6 @@ ring_buffer::ring_buffer(int l)
     buf = (uint8_t *)malloc(size);
     read_pointer = buf;
     write_pointer = buf;
-    stack = std::queue<uint8_t *>();
 }
 
 uint16_t ring_buffer::write(uint8_t *raw_data, uint16_t len)
@@ -28,9 +26,10 @@ uint16_t ring_buffer::write(uint8_t *raw_data, uint16_t len)
     int segment_right = buf + size - write_pointer;
     int segment_left = len - segment_right;
 
-    int bytes_written = 0; // TODO should i use this and count when i write or just return len?
+    int bytes_written = 0; // TODO should I use this and count when I write, or just return len?
 
-    if (segment_right > len)
+
+    if (segment_right >= len)
     {
         std::memcpy(write_pointer, raw_data, len);
         write_pointer = write_pointer + len;
@@ -46,36 +45,25 @@ uint16_t ring_buffer::write(uint8_t *raw_data, uint16_t len)
     {
         write_pointer -= size;
     }
-    stack.push(write_pointer);
     return len;
 }
 
 // HAVE The caller pass in a buffer and write to it.
 // Think about what to do if buffer passed in is two small
-void *ring_buffer::read()
+void ring_buffer::read(int read_len, uint8_t *return_buffer)
 {
-    lock.lock();
-    // if there is nothing to read return -1:
 
-    if (stack.empty())
+    uint8_t *stop_pointer = read_pointer + read_len;
+
+    if (stop_pointer > buf + size)
     {
-        lock.unlock();
-        return NULL;
+        stop_pointer -= size;
     }
-
-    uint8_t *stop_pointer = stack.front();
-    stack.pop();
-
-    uint8_t *return_buffer;
 
     // The entire message is in order
     if (stop_pointer > read_pointer)
     {
-        int buf_size = stop_pointer - read_pointer;
-        return_buffer = (uint8_t *)malloc(buf_size);
-        memcpy(return_buffer, read_pointer, stop_pointer - read_pointer);
-        read_pointer = stop_pointer;
-
+        memcpy(return_buffer, read_pointer, read_len);
     }
 
     // The message wraps around
@@ -83,17 +71,14 @@ void *ring_buffer::read()
     {
         // Start at the end of the buffer and count back to read pointer start
         int segment_right = buf + size - read_pointer;
-        // Then count from the wrap point to stop pointer
-        int segment_left = stop_pointer - buf;
+        // Then read the rest of the message
+        int segment_left = read_len - segment_right;
 
-        return_buffer = (uint8_t *)malloc(segment_right + segment_left);
+ 
+
         memcpy(return_buffer, read_pointer, segment_right);
         memcpy(return_buffer + segment_right, buf, segment_left);
-
-        read_pointer = buf + segment_left;
-
     }
 
-    lock.unlock();
-    return return_buffer;
+    read_pointer = stop_pointer;
 }

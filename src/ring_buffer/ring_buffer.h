@@ -9,11 +9,9 @@
 class ring_buffer
 {
 public:
-    std::mutex lock;
     uint8_t *buf;
     uint8_t *read_pointer;
     uint8_t *write_pointer;
-    std::queue<uint8_t *> stack;
     
     int size = RING_SIZE;
 
@@ -21,7 +19,9 @@ public:
     ring_buffer(int l);
 
     uint16_t write(uint8_t *raw_data, uint16_t len);
-    void *read();
+    void read(int len, uint8_t * out_buf);
+    
+    void read_from_socket(int sockfd);
 };
 //#endif
  
