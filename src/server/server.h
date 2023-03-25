@@ -17,10 +17,8 @@ public:
     void start(int port_number);
 
 private:
-
     std::map<int, client *> m;
     lru_cache *cache;
-
 
     void poll_listener_thread();
     pollfd pollers[100];
@@ -29,4 +27,10 @@ private:
     void handle_new_connection(client *c);
     int read_attribute(uint8_t *buf, int size, client *c);
     int epollfd;
+
+    void read_in(client *c);
+    void handle_read_to_client(client *c);
+
+    std::queue <int> has_message = std::queue<int>();
+    void handle_message(p);
 };

@@ -1,6 +1,7 @@
 #pragma once
 #include "../accounts/account.h"
 #include "../ring_buffer/ring_buffer.h"
+#include "../packets/packets.h"
 
 class client
 {
@@ -16,4 +17,11 @@ public:
     bool is_reading = false;
     ring_buffer *buffer;
 
+    int read_from_socket(int len);
+
+    int desired_bytes;
+    int received_bytes ;
+    bool completed_header = false;
+
+    void read_message(packet* p);
 };

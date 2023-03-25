@@ -28,7 +28,7 @@ void handle_new_connection(client *c);
 void server::start(int port_number)
 {
 
-    cache = new lru_cache(6);
+    cache = new lru_cache(1);
     epollfd = epoll_create(1);
 
     if (epollfd == -1)
@@ -143,14 +143,18 @@ void server::start(int port_number)
     return;
 }
 
-void readin(client *c)
+void server::handle_message()
 {
-    //26
-    uint8_t * buffer ;
-   
+    lock.lock();
+    int sock = has_message.front();
+    has_message.pop();
+    lock.unlock();
+
+    client *c = m.at(sock);
+
+    packet *p = c->read_message(p);
 
 }
-
 void server::poll_listener_thread()
 {
 
@@ -166,7 +170,6 @@ void server::poll_listener_thread()
         for (int i = 0; i < nfds; i++)
         {
 
-        
             int fd = events[i].data.fd;
             spdlog::debug("Handling FD: {}", fd);
             client *c = m.at(fd);
@@ -177,9 +180,70 @@ void server::poll_listener_thread()
             spdlog::debug("Number of bytes available: {}", num_bytes);
 
             has_messages[i] = c;
-            handle_new_connection(c);
+            // handle_new_connection(c);
+            read_in(c);
         }
     }
+}
+void server::handle_read_to_client(client *c)
+{
+    int bytes_read = c->read_from_socket(c->desired_bytes - c->received_bytes);
+    if (bytes_read == -1)
+    {
+        disconnect_from_client(c);
+        return;
+    }
+
+    c->received_bytes += bytes_read;
+    if (c->received_bytes == c->desired_bytes)
+    {
+        c->received_bytes = 0;
+        c->desired_bytes = 0;
+
+        //if body is completed add to queue to be processed
+        if(c->completed_header)
+        {
+            has_message.push(c->socket_fd);
+        }
+        c->completed_header = !c->completed_header;
+    }
+}
+void server::read_in(client *c)
+{
+    // Finish unfinished read
+    if (c->received_bytes < c->desired_bytes)
+    {
+        handle_read_to_client(c);
+    }
+
+    // Read in payload
+    if (c->completed_header == true)
+    {
+        uint8_t *t = (c->buffer->expose_write_pointer() - sizeof(packet::buf_size));
+        uint32_t *payload_size = reinterpret_cast<uint32_t *>(t);
+        c->desired_bytes = *payload_size;
+        c->received_bytes = 0;
+
+        handle_read_to_client(c);
+    }
+
+    // Read in a header
+    else
+    {
+        c->desired_bytes = 26;
+        c->received_bytes = 0;
+
+        handle_read_to_client(c);
+    }
+
+    // // If a read finishes then continue until eAgain
+    // if (c->desired_bytes == 0)
+    // {
+    //     int bytes_on_wire = 0;
+    //     ioctl(c->socket_fd, FIONREAD, &bytes_on_wire);
+    //     if (bytes_on_wire > 0)
+    //         read_in(c);
+    // }
 }
 
 // use client
@@ -219,8 +283,6 @@ int server::read_attribute(uint8_t *buf, int size, client *c)
             if (errno == EWOULDBLOCK)
             {
                 sleep(1);
-
- 
             }
 
             else

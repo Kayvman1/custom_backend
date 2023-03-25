@@ -22,6 +22,8 @@
 
 // Helper functions
 int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message_len);
+void start_server(int port);
+int create_socket(int server_port);
 
 TEST_CASE("SerializeLoginRequest", "[serialize]")
 {
@@ -350,7 +352,7 @@ TEST_CASE("RingBufferWrite", "[ring_buffer]")
     for (int i = 1; i < 12; i++)
     {
         uint8_t val = i;
-        ring_buf->write(&val, 1);
+        ring_buf->write_buf(&val, 1);
     }
 
     REQUIRE(ring_buf->buf[0] == 11);
@@ -364,18 +366,18 @@ TEST_CASE("RingBufferRead", "[ring_buffer]")
     for (int i = 1; i <= 11; i++)
     {
         write_val = i;
-        ring_buf->write(&write_val, 1);
+        ring_buf->write_buf(&write_val, 1);
     }
 
     uint8_t read_val;
 
-    ring_buf->read(1, &read_val);
+    ring_buf->read_buf(1, &read_val);
     REQUIRE(read_val == 11);
 
     for (int i = 2; i <= 11; i++)
     {
 
-        ring_buf->read(1, &read_val);
+        ring_buf->read_buf(1, &read_val);
         REQUIRE(read_val == i);
     }
 }
@@ -410,27 +412,27 @@ TEST_CASE("RingBufferUseCaseNoWrap", "[ring_buffer]")
 
     // All messages being written are the same length
     message_len = login_response::pack(msg1, in_buf);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     login_response::pack(msg2, in_buf);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     login_response::pack(msg3, in_buf);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     login_response::pack(msg4, in_buf);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
 
-    ring_buf->read(message_len, out_buf);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "1");
 
-    ring_buf->read(message_len, out_buf);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "2");
 
-    ring_buf->read(message_len, out_buf);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "3");
 
-    ring_buf->read(message_len, out_buf);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "4");
 }
@@ -466,26 +468,26 @@ TEST_CASE("RingBufferUseCaseWithWrap", "[ring_buffer]")
     msg4->user = user;
 
     message_len = login_response::pack(msg1, in_buf);
-    ring_buf->write(in_buf, message_len);
-    ring_buf->read(message_len, out_buf);
+    ring_buf->write_buf(in_buf, message_len);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "1");
 
     message_len = login_response::pack(msg2, in_buf);
-    ring_buf->write(in_buf, message_len);
-    ring_buf->read(message_len, out_buf);
+    ring_buf->write_buf(in_buf, message_len);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "2");
 
     message_len = login_response::pack(msg3, in_buf);
-    ring_buf->write(in_buf, message_len);
-    ring_buf->read(message_len, out_buf);
+    ring_buf->write_buf(in_buf, message_len);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "3");
 
     message_len = login_response::pack(msg4, in_buf);
-    ring_buf->write(in_buf, message_len);
-    ring_buf->read(message_len, out_buf);
+    ring_buf->write_buf(in_buf, message_len);
+    ring_buf->read_buf(message_len, out_buf);
     login_response::unpack(ret, out_buf);
     REQUIRE(ret->auth_token == "4");
 }
@@ -525,13 +527,13 @@ TEST_CASE("RingBufferReadBytesSingleThread", "[ring_buffer]")
     msg4->user = user;
 
     message_len = packet::pack(pac, in_buf, msg1);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg2);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg3);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg4);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
 
     read_packet_from_ringbuf(ring_buf, 1, message_len);
     read_packet_from_ringbuf(ring_buf, 2, message_len);
@@ -573,13 +575,13 @@ TEST_CASE("RingBufferReadBytesMultiThread", "[ring_buffer]")
     msg4->user = user;
 
     message_len = packet::pack(pac, in_buf, msg1);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg2);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg3);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
     message_len = packet::pack(pac, in_buf, msg4);
-    ring_buf->write(in_buf, message_len);
+    ring_buf->write_buf(in_buf, message_len);
 
     std::thread clientThread1(read_packet_from_ringbuf, ring_buf, 1, message_len);
     std::thread clientThread2(read_packet_from_ringbuf, ring_buf, 2, message_len);
@@ -599,7 +601,7 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
     packet *unpack = new packet;
 
     uint8_t *out_buf = (uint8_t *)malloc(100);
-    ring_buf->read(message_len, out_buf);
+    ring_buf->read_buf(message_len, out_buf);
 
     login_response *msg;
 
@@ -612,59 +614,98 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 
 // //////////////// SERVER \\\\\\\\\\\\\\\\\\\
 
-// void start_server(int port)
-// {
-//     server *s = new server();
-//     s->start(port);
-// }
+void start_server(int port)
+{
+    server *s = new server();
+    s->start(port);
+}
 
-// int create_socket(int server_port)
-// {
-//     // using namespace std::chrono_literals;
+int create_socket(int server_port)
+{
+    // using namespace std::chrono_literals;
 
-//     int sock = 0;
-//     long valread;
-//     struct sockaddr_in serv_addr;
-//     char *hello = "Hello from client";
-//     // char buffer[1024] = {0};
-//     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
-//     {
-//         printf("\n Socket creation error \n");
-//         return -1;
-//     }
+    int sock = 0;
+    long valread;
+    struct sockaddr_in serv_addr;
+    char *hello = "Hello from client";
+    // char buffer[1024] = {0};
+    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    {
+        printf("\n Socket creation error \n");
+        return -1;
+    }
 
-//     memset(&serv_addr, '0', sizeof(serv_addr));
+    memset(&serv_addr, '0', sizeof(serv_addr));
 
-//     serv_addr.sin_family = AF_INET;
+    serv_addr.sin_family = AF_INET;
 
-//     serv_addr.sin_port = htons(server_port);
+    serv_addr.sin_port = htons(server_port);
 
-//     // Convert IPv4 and IPv6 addresses from text to binary form
-//     // if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
-//     // if (inet_pton(AF_INET, "108.48.69.131", &serv_addr.sin_addr) <= 0)
-//     if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
-//     {
-//         printf("\nInvalid address/ Address not supported \n");
-//         return -1;
-//     }
+    // Convert IPv4 and IPv6 addresses from text to binary form
+    // if (inet_pton(AF_INET, "192.168.1.177", &serv_addr.sin_addr) <= 0)
+    // if (inet_pton(AF_INET, "108.48.69.131", &serv_addr.sin_addr) <= 0)
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
+    {
+        printf("\nInvalid address/ Address not supported \n");
+        return -1;
+    }
 
-//     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
-//     {
-//         printf("\nConnection Failed \n");
-//         return -1;
-//     }
-//     return sock;
-// }
+    if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+    {
+        printf("\nConnection Failed \n");
+        return -1;
+    }
+    return sock;
+}
+
+void close_connection(int sock)
+{
+    shutdown(sock, SHUT_RDWR);
+    close(sock);
+}
 
 // int sock;
+TEST_CASE("Test Message", "[Server]")
+{
+
+    int sock = create_socket(47479);
+
+    packet *p = new packet();
+    test_request *msg1 = new test_request();
+    uint8_t *buf = (uint8_t *)malloc(100);
+    int packet_size;
+
+    p->message_type = TEST_PACKET;
+    msg1->val = 5;
+    p->message_id = TEST_PACKET_IDS::test_request_id;
+
+    packet_size = packet::pack(p, buf, msg1);
+
+    write(sock, buf, packet_size);
+
+    uint8_t message_buffer[3000];
+    packet *unpack = new packet;
+    long val_read;
+    // read(sock, &unpack->message_type, sizeof(packet::message_type));
+    // read(sock, &unpack->message_id, sizeof(packet::message_id));
+    // read(sock, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    // read(sock, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    // read(sock, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    // read(sock, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    // read(sock, message_buffer, unpack->buf_size);
+
+    // test_response *x = new test_response();
+    // x = (test_response *)unpack->message_unpack(message_buffer);
+
+    // REQUIRE(x->val == 5);
+    
+    close_connection(sock);
+}
+
 // TEST_CASE("Test Message", "[Server]")
 // {
-//     // std::thread serverThread(start_server, 8080);
 
-//     // int x1;
-//     // std::cout << "Enter Server Port ";
-//     // std::cin >> x1;
-//     sock = create_socket(47479);
+//     int sock = create_socket(47479);
 
 //     packet *p = new packet();
 //     test_request *msg1 = new test_request();
@@ -694,10 +735,13 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     x = (test_response *)unpack->message_unpack(message_buffer);
 
 //     REQUIRE(x->val == 5);
+//     close_connection(sock);
 // }
-
+//
 // TEST_CASE("TestMessage with one delayed byte", "[Server]")
 // {
+//     int sock = create_socket(47479);
+
 //     packet *p = new packet();
 //     test_request *msg1 = new test_request();
 //     uint8_t *buf = (uint8_t *)malloc(100);
@@ -728,11 +772,12 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     x = (test_response *)unpack->message_unpack(message_buffer);
 
 //     REQUIRE(x->val == 5);
-//     // make s read from vs and then call handle message
+//     close_connection(sock);
 // }
 
 // TEST_CASE("Test Message with split packet", "[Server]")
 // {
+//     int sock = create_socket(47479);
 //     packet *p = new packet();
 //     test_request *msg1 = new test_request();
 //     uint8_t *buf = (uint8_t *)malloc(100);
@@ -777,11 +822,12 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 
 //     REQUIRE(x->val == 5);
 //     REQUIRE(unpack->session_token == 54321);
-//     // make s read from vs and then call handle message
+//     close_connection(sock);
 // }
 
 // TEST_CASE("Test Message one byte sent at a time", "[Server]")
 // {
+//     int sock = create_socket(47479);
 //     packet *p = new packet();
 //     test_request *msg1 = new test_request();
 //     uint8_t *buf = (uint8_t *)malloc(100);
@@ -814,12 +860,15 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     x = (test_response *)unpack->message_unpack(message_buffer);
 
 //     REQUIRE(x->val == 5);
-
-//     // make s read from vs and then call handle message
+//     close_connection(sock);
 // }
+
+// //////////CONTROL PACKETS \\\\\\\\\\
 
 // TEST_CASE("Invalid Login", "[Infrastructure]")
 // {
+//     int sock = create_socket(47479);
+
 //     uint8_t *buf = (uint8_t *)malloc(1000);
 //     login_request *req = new login_request();
 //     req->username = "abcds";
@@ -851,7 +900,7 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     REQUIRE(resp->auth_token == "INVALID");
 //     REQUIRE(resp->status == control_errors::user_not_found);
 
-//     // std::cout << unpack->magic << std::endl;
+//     close_connection(sock);
 // }
 // std::string random_string(std::size_t length)
 // {
@@ -872,6 +921,8 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 // }
 // TEST_CASE("Test Create New User", "[USER]")
 // {
+//     int sock = create_socket(47479);
+
 //     uint8_t *buf = (uint8_t *)malloc(1000);
 //     create_user_request *req = new create_user_request;
 //     req->email = "test user*";
@@ -902,10 +953,13 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     create_user_response *resp = (create_user_response *)unpack->message_unpack(message_buffer);
 
 //     REQUIRE(resp->status == 201);
+//     close_connection(sock);
 // }
 
 // TEST_CASE("Test malformed message - Too Short", "[Networking]")
 // {
+//     int sock = create_socket(47479);
+
 //     uint8_t *buf = (uint8_t *)malloc(1000);
 //     create_user_request *req = new create_user_request;
 //     req->email = "test user*";
@@ -916,11 +970,10 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     outgoing->message_id = create_user_request_id;
 //     packet *unpack = new packet;
 
-//     uint32_t fake = 555;
+
 
 //     int packet_size = packet::pack(outgoing, buf, req);
 
-//     std::memcpy(buf + 22, &fake, sizeof(uint32_t));
 
 //     int val_read;
 
@@ -929,10 +982,5 @@ int read_packet_from_ringbuf(ring_buffer *ring_buf, int read_number, int message
 //     write(sock, buf, packet_size);
 
 //     val_read = read(sock, &unpack->message_type, sizeof(packet::message_type));
-// }
-
-// TEST_CASE("CLEANUP", "[ADMIN]")
-// {
-//     shutdown(sock, SHUT_RDWR);
-//     close(sock);
+//     close_connection(sock);
 // }

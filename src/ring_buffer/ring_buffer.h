@@ -18,10 +18,13 @@ public:
     ring_buffer();
     ring_buffer(int l);
 
-    uint16_t write(uint8_t *raw_data, uint16_t len);
-    void read(int len, uint8_t * out_buf);
+    uint16_t write_buf(uint8_t *raw_data, uint16_t len);
+    void read_buf(int len, uint8_t * out_buf);
     
-    void read_from_socket(int sockfd);
+    int write_from_socket(int sockfd, int len);
+
+    int contigious_bytes_remaining();
+    uint8_t* expose_write_pointer();
 };
 //#endif
  
