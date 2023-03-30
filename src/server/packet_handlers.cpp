@@ -141,7 +141,7 @@ void packet_handlers::test_request_handler(uint8_t *raw_msg, packet *in, client 
     response->val = request->val;
 
     size_t packet_size = packet::pack(out, write_buf, response);
-    write(user->socket_fd, write_buf, packet_size);
+    send(user->socket_fd, write_buf, packet_size, MSG_NOSIGNAL);
 
 
     free(request);

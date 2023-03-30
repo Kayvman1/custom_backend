@@ -2,6 +2,7 @@
 #include <map>
 #include "server/client.h"
 #include "lru_cache.h"
+#include <iostream>
 
 lru_node::lru_node(int k, client *v)
 {
@@ -35,20 +36,27 @@ lru_cache::lru_cache(int capacity)
 
 client *lru_cache::get(int key)
 {
+    std::cout << "GET LOCK" << key << std::endl;
+
     lock.lock();
     if (data.count(key) == 0)
+    {
+        lock.unlock();
         return NULL;
-
+    }
     lru_node *n = data.at(key);
     remove(n);
     append(n);
 
     lock.unlock();
+    std::cout << "GET UNLOCK" << key << std::endl;
+
     return n->value;
 }
 
 client *lru_cache::put(int key, client *value)
 {
+    std::cout << "PUT LOCK " << key << std::endl;
 
     lock.lock();
 
@@ -60,6 +68,7 @@ client *lru_cache::put(int key, client *value)
         n->value = value;
         remove(n);
         append(n);
+        lock.unlock();
         return NULL;
     }
 
@@ -77,6 +86,8 @@ client *lru_cache::put(int key, client *value)
     data.insert(std::pair<int, lru_node *>(key, n));
 
     lock.unlock();
+    std::cout << "PUT UNLOCK" << key << std::endl;
+
     return evicted->value;
 }
 

@@ -678,6 +678,8 @@ TEST_CASE("Test Message", "[Server]")
     p->message_type = TEST_PACKET;
     msg1->val = 5;
     p->message_id = TEST_PACKET_IDS::test_request_id;
+    p->session_token = 12345;
+    p->magic = 54321;
 
     packet_size = packet::pack(p, buf, msg1);
 
@@ -702,42 +704,42 @@ TEST_CASE("Test Message", "[Server]")
     close_connection(sock);
 }
 
-// TEST_CASE("Test Message", "[Server]")
-// {
+TEST_CASE("Test Message1", "[Server]")
+{
 
-//     int sock = create_socket(47479);
+    int sock = create_socket(47479);
 
-//     packet *p = new packet();
-//     test_request *msg1 = new test_request();
-//     uint8_t *buf = (uint8_t *)malloc(100);
-//     int packet_size;
+    packet *p = new packet();
+    test_request *msg1 = new test_request();
+    uint8_t *buf = (uint8_t *)malloc(100);
+    int packet_size;
 
-//     p->message_type = TEST_PACKET;
-//     msg1->val = 5;
-//     p->message_id = TEST_PACKET_IDS::test_request_id;
+    p->message_type = TEST_PACKET;
+    msg1->val = 5;
+    p->message_id = TEST_PACKET_IDS::test_request_id;
 
-//     packet_size = packet::pack(p, buf, msg1);
+    packet_size = packet::pack(p, buf, msg1);
 
-//     write(sock, buf, packet_size);
+    write(sock, buf, packet_size);
 
-//     uint8_t message_buffer[3000];
-//     packet *unpack = new packet;
-//     long val_read;
-//     read(sock, &unpack->message_type, sizeof(packet::message_type));
-//     read(sock, &unpack->message_id, sizeof(packet::message_id));
-//     read(sock, (uint8_t *)&unpack->magic, sizeof(packet::magic));
-//     read(sock, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
-//     read(sock, (uint8_t *)&unpack->flags, sizeof(packet::flags));
-//     read(sock, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
-//     read(sock, message_buffer, unpack->buf_size);
+    uint8_t message_buffer[3000];
+    packet *unpack = new packet;
+    long val_read;
+    read(sock, &unpack->message_type, sizeof(packet::message_type));
+    read(sock, &unpack->message_id, sizeof(packet::message_id));
+    read(sock, (uint8_t *)&unpack->magic, sizeof(packet::magic));
+    read(sock, (uint8_t *)&unpack->session_token, sizeof(packet::session_token));
+    read(sock, (uint8_t *)&unpack->flags, sizeof(packet::flags));
+    read(sock, (uint8_t *)&unpack->buf_size, sizeof(packet::buf_size));
+    read(sock, message_buffer, unpack->buf_size);
 
-//     test_response *x = new test_response();
-//     x = (test_response *)unpack->message_unpack(message_buffer);
+    test_response *x = new test_response();
+    x = (test_response *)unpack->message_unpack(message_buffer);
 
-//     REQUIRE(x->val == 5);
-//     close_connection(sock);
-// }
-//
+    REQUIRE(x->val == 5);
+    close_connection(sock);
+}
+
 // TEST_CASE("TestMessage with one delayed byte", "[Server]")
 // {
 //     int sock = create_socket(47479);

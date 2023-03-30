@@ -75,6 +75,30 @@ void *packet::unpack(packet *msg, uint8_t *buf)
     return m;
 }
 
+void *packet::unpack_from_ringbuffer(packet *msg, ring_buffer *buf)
+{
+    // Do pass in a raw buff or instantiate one here
+
+    uint8_t index = 0;
+
+    buf->read_buf(sizeof(packet::message_type), &msg->message_type);
+    buf->read_buf(sizeof(packet::message_id), &msg->message_id);
+    buf->read_buf(sizeof(packet::magic), (uint8_t *)&msg->magic);
+    buf->read_buf(sizeof(packet::session_token), (uint8_t *)&msg->session_token);
+    buf->read_buf(sizeof(packet::flags), (uint8_t *)&msg->flags);
+    buf->read_buf(sizeof(packet::buf_size), (uint8_t *)&msg->buf_size);
+
+
+    payload = (uint8_t *) malloc(msg->buf_size);
+    buf->read_buf(msg->buf_size, payload);
+
+    void *m = GET_POINTER_MESSAGE(msg);
+    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
+    func(m,payload);
+
+    return m;
+}
+
 void *packet::message_unpack(uint8_t *buf)
 {
     void *m = GET_POINTER_MESSAGE(this);
@@ -100,9 +124,9 @@ uint32_t error_response::pack(void *raw_msg, uint8_t *buf)
     memcpy(buf, msg->response.c_str(), msg->response.length());
 }
 
-void error_response::unpack(void *raw_msg, uint8_t * buf)
+void error_response::unpack(void *raw_msg, uint8_t *buf)
 {
-    error_response * msg = (error_response *) raw_msg;
+    error_response *msg = (error_response *)raw_msg;
     int index = 0;
     uint8_t response_length;
 
@@ -608,5 +632,3 @@ void poem_interaction_response::unpack(void *raw_msg, uint8_t *buf)
     std::memcpy(&msg->status, buf + index, sizeof(msg->status));
     index = index + sizeof(msg->status);
 }
-
-

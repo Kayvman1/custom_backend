@@ -7,6 +7,8 @@
 #include <map>
 #include <poll.h>
 #include "../lru_cache/lru_cache.h"
+#include <semaphore.h>
+
 
 #define MAX_EVENTS 10
 class server
@@ -32,5 +34,7 @@ private:
     void handle_read_to_client(client *c);
 
     std::queue <int> has_message = std::queue<int>();
-    void handle_message(p);
+    void handle_message();
+
+    sem_t handler_sem;
 };

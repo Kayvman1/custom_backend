@@ -21,15 +21,21 @@
 
 #include "client.h"
 #include "server.h"
+#include <signal.h>
 
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
 
+
+
 void server::start(int port_number)
 {
+    
+   
 
     cache = new lru_cache(1);
     epollfd = epoll_create(1);
+    sem_init(&handler_sem, 0, 0);
 
     if (epollfd == -1)
     {
@@ -68,6 +74,7 @@ void server::start(int port_number)
 
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (const char *)&reuse, sizeof(reuse));
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEPORT, (const char *)&reuse, sizeof(reuse));
+    
 
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
@@ -97,6 +104,8 @@ void server::start(int port_number)
     int i = 0;
 
     std::thread listen_thread(&server::poll_listener_thread, this);
+    std::thread handle_thread(&server::handle_message, this);
+
     while (true) // TODO WAKE ON CONNECTION
     {
         addr_size = sizeof(serverStorage);
@@ -145,15 +154,25 @@ void server::start(int port_number)
 
 void server::handle_message()
 {
-    lock.lock();
-    int sock = has_message.front();
-    has_message.pop();
-    lock.unlock();
+    while (true)
+    {
+        sem_wait(&handler_sem);
+        if (has_message.size() != 0)
+        {
+            lock.lock();
+            int sock = has_message.front();
+            has_message.pop();
+            lock.unlock();
 
-    client *c = m.at(sock);
+            client *c = m.at(sock);
 
-    packet *p = c->read_message(p);
+            packet *p = new packet;
+            c->read_message(p);
 
+            handler_pointer f = GET_HANDLER_FOR_MESSAGE(p);
+            f(p->payload, p, c);
+        }
+    }
 }
 void server::poll_listener_thread()
 {
@@ -174,6 +193,11 @@ void server::poll_listener_thread()
             spdlog::debug("Handling FD: {}", fd);
             client *c = m.at(fd);
             c = cache->get(fd);
+            // if evicted
+            if (c == NULL)
+            {
+                continue;
+            }
 
             int num_bytes = 0;
             ioctl(fd, FIONREAD, &num_bytes);
@@ -200,10 +224,11 @@ void server::handle_read_to_client(client *c)
         c->received_bytes = 0;
         c->desired_bytes = 0;
 
-        //if body is completed add to queue to be processed
-        if(c->completed_header)
+        // if body is completed add to queue to be processed
+        if (c->completed_header)
         {
             has_message.push(c->socket_fd);
+            sem_post(&handler_sem);
         }
         c->completed_header = !c->completed_header;
     }

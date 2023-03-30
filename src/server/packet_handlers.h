@@ -1,6 +1,8 @@
 #pragma once
 #include "server.h"
 #include "client.h"
+#include <spdlog/spdlog.h>
+#include <signal.h>
 
 class packet_handlers
 {
