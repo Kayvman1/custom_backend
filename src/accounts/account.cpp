@@ -15,6 +15,9 @@ uint32_t account::pack(void *raw_msg, uint8_t *buf)
     strncpy((char *)buf + index, msg->username.c_str(), USERNAME_LEN + 1);
     index += USERNAME_LEN + 1;
 
+    memcpy(buf+index, &(msg->id), sizeof (msg->id));
+    index += sizeof(id);
+
     return index;
 }
 
@@ -30,6 +33,9 @@ uint32_t account::unpack(void *raw_msg, uint8_t *buf)
 
     msg->username = std::string((char *)buf + index);
     index += USERNAME_LEN + 1;
+
+    memcpy(&(msg->id), buf+index, sizeof(msg->id));
+    index += sizeof(msg->id);
 
     return index;
 }

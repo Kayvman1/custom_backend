@@ -33,7 +33,7 @@ void server::start(int port_number)
     
    
 
-    cache = new lru_cache(1);
+    cache = new lru_cache(100);
     epollfd = epoll_create(1);
     sem_init(&handler_sem, 0, 0);
 
@@ -123,7 +123,6 @@ void server::start(int port_number)
 
             client *c = new client;
             c->is_active = true;
-            c->session_id = 0; // TODO generate this
             c->socket_fd = new_socket;
 
             int flags = fcntl(new_socket, F_GETFL, 0);
@@ -214,6 +213,7 @@ void server::handle_read_to_client(client *c)
     int bytes_read = c->read_from_socket(c->desired_bytes - c->received_bytes);
     if (bytes_read == -1)
     {
+        std::cout << "TOO SLOW" << std::endl;
         disconnect_from_client(c);
         return;
     }

@@ -125,6 +125,8 @@ class create_user_response
 public:
     uint16_t status;
     account *user;
+    std::string token;
+
     static uint32_t pack(void *raw_msg, uint8_t *buf);
     static void unpack(void *raw_msg, uint8_t *buf);
 };

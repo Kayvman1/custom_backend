@@ -12,7 +12,7 @@ public:
 //be split over multiple reads. Does this need to be solved idiomatically? 
     client();
     account *user;
-    int session_id;
+    std::string session_id;
     int socket_fd;
     bool is_active = true;
     bool is_reading = false;

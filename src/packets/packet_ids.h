@@ -23,11 +23,15 @@ using unpack_pointer = void (*)(void *raw_msg, uint8_t *buf);
     XX(create_user_request, 5, packet_handlers::create_user_request_handler, create_user_request::pack, create_user_request::unpack)            \ 
     XX(create_user_response, 6, NULL, create_user_response::pack, create_user_response::unpack)
 
+#define POEM_PACKET_TABLE(XX)                                                                           \
+    XX(poem_create_request, 1 , packet_handlers::poem_create_request_handler, poem_create_request::pack, poem_create_request::unpack )
+
 enum MESSAGE_TYPE
 {
     TEST_PACKET = 100,
     CONTROL_PACKET = 0,
     ERROR_PACKET = 1,
+    POEM_PACKET = 2
 };
 
 enum ERROR_PACKETS_IDS
@@ -51,6 +55,15 @@ enum CONTROL_PACKET_IDS
 #define PACKET_HANDLER(CLASS, ID, HANDLER, PACK, UNPACK) \
     CLASS##_id = ID,
     CONTROL_PACKET_TABLE(PACKET_HANDLER)
+
+#undef PACKET_HANDLER
+};
+
+enum POEM_PACKET_IDS
+{
+#define PACKET_HANDLER(CLASS, ID, HANDLER, PACK, UNPACK) \
+    CLASS##_id = ID,
+    POEM_PACKET_TABLE(PACKET_HANDLER)
 
 #undef PACKET_HANDLER
 };

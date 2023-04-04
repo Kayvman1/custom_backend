@@ -11,7 +11,8 @@ class account
 {
 public:
     std::string username;
-
+    uint64_t id;
+    
     static uint32_t pack(void *raw_msg, uint8_t *buf);
     static uint32_t unpack(void *raw_msg, uint8_t *buf);
 };

@@ -88,13 +88,12 @@ void *packet::unpack_from_ringbuffer(packet *msg, ring_buffer *buf)
     buf->read_buf(sizeof(packet::flags), (uint8_t *)&msg->flags);
     buf->read_buf(sizeof(packet::buf_size), (uint8_t *)&msg->buf_size);
 
-
-    payload = (uint8_t *) malloc(msg->buf_size);
+    payload = (uint8_t *)malloc(msg->buf_size);
     buf->read_buf(msg->buf_size, payload);
 
     void *m = GET_POINTER_MESSAGE(msg);
     unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
-    func(m,payload);
+    func(m, payload);
 
     return m;
 }
@@ -379,9 +378,16 @@ uint32_t create_user_response::pack(void *raw_msg, uint8_t *buf)
 {
     create_user_response *msg = (create_user_response *)raw_msg;
     uint32_t index = 0;
+    uint8_t token_len =  msg->token.length();
 
     std::memcpy(buf + index, &(msg->status), sizeof(msg->status));
     index = index + sizeof(msg->status);
+
+    std::memcpy(buf+index, &token_len, sizeof(token_len));
+    index += sizeof(token_len); 
+
+    strncpy((char *)buf + index, msg->token.c_str(), TOKEN_LEN + 1);
+    index = index + TOKEN_LEN + 1;
 
     index += account::pack(msg->user, buf + index);
 
@@ -390,11 +396,19 @@ uint32_t create_user_response::pack(void *raw_msg, uint8_t *buf)
 
 void create_user_response::unpack(void *raw_msg, uint8_t *buf)
 {
+    uint8_t token_len;
+
     create_user_response *msg = (create_user_response *)raw_msg;
     uint32_t index = 0;
 
     std::memcpy(&(msg->status), buf + index, sizeof(msg->status));
     index += sizeof(msg->status);
+
+    std::memcpy(&token_len, buf+index, sizeof(token_len));
+    index += sizeof(token_len);
+
+    msg->token = std::string((char *)buf + index);
+    index += TOKEN_LEN + 1;
 
     msg->user = new account;
     index += account::unpack(msg->user, buf + index);
