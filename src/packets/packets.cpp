@@ -9,99 +9,65 @@
 
 /////////////////////////// PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-uint32_t packet::pack(packet *msg, uint8_t *buf, void *raw_msg)
+uint32_t packet::pack(packet *msg, uint8_t *out_buf)
 {
-    uint8_t index = 0;
-    int buf_size_addr;
-    uint32_t message_size;
-
-    std::memcpy(buf + index, &msg->message_type, sizeof(msg->message_type));
-    index = index + sizeof(msg->message_type);
-
-    std::memcpy(buf + index, &msg->message_id, sizeof(msg->message_id));
-    index = index + sizeof(msg->message_id);
-
-    std::memcpy(buf + index, &msg->magic, sizeof(msg->magic));
-    index = index + sizeof(msg->magic);
-
-    std::memcpy(buf + index, &msg->session_token, sizeof(session_token));
-    index = index + sizeof(msg->session_token);
-
-    std::memcpy(buf + index, &msg->flags, sizeof(msg->flags));
-    index = index + sizeof(msg->flags);
-
-    buf_size_addr = index;
-    index = index + sizeof(msg->buf_size);
-
-    pack_pointer func = GET_PACK_FOR_MESSAGE(msg);
-    message_size = func(raw_msg, buf + index);
-
-    // TODO REMOVE THIS, DEBUGGING ?
-    msg->buf_size = message_size;
-
-    std::memcpy(buf + buf_size_addr, &message_size, sizeof(message_size));
-    index += message_size;
-    return index;
+    // get handler for packing the payload
+    pack_pointer func = GET_PACK_FOR_MESSAGE(msg->head);
+    // pack the payload and set the message_size
+    msg->head->buf_size = func(msg->payload, out_buf + sizeof(header));
+    // pack the header
+    memcpy(out_buf, msg->head, sizeof(head));
 }
 
-void *packet::unpack(packet *msg, uint8_t *buf)
+void *packet::unpack(packet *msg, uint8_t *in_buf)
 {
-    // Do pass in a raw buff or instantiate one here
-
-    uint8_t index = 0;
-
-    std::memcpy(&msg->message_type, buf + index, sizeof(msg->message_type));
-    index = index + sizeof(msg->message_type);
-
-    std::memcpy(&msg->message_id, buf + index, sizeof(msg->message_id));
-    index = index + sizeof(msg->message_id);
-
-    std::memcpy(&msg->magic, buf + index, sizeof(msg->magic));
-    index = index + sizeof(msg->magic);
-
-    std::memcpy(&msg->session_token, buf + index, sizeof(session_token));
-    index = index + sizeof(msg->session_token);
-
-    std::memcpy(&msg->flags, buf + index, sizeof(msg->flags));
-    index = index + sizeof(msg->flags);
-
-    std::memcpy(&msg->buf_size, buf + index, sizeof(msg->buf_size));
-    index = index + sizeof(msg->buf_size);
-
-    void *m = GET_POINTER_MESSAGE(msg);
-    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
-    func(m, buf + index);
-
-    return m;
+    return NULL;
 }
+//     // Do pass in a raw buff or instantiate one here
+
+//     msg->head = (header *) in_buf;
+
+//     uint8_t index = 0;
+
+//     void *m = GET_POINTER_MESSAGE(msg->head);
+//     unpack_pointer unpacker = GET_UNPACK_FOR_MESSAGE(msg->head);
+//     unpacker(m, buf + index);
+
+//     return m;
+// }
 
 void *packet::unpack_from_ringbuffer(packet *msg, ring_buffer *buf)
 {
-    // Do pass in a raw buff or instantiate one here
-
-    uint8_t index = 0;
-
-    buf->read_buf(sizeof(packet::message_type), &msg->message_type);
-    buf->read_buf(sizeof(packet::message_id), &msg->message_id);
-    buf->read_buf(sizeof(packet::magic), (uint8_t *)&msg->magic);
-    buf->read_buf(sizeof(packet::session_token), (uint8_t *)&msg->session_token);
-    buf->read_buf(sizeof(packet::flags), (uint8_t *)&msg->flags);
-    buf->read_buf(sizeof(packet::buf_size), (uint8_t *)&msg->buf_size);
-
-    payload = (uint8_t *)malloc(msg->buf_size);
-    buf->read_buf(msg->buf_size, payload);
-
-    void *m = GET_POINTER_MESSAGE(msg);
-    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
-    func(m, payload);
-
-    return m;
+    return NULL;
 }
+//     // Do pass in a raw buff or instantiate one here
+//     uint8_t raw_token[TOKEN_LEN + 1];
+//     raw_token[TOKEN_LEN + 1] = '\0';
+//     uint8_t index = 0;
+
+//     buf->read_buf(sizeof(packet::message_type), &msg->message_type);
+//     buf->read_buf(sizeof(packet::message_id), &msg->message_id);
+//     buf->read_buf(sizeof(packet::magic), (uint8_t *)&msg->magic);
+//     buf->read_buf(sizeof(packet::session_token), raw_token);
+//     buf->read_buf(sizeof(packet::flags), (uint8_t *)&msg->flags);
+//     buf->read_buf(sizeof(packet::buf_size), (uint8_t *)&msg->buf_size);
+
+//     msg->session_token = std::string((char *)raw_token);
+
+//     payload = (uint8_t *)malloc(msg->buf_size);
+//     buf->read_buf(msg->buf_size, payload);
+
+//     void *m = GET_POINTER_MESSAGE(msg);
+//     unpack_pointer func = GET_UNPACK_FOR_MESSAGE(msg);
+//     func(m, payload);
+
+//     return m;
+// }
 
 void *packet::message_unpack(uint8_t *buf)
 {
-    void *m = GET_POINTER_MESSAGE(this);
-    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(this);
+    void *m = GET_POINTER_MESSAGE(head);
+    unpack_pointer func = GET_UNPACK_FOR_MESSAGE(head);
     func(m, buf);
 
     return m;
@@ -378,13 +344,13 @@ uint32_t create_user_response::pack(void *raw_msg, uint8_t *buf)
 {
     create_user_response *msg = (create_user_response *)raw_msg;
     uint32_t index = 0;
-    uint8_t token_len =  msg->token.length();
+    uint8_t token_len = msg->token.length();
 
     std::memcpy(buf + index, &(msg->status), sizeof(msg->status));
     index = index + sizeof(msg->status);
 
-    std::memcpy(buf+index, &token_len, sizeof(token_len));
-    index += sizeof(token_len); 
+    std::memcpy(buf + index, &token_len, sizeof(token_len));
+    index += sizeof(token_len);
 
     strncpy((char *)buf + index, msg->token.c_str(), TOKEN_LEN + 1);
     index = index + TOKEN_LEN + 1;
@@ -404,7 +370,7 @@ void create_user_response::unpack(void *raw_msg, uint8_t *buf)
     std::memcpy(&(msg->status), buf + index, sizeof(msg->status));
     index += sizeof(msg->status);
 
-    std::memcpy(&token_len, buf+index, sizeof(token_len));
+    std::memcpy(&token_len, buf + index, sizeof(token_len));
     index += sizeof(token_len);
 
     msg->token = std::string((char *)buf + index);

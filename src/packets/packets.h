@@ -7,6 +7,7 @@
 #include "../posts/post.h"
 #pragma once
 
+#pragma packpush
 struct header
 {
     uint8_t message_type;
@@ -16,23 +17,18 @@ struct header
     uint32_t flags;
     uint32_t buf_size;
 };
+
+#pragma packpop
 class packet
 {
 public:
-    uint8_t message_type;
-    uint8_t message_id;
-    uint64_t magic;
-    uint64_t session_token;
-    uint32_t flags;
+    header *head;
+    uint8_t *payload;
 
-    uint32_t buf_size;
-
-    static uint32_t pack(packet *msg, uint8_t *buf, void *raw_msg);
+    static uint32_t pack(packet *msg, uint8_t *buf);
     static void *unpack(packet *msg, uint8_t *buf);
     void *message_unpack(uint8_t *buf);
     void *unpack_from_ringbuffer(packet *msg, ring_buffer *buf);
-
-    uint8_t *payload;
 };
 
 class test_request

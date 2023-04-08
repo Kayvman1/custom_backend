@@ -20,7 +20,7 @@
 
 extern sw::redis::Redis *redis;
 
-std::string generate_token(std::size_t length)
+uint64_t generate_token(std::size_t length)
 {
     const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -30,35 +30,38 @@ std::string generate_token(std::size_t length)
 
     std::string random_string;
 
-    for (std::size_t i = 0; i < length; ++i)
+    for (std::size_t i = 0; i < 8; ++i)
     {
         random_string += CHARACTERS[distribution(generator)];
     }
 
-    return random_string;
+    return (uint64_t)random_string.c_str();
 }
 
-void packet_handlers::create_user_request_handler(uint8_t *raw_msg, packet *in, client *user)
+void packet_handlers::create_user_request_handler(packet *in, client *user)
 {
     packet *out = new packet;
     uint8_t write_buffer[3000];
     create_user_response *response = new create_user_response();
     create_user_request *request = new create_user_request;
-    create_user_request::unpack(request, raw_msg);
+    create_user_request::unpack(request, in->payload);
 
     auto redis_response = redis->get("username:" + request->username);
 
-    out->message_type = MESSAGE_TYPE::CONTROL_PACKET;
-    out->message_id = CONTROL_PACKET_IDS::create_user_response_id;
-    out->flags = 0;
-    out->magic = 12345;
-    out->session_token = 0;
+    out->head->message_type = MESSAGE_TYPE::CONTROL_PACKET;
+    out->head->message_id = CONTROL_PACKET_IDS::create_user_response_id;
+    out->head->flags = 0;
+    out->head->magic = 12345;
 
+    // User already exists
     if (redis_response)
     {
         response->status = control_errors::create_user_failed;
         response->user = new account;
         response->user->username = '\0';
+
+        // TODO this is a point of failure beacause a user might generate a session token of 0
+        out->head->session_token = 0;
     }
 
     else
@@ -72,9 +75,9 @@ void packet_handlers::create_user_request_handler(uint8_t *raw_msg, packet *in, 
         redis->set("username:" + request->username, id);
         redis->hset(key, "USERNAME", request->username);
         redis->hset(key, "PASSWORD", request->password);
-        std::string token = generate_token(TOKEN_LEN);
+        int token = generate_token(TOKEN_LEN);
 
-        redis->hset(key, "TOKEN", token);
+        redis->hset(key, "TOKEN", ""+token);
 
         account *new_user = new account();
         new_user->username = request->username;
@@ -85,26 +88,26 @@ void packet_handlers::create_user_request_handler(uint8_t *raw_msg, packet *in, 
         response->user = new_user;
         response->user->username = request->username;
         response->token = token;
+        out->head->session_token = token;
     }
-
-    int packet_size = packet::pack(out, write_buffer, response);
+    out->payload = (uint8_t *)response;
+    int packet_size = packet::pack(out, write_buffer);
     write(user->socket_fd, write_buffer, packet_size);
     return;
 }
 
-void packet_handlers::login_request_handler(uint8_t *raw_msg, packet *in, client *user)
+void packet_handlers::login_request_handler(packet *in, client *user)
 {
     uint8_t write_buf[3000];
     packet *out = new packet;
     login_response *response = new login_response;
     login_request *request = new login_request;
-    login_request::unpack(request, raw_msg);
+    login_request::unpack(request, in->payload);
 
-    out->message_type = MESSAGE_TYPE::CONTROL_PACKET;
-    out->message_id = CONTROL_PACKET_IDS::login_response_id;
-    out->flags = 0;
-    out->magic = 54321;
-    out->session_token = 0;
+    out->head->message_type = MESSAGE_TYPE::CONTROL_PACKET;
+    out->head->message_id = CONTROL_PACKET_IDS::login_response_id;
+    out->head->flags = 0;
+    out->head->magic = 54321;
 
     std::optional<std::string> redis_response_id = redis->get("username:" + request->username);
 
@@ -114,7 +117,8 @@ void packet_handlers::login_request_handler(uint8_t *raw_msg, packet *in, client
         response->auth_token = "INVALID";
         response->user = new account;
         response->status = control_errors::user_not_found;
-        int packet_size = packet::pack(out, write_buf, response);
+        out->payload = (uint8_t *)response;
+        int packet_size = packet::pack(out, write_buf);
         write(user->socket_fd, write_buf, packet_size);
         free(response);
         return;
@@ -139,7 +143,7 @@ void packet_handlers::login_request_handler(uint8_t *raw_msg, packet *in, client
     // Valid Login
     else
     {
-        std::string token = generate_token(TOKEN_LEN);
+        int token = generate_token(TOKEN_LEN);
 
         account *logged_in = new account;
         logged_in->username = request->username;
@@ -148,31 +152,33 @@ void packet_handlers::login_request_handler(uint8_t *raw_msg, packet *in, client
 
         response->user = logged_in;
         response->auth_token = token;
-        redis->hset("user:" + redis_response_id.value(), "TOKEN", token);
+        redis->hset("user:" + redis_response_id.value(), "TOKEN", "" + token);
         response->status = 200;
     }
 
-    int packet_size = packet::pack(out, write_buf, response);
+    out->payload = (uint8_t *)response;
+    int packet_size = packet::pack(out, write_buf);
     write(user->socket_fd, write_buf, packet_size);
     free(response);
     return;
 }
 
-void packet_handlers::test_request_handler(uint8_t *raw_msg, packet *in, client *user)
+void packet_handlers::test_request_handler(packet *in, client *user)
 {
     test_request *request = new test_request();
-    test_request::unpack(request, raw_msg);
+    test_request::unpack(request, in->payload);
     packet *out = new packet;
     test_response *response = new test_response();
     uint8_t write_buf[3000];
 
-    out->message_type = TEST_PACKET;
-    out->message_id = TEST_PACKET_IDS::test_response_id;
-    out->session_token = in->session_token;
+    out->head->message_type = TEST_PACKET;
+    out->head->message_id = TEST_PACKET_IDS::test_response_id;
+    out->head->session_token = in->head->session_token;
 
     response->val = request->val;
 
-    size_t packet_size = packet::pack(out, write_buf, response);
+    out->payload = (uint8_t *)response;
+    size_t packet_size = packet::pack(out, write_buf);
     send(user->socket_fd, write_buf, packet_size, MSG_NOSIGNAL);
 
     free(request);
@@ -180,32 +186,26 @@ void packet_handlers::test_request_handler(uint8_t *raw_msg, packet *in, client 
     return;
 }
 
-void packet_handlers::response_handler(uint8_t *raw_msg, packet *in, client *user)
+void packet_handlers::response_handler(packet *in, client *user)
 {
     return;
 }
 
 void packet_handlers::poem_create_request_handler(packet *in, client *c)
 {
-    int x =1;
-    x += 1;
-        return;
-    // poem_create_request *request = new poem_create_request;
-    // poem_create_request::unpack(request, in->payload);
+    poem_create_request *request = new poem_create_request;
+    poem_create_request::unpack(request, in->payload);
 
-    // if (in->session_token != c->session_id)
-    // {
-    //     error_response *response = new error_response;
-    //     response->status = 14;
+    if (in->head->session_token != c->session_id)
+    {
+        error_response *response = new error_response;
+        response->status = 14;
 
-    //     redis->hdel("user"+c->user->id, "TOKEN");
+        redis->hdel("user" + c->user->id, "TOKEN");
+    }
 
-    // }
-
-    // else
-    // {
-    //     std::cout<< "LALALA a pretty poem by"<< c->user->username<<std::endl;
-    // }
-
-
+    else
+    {
+        std::cout << "LALALA a pretty poem by" << c->user->username << std::endl;
+    }
 }
