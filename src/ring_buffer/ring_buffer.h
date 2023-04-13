@@ -25,6 +25,9 @@ public:
 
     int contigious_bytes_remaining();
     uint8_t* expose_write_pointer();
+
+    void inc_read_pointer(int bytes);
+    void read_buf_from_pointer (int len, uint8_t * read_loc, uint8_t *return_buffer);
 };
 //#endif
  

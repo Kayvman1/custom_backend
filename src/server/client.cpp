@@ -18,10 +18,17 @@ int client::read_from_socket(int len)
 
 void client::read_message(packet *p)
 {
-    header *x = (header *)calloc(26, 1);
-    uint8_t *read_pointer = (uint8_t *)x;
+    header *h = (header *)calloc(26, 1);
+    uint8_t *read_pointer = (uint8_t *)h;
 
-    buffer->read_buf(26,read_pointer);
+    buffer->read_buf(26, read_pointer);
 
-    //void *x1 = p->unpack_from_ringbuffer(p, buffer);
+    p->head = h;
+
+    uint8_t *m = (uint8_t *)malloc(400);
+    p->payload = m;
+
+    buffer->read_buf(h->buf_size,m);
+
+    // void *x1 = p->unpack_from_ringbuffer(p, buffer);
 }

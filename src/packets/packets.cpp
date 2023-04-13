@@ -9,6 +9,11 @@
 
 /////////////////////////// PACKETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+packet::packet()
+{
+    head = (header *)malloc(sizeof(header));
+}
+
 uint32_t packet::pack(packet *msg, uint8_t *out_buf)
 {
     // get handler for packing the payload
@@ -16,7 +21,9 @@ uint32_t packet::pack(packet *msg, uint8_t *out_buf)
     // pack the payload and set the message_size
     msg->head->buf_size = func(msg->payload, out_buf + sizeof(header));
     // pack the header
-    memcpy(out_buf, msg->head, sizeof(head));
+    memcpy(out_buf, msg->head, sizeof(header));
+
+    return msg->head->buf_size + sizeof(header);
 }
 
 void *packet::unpack(packet *msg, uint8_t *in_buf)

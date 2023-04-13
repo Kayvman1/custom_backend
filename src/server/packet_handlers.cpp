@@ -77,7 +77,7 @@ void packet_handlers::create_user_request_handler(packet *in, client *user)
         redis->hset(key, "PASSWORD", request->password);
         int token = generate_token(TOKEN_LEN);
 
-        redis->hset(key, "TOKEN", ""+token);
+        redis->hset(key, "TOKEN", std::to_string(token));
 
         account *new_user = new account();
         new_user->username = request->username;

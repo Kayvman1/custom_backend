@@ -167,3 +167,49 @@ uint8_t *ring_buffer::expose_write_pointer()
 {
     return write_pointer;
 }
+
+void ring_buffer::inc_read_pointer(int bytes)
+{
+    read_pointer += bytes;
+
+    if (read_pointer > buf + size)
+    {
+        read_pointer -= size;
+    }
+}
+
+// void start reading from address
+
+// HAVE The caller pass in a buffer and write to it.
+// Think about what to do if buffer passed in is two small
+void ring_buffer::read_buf_from_pointer(int read_len, uint8_t *read_location, uint8_t* return_buffer)
+{
+    uint8_t * read_pointer;
+    read_pointer = read_location;
+    uint8_t *stop_pointer = read_pointer + read_len;
+
+    if (stop_pointer > buf + size)
+    {
+        stop_pointer -= size;
+    }
+
+    // The entire message is in order
+    if (stop_pointer > read_pointer)
+    {
+        memcpy(return_buffer, read_pointer, read_len);
+    }
+
+    // The message wraps around
+    else
+    {
+        // Start at the end of the buffer and count back to read pointer start
+        int segment_right = buf + size - read_pointer;
+        // Then read the rest of the message
+        int segment_left = read_len - segment_right;
+
+        memcpy(return_buffer, read_pointer, segment_right);
+        memcpy(return_buffer + segment_right, buf, segment_left);
+    }
+
+    read_pointer = stop_pointer;
+}

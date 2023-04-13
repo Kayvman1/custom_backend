@@ -7,10 +7,10 @@
 #include "../posts/post.h"
 #pragma once
 
-#pragma packpush
+#pragma pack(push, 1)
 struct header
 {
-    uint8_t message_type;
+    uint8_t message_type;  
     uint8_t message_id;
     uint64_t magic;
     uint64_t session_token;
@@ -18,12 +18,14 @@ struct header
     uint32_t buf_size;
 };
 
-#pragma packpop
+#pragma pack(pop)
 class packet
 {
 public:
     header *head;
     uint8_t *payload;
+
+    packet();
 
     static uint32_t pack(packet *msg, uint8_t *buf);
     static void *unpack(packet *msg, uint8_t *buf);

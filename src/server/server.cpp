@@ -26,12 +26,8 @@
 sw::redis::Redis *redis;
 void handle_new_connection(client *c);
 
-
-
 void server::start(int port_number)
 {
-    
-   
 
     cache = new lru_cache(100);
     epollfd = epoll_create(1);
@@ -74,7 +70,6 @@ void server::start(int port_number)
 
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (const char *)&reuse, sizeof(reuse));
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEPORT, (const char *)&reuse, sizeof(reuse));
-    
 
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
@@ -168,6 +163,7 @@ void server::handle_message()
             packet *p = new packet;
             c->read_message(p);
 
+
             handler_pointer message_handler = GET_HANDLER_FOR_MESSAGE(p->head);
             message_handler(p, c);
         }
@@ -227,9 +223,11 @@ void server::handle_read_to_client(client *c)
         // if body is completed add to queue to be processed
         if (c->completed_header)
         {
+
             has_message.push(c->socket_fd);
             sem_post(&handler_sem);
         }
+
         c->completed_header = !c->completed_header;
     }
 }
@@ -244,6 +242,8 @@ void server::read_in(client *c)
     // Read in payload
     if (c->completed_header == true)
     {
+
+        header *h = (header *)(c->buffer->expose_write_pointer() - sizeof(header) - 1);
         uint8_t *t = (c->buffer->expose_write_pointer() - sizeof(header::buf_size));
         uint32_t *payload_size = reinterpret_cast<uint32_t *>(t);
         c->desired_bytes = *payload_size;
@@ -276,52 +276,6 @@ void server::read_in(client *c)
 // thread dedicated to poll and select, pass in a list of FDs
 // wake which ever threads have data on them so they can continue (signal sempahore)
 
-int server::read_attribute(uint8_t *buf, int size, client *c)
-{
-    int b_count = 0;
-    int val_read;
-
-    while (b_count < size)
-    {
-        val_read = read(c->socket_fd, buf + b_count, size - b_count);
-
-        // Real error on reading
-        if (errno != EAGAIN && val_read == -1)
-        {
-            spdlog::debug("Errno {}: ", errno);
-        }
-
-        // Poll event was disconnect
-        if (val_read == 0)
-        {
-            spdlog::debug("Connection closed");
-            return -1;
-        }
-
-        if (val_read > 0)
-        {
-            b_count += val_read;
-        }
-
-        if (b_count < size)
-        {
-            if (errno == EWOULDBLOCK)
-            {
-                sleep(1);
-            }
-
-            else
-            {
-                spdlog::error("Expected {}, but read {}", size, b_count);
-                return b_count;
-            }
-        }
-    }
-
-    spdlog::debug("Attribute Size: {}, Attribute Read : {}", size, b_count);
-    return b_count;
-}
-
 void server::disconnect_from_client(client *c)
 {
     spdlog::info("Disconnecting from FD: {}", c->socket_fd);
@@ -330,59 +284,3 @@ void server::disconnect_from_client(client *c)
     epoll_ctl(epollfd, EPOLL_CTL_DEL, c->socket_fd, NULL);
     c->is_active = false;
 }
-
-// void server::handle_new_connection(client *c)
-// {
-
-//     uint8_t message_buffer[3000];
-//     uint8_t assembly_buffer[3000];
-//     packet *unpack = new packet;
-//     int val_read = 0;
-//     int b_count = 0;
-
-//     if (read_attribute(&unpack->message_type, sizeof(packet::message_type), c) == -1)
-//     {
-//         spdlog::debug("Disconncet");
-//         disconnect_from_client(c);
-
-//         return;
-//     }
-//     if (read_attribute(&unpack->message_id, sizeof(packet::message_id), c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, MessageID", c->socket_fd);
-//         return;
-//     }
-//     if (read_attribute((uint8_t *)&unpack->magic, sizeof(packet::magic), c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, Magic", c->socket_fd);
-//         return;
-//     }
-//     if (read_attribute((uint8_t *)&unpack->session_token, sizeof(packet::session_token), c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, Session Token", c->socket_fd);
-//         return;
-//     }
-//     if (read_attribute((uint8_t *)&unpack->flags, sizeof(packet::flags), c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, Flags", c->socket_fd);
-//         return;
-//     }
-//     if (read_attribute((uint8_t *)&unpack->buf_size, sizeof(packet::buf_size), c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, BufSize", c->socket_fd);
-//         return;
-//     }
-//     if (read_attribute(message_buffer, unpack->buf_size, c) == -1)
-//     {
-//         spdlog::error("Error durning read on FD: {}, Buffer", c->socket_fd);
-//         return;
-//     }
-//     spdlog::debug("Complete Read \n");
-
-//     // unpack->message_unpack(message_buffer);
-
-//     handler_pointer func = GET_HANDLER_FOR_MESSAGE(unpack);
-
-//     func(message_buffer, unpack, c);
-//     c->is_reading = false;
-// }
