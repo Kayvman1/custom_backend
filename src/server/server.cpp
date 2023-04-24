@@ -202,8 +202,7 @@ void server::poll_listener_thread()
 
             if (num_bytes > 400)
             {
-                uint8_t * bufff = (uint8_t *) calloc(1000,1);
-                read(c->socket_fd,bufff,num_bytes);
+                continue;
             }
 
             read_in(c);
