@@ -163,7 +163,6 @@ void server::handle_message()
             packet *p = new packet;
             c->read_message(p);
 
-
             handler_pointer message_handler = GET_HANDLER_FOR_MESSAGE(p->head);
             message_handler(p, c);
         }
@@ -200,6 +199,13 @@ void server::poll_listener_thread()
 
             has_messages[i] = c;
             // handle_new_connection(c);
+
+            if (num_bytes > 400)
+            {
+                uint8_t * bufff = (uint8_t *) calloc(1000,1);
+                read(c->socket_fd,bufff,num_bytes)
+            }
+
             read_in(c);
         }
     }
