@@ -156,6 +156,8 @@ int helper(int read_bytes, int len)
             return read_bytes;
         }
     }
+    
+    return 0;
 }
 
 int ring_buffer::contigious_bytes_remaining()
