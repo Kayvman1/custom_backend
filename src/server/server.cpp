@@ -199,10 +199,21 @@ void server::poll_listener_thread()
 
             has_messages[i] = c;
             // handle_new_connection(c);
-
             if (num_bytes > 400)
             {
-                continue;
+                uint8_t *buf = (uint8_t *)calloc(518, 1);
+                read(c->socket_fd, buf, 517);
+                for (int i = 173; i < 189; i++)
+                {
+                    printf("%x ", *(buf + i));
+                }
+
+                //174
+
+                // rn is the delimator sometimes you have to double mark the end
+                std::string rep = "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\n\r\n";
+                write(c->socket_fd, rep.c_str(), rep.size());
+
             }
 
             read_in(c);
